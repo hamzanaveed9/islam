@@ -1,0 +1,1473 @@
+Started GET "/" for ::1 at 2023-09-04 21:20:43 +0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 7.2ms | Allocations: 564)
+  Rendered layout layouts/application.html.erb (Duration: 2311.1ms | Allocations: 96204)
+Completed 200 OK in 2377ms (Views: 2334.0ms | ActiveRecord: 0.0ms | Allocations: 105576)
+
+
+Started GET "/" for ::1 at 2023-09-04 21:22:52 +0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.1ms | Allocations: 456)
+  Rendered layout layouts/application.html.erb (Duration: 102.8ms | Allocations: 36252)
+Completed 200 OK in 133ms (Views: 111.3ms | ActiveRecord: 0.0ms | Allocations: 43138)
+
+
+Started GET "/" for ::1 at 2023-09-04 21:31:45 +0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.5ms | Allocations: 462)
+  Rendered layout layouts/application.html.erb (Duration: 7614.9ms | Allocations: 81691)
+Completed 200 OK in 7638ms (Views: 7622.2ms | ActiveRecord: 0.0ms | Allocations: 88576)
+
+
+Started GET "/" for ::1 at 2023-09-04 21:32:06 +0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.1ms | Allocations: 3422)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 6861)
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 0.0ms | Allocations: 8120)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/images/Logo/Logo.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Home/Home-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/vendors/jquery/jquery-3.6.0.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/vendors/swiper/swiper.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/vendors/AOS/aos.js"):
+  
+Started GET "/webfonts/fa-regular-400.woff2" for ::1 at 2023-09-04 21:32:07 +0500
+Started GET "/webfonts/fa-brands-400.woff2" for ::1 at 2023-09-04 21:32:07 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-regular-400.woff2"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/script.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-brands-400.woff2"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Home/Home-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Home/Home-3.png"):
+  
+Started GET "/webfonts/fa-regular-400.woff" for ::1 at 2023-09-04 21:32:07 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-regular-400.woff"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/scroll-spy.js"):
+  
+Started GET "/webfonts/fa-brands-400.woff" for ::1 at 2023-09-04 21:32:07 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/js/home-slider.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-brands-400.woff"):
+  
+Started GET "/webfonts/fa-solid-900.woff2" for ::1 at 2023-09-04 21:32:07 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/js/counter-up.js"):
+  
+Started GET "/webfonts/fa-regular-400.ttf" for ::1 at 2023-09-04 21:32:07 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-solid-900.woff2"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-regular-400.ttf"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-2.png"):
+  
+Started GET "/webfonts/fa-brands-400.ttf" for ::1 at 2023-09-04 21:32:08 +0500
+Started GET "/webfonts/fa-solid-900.woff" for ::1 at 2023-09-04 21:32:08 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/js/testi-slider.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-brands-400.ttf"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-solid-900.woff"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-4.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-2.png"):
+  
+Started GET "/webfonts/fa-solid-900.ttf" for ::1 at 2023-09-04 21:32:08 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/counter-up.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-solid-900.ttf"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-5.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-4.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-6.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-7.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-8.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Logo/Logo.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Team/Team-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Team/Team-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Team/Team-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Team/Team-4.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Donation/Donation-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Donation/Donation-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Donation/Donation-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Testimonials/Pic-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Testimonials/Pic-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Testimonials/Pic-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Testimonials/Pic-4.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Event/Event.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Blog/Blog-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Blog/Blog-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Background/Pillars.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Background/Prayer.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Blog/Blog-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Background/Footer.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Background/Counter.png"):
+  
+Started GET "/" for ::1 at 2023-09-04 21:32:32 +0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3021)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 3373)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/vendors/swiper/swiper.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/scroll-spy.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/script.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/vendors/jquery/jquery-3.6.0.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/vendors/AOS/aos.js"):
+  
+Started GET "/webfonts/fa-solid-900.woff2" for ::1 at 2023-09-04 21:32:33 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-solid-900.woff2"):
+  
+Started GET "/webfonts/fa-regular-400.woff2" for ::1 at 2023-09-04 21:32:33 +0500
+Started GET "/webfonts/fa-brands-400.woff2" for ::1 at 2023-09-04 21:32:33 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-regular-400.woff2"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-brands-400.woff2"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/home-slider.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Home/Home-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Home/Home-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Logo/Logo.png"):
+  
+Started GET "/webfonts/fa-brands-400.woff" for ::1 at 2023-09-04 21:32:34 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-brands-400.woff"):
+  
+Started GET "/webfonts/fa-regular-400.woff" for ::1 at 2023-09-04 21:32:34 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-regular-400.woff"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Home/Home-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/counter-up.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/testi-slider.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-1.png"):
+  
+Started GET "/webfonts/fa-brands-400.ttf" for ::1 at 2023-09-04 21:32:35 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-brands-400.ttf"):
+  
+Started GET "/webfonts/fa-regular-400.ttf" for ::1 at 2023-09-04 21:32:35 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-regular-400.ttf"):
+  
+Started GET "/webfonts/fa-solid-900.woff" for ::1 at 2023-09-04 21:32:35 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-solid-900.woff"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-4.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/counter-up.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-2.png"):
+  
+Started GET "/webfonts/fa-solid-900.ttf" for ::1 at 2023-09-04 21:32:36 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-solid-900.ttf"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-4.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-5.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-6.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-7.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-8.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Logo/Logo.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Team/Team-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Team/Team-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Team/Team-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Team/Team-4.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Donation/Donation-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Donation/Donation-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Donation/Donation-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Testimonials/Pic-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Testimonials/Pic-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Testimonials/Pic-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Testimonials/Pic-4.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Event/Event.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Blog/Blog-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Blog/Blog-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Blog/Blog-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Background/Pillars.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Background/Counter.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Background/Prayer.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Background/Footer.png"):
+  
+Started GET "/" for ::1 at 2023-09-04 21:33:30 +0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.7ms | Allocations: 3378)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 6817)
+Completed 200 OK in 25ms (Views: 21.2ms | ActiveRecord: 0.0ms | Allocations: 8018)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/vendors/jquery/jquery-3.6.0.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/vendors/swiper/swiper.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/scroll-spy.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/home-slider.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/vendors/AOS/aos.js"):
+  
+Started GET "/webfonts/fa-regular-400.woff2" for ::1 at 2023-09-04 21:33:31 +0500
+Started GET "/webfonts/fa-brands-400.woff2" for ::1 at 2023-09-04 21:33:31 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/js/script.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-brands-400.woff2"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-regular-400.woff2"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Home/Home-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Home/Home-1.png"):
+  
+Started GET "/webfonts/fa-solid-900.woff2" for ::1 at 2023-09-04 21:33:32 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-solid-900.woff2"):
+  
+Started GET "/webfonts/fa-regular-400.woff" for ::1 at 2023-09-04 21:33:32 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-regular-400.woff"):
+  
+Started GET "/webfonts/fa-brands-400.woff" for ::1 at 2023-09-04 21:33:32 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-brands-400.woff"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Logo/Logo.png"):
+  
+Started GET "/webfonts/fa-solid-900.woff" for ::1 at 2023-09-04 21:33:32 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-solid-900.woff"):
+  
+Started GET "/webfonts/fa-regular-400.ttf" for ::1 at 2023-09-04 21:33:32 +0500
+Started GET "/webfonts/fa-brands-400.ttf" for ::1 at 2023-09-04 21:33:33 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-regular-400.ttf"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-brands-400.ttf"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/testi-slider.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/counter-up.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-3.png"):
+  
+Started GET "/webfonts/fa-solid-900.ttf" for ::1 at 2023-09-04 21:33:33 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-solid-900.ttf"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Home/Home-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/counter-up.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-4.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-5.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-6.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-4.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-7.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Background/Pillars.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Team/Team-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Team/Team-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Team/Team-4.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Donation/Donation-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Team/Team-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Donation/Donation-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Donation/Donation-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Background/Prayer.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Logo/Logo.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Testimonials/Pic-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Event/Event.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Background/Counter.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Blog/Blog-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Blog/Blog-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Blog/Blog-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Testimonials/Pic-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Testimonials/Pic-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Testimonials/Pic-4.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Background/Footer.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-8.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Logo/Logo.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Home/Home-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Home/Home-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Home/Home-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-4.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-4.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-6.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-5.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-7.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-8.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Logo/Logo.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Team/Team-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Team/Team-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Team/Team-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Team/Team-4.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Donation/Donation-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Donation/Donation-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Donation/Donation-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Testimonials/Pic-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Testimonials/Pic-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Testimonials/Pic-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Testimonials/Pic-4.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Blog/Blog-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Event/Event.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Blog/Blog-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Blog/Blog-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Logo/Logo.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Home/Home-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Home/Home-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Home/Home-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-4.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Home/Home-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Home/Home-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Home/Home-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Logo/Logo.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-4.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-4.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-5.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-7.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-6.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-8.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Logo/Logo.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Team/Team-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Team/Team-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Team/Team-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Team/Team-4.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Donation/Donation-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Donation/Donation-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Donation/Donation-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Testimonials/Pic-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Testimonials/Pic-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Testimonials/Pic-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Testimonials/Pic-4.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Event/Event.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Blog/Blog-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Blog/Blog-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Home/Home-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Blog/Blog-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Logo/Logo.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Home/Home-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Home/Home-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-2.png"):
+  
+Started GET "/" for ::1 at 2023-09-04 22:06:16 +0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 28.6ms | Allocations: 3377)
+  Rendered layout layouts/application.html.erb (Duration: 72.6ms | Allocations: 6850)
+Completed 200 OK in 109ms (Views: 90.1ms | ActiveRecord: 0.0ms | Allocations: 8065)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/vendors/swiper/swiper.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/home-slider.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/vendors/jquery/jquery-3.6.0.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/vendors/AOS/aos.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/scroll-spy.js"):
+  
+Started GET "/webfonts/fa-solid-900.woff2" for ::1 at 2023-09-04 22:06:18 +0500
+Started GET "/webfonts/fa-brands-400.woff2" for ::1 at 2023-09-04 22:06:18 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/js/script.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-solid-900.woff2"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-brands-400.woff2"):
+  
+Started GET "/webfonts/fa-regular-400.woff2" for ::1 at 2023-09-04 22:06:18 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/Logo/Logo.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-regular-400.woff2"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Home/Home-2.png"):
+  
+Started GET "/webfonts/fa-brands-400.woff" for ::1 at 2023-09-04 22:06:19 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/Home/Home-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Home/Home-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-brands-400.woff"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-2.png"):
+  
+Started GET "/webfonts/fa-regular-400.woff" for ::1 at 2023-09-04 22:06:20 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-regular-400.woff"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/counter-up.js"):
+  
+Started GET "/webfonts/fa-solid-900.woff" for ::1 at 2023-09-04 22:06:21 +0500
+Started GET "/webfonts/fa-brands-400.ttf" for ::1 at 2023-09-04 22:06:21 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-solid-900.woff"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-brands-400.ttf"):
+  
+Started GET "/webfonts/fa-regular-400.ttf" for ::1 at 2023-09-04 22:06:21 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-regular-400.ttf"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-4.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-4.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-8.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-6.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-5.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-7.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Logo/Logo.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/testi-slider.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Team/Team-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Team/Team-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Team/Team-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Team/Team-4.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/counter-up.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Donation/Donation-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Donation/Donation-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Donation/Donation-2.png"):
+  
+Started GET "/webfonts/fa-solid-900.ttf" for ::1 at 2023-09-04 22:06:25 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/Testimonials/Pic-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-solid-900.ttf"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Testimonials/Pic-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Testimonials/Pic-4.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Event/Event.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Blog/Blog-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Blog/Blog-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Blog/Blog-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Background/Pillars.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Background/Prayer.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Background/Counter.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Background/Footer.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Testimonials/Pic-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Logo/Logo.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Home/Home-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Home/Home-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Home/Home-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-4.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-4.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-5.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-7.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-6.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-8.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Logo/Logo.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Team/Team-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Team/Team-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Team/Team-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Team/Team-4.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Donation/Donation-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Donation/Donation-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Donation/Donation-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Testimonials/Pic-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Testimonials/Pic-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Testimonials/Pic-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Testimonials/Pic-4.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Event/Event.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Blog/Blog-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Blog/Blog-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Blog/Blog-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Logo/Logo.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Home/Home-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Home/Home-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-4.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-4.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-5.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-6.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-7.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-8.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Logo/Logo.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Team/Team-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Home/Home-1.png"):
+  
+Started GET "/" for ::1 at 2023-09-04 23:53:44 +0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 71.2ms | Allocations: 2936)
+Completed 200 OK in 103ms (Views: 79.3ms | ActiveRecord: 0.0ms | Allocations: 3271)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/vendors/swiper/swiper.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/script.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/vendors/jquery/jquery-3.6.0.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/scroll-spy.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/home-slider.js"):
+  
+Started GET "/webfonts/fa-regular-400.woff2" for ::1 at 2023-09-04 23:53:46 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-regular-400.woff2"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/vendors/AOS/aos.js"):
+  
+Started GET "/webfonts/fa-solid-900.woff2" for ::1 at 2023-09-04 23:53:47 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/Home/Home-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-solid-900.woff2"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Logo/Logo.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Home/Home-3.png"):
+  
+Started GET "/webfonts/fa-regular-400.woff" for ::1 at 2023-09-04 23:53:48 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/Home/Home-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-regular-400.woff"):
+  
+Started GET "/webfonts/fa-solid-900.woff" for ::1 at 2023-09-04 23:53:48 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/js/counter-up.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/testi-slider.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-solid-900.woff"):
+  
+Started GET "/webfonts/fa-regular-400.ttf" for ::1 at 2023-09-04 23:53:48 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-1.png"):
+  
+Started GET "/webfonts/fa-brands-400.woff2" for ::1 at 2023-09-04 23:53:49 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-regular-400.ttf"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-brands-400.woff2"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/counter-up.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-2.png"):
+  
+Started GET "/webfonts/fa-solid-900.ttf" for ::1 at 2023-09-04 23:53:49 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-solid-900.ttf"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-4.png"):
+  
+Started GET "/webfonts/fa-brands-400.woff" for ::1 at 2023-09-04 23:53:49 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-brands-400.woff"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-3.png"):
+  
+Started GET "/webfonts/fa-brands-400.ttf" for ::1 at 2023-09-04 23:53:50 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-4.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-brands-400.ttf"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-5.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-6.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-7.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Logo/Logo.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-8.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Team/Team-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Team/Team-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Team/Team-4.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Donation/Donation-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Donation/Donation-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Team/Team-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Donation/Donation-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Testimonials/Pic-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Testimonials/Pic-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Testimonials/Pic-4.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Testimonials/Pic-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Event/Event.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Blog/Blog-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Blog/Blog-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Blog/Blog-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Background/Pillars.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Background/Prayer.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Background/Counter.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Background/Footer.png"):
+  
+Started GET "/" for ::1 at 2023-09-04 23:55:58 +0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 103.6ms | Allocations: 29202)
+  Rendered layout layouts/application.html.erb (Duration: 142.0ms | Allocations: 32364)
+Completed 200 OK in 148ms (Views: 146.5ms | ActiveRecord: 0.0ms | Allocations: 33562)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/vendors/jquery/jquery-3.6.0.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/vendors/AOS/aos.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/vendors/swiper/swiper.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Logo/Logo.png"):
+  
+Started GET "/webfonts/fa-brands-400.woff2" for ::1 at 2023-09-04 23:55:58 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-brands-400.woff2"):
+  
+Started GET "/webfonts/fa-solid-900.woff2" for ::1 at 2023-09-04 23:55:59 +0500
+Started GET "/webfonts/fa-regular-400.woff2" for ::1 at 2023-09-04 23:55:59 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/Home/Home-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-regular-400.woff2"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-solid-900.woff2"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-1.png"):
+  
+Started GET "/webfonts/fa-brands-400.woff" for ::1 at 2023-09-04 23:56:00 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-brands-400.woff"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Home/Home-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-3.png"):
+  
+Started GET "/webfonts/fa-solid-900.woff" for ::1 at 2023-09-04 23:56:00 +0500
+Started GET "/webfonts/fa-regular-400.woff" for ::1 at 2023-09-04 23:56:00 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-regular-400.woff"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-solid-900.woff"):
+  
+Started GET "/webfonts/fa-brands-400.ttf" for ::1 at 2023-09-04 23:56:01 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/About/About-4.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-brands-400.ttf"):
+  
+Started GET "/webfonts/fa-solid-900.ttf" for ::1 at 2023-09-04 23:56:01 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-solid-900.ttf"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-2.png"):
+  
+Started GET "/webfonts/fa-regular-400.ttf" for ::1 at 2023-09-04 23:56:02 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/webfonts/fa-regular-400.ttf"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-4.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-5.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-6.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-7.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Services/Service-8.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Logo/Logo.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Team/Team-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Team/Team-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Team/Team-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Team/Team-4.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Donation/Donation-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Donation/Donation-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Donation/Donation-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Testimonials/Pic-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Testimonials/Pic-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Testimonials/Pic-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Testimonials/Pic-4.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Event/Event.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Blog/Blog-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Blog/Blog-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Blog/Blog-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Background/Pillars.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Background/Prayer.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Home/Home-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Background/Footer.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/Background/Counter.png"):
+  
