@@ -1072,8 +1072,8 @@ section{
 
 /*--------------------- 9- Pillars of Islam Area CSS (Start) -------*/
 .pillars{
-    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url("../../assets/images/Background/Pillars.png");
-    background:         linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url("../../assets/images/Background/Pillars.png");
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url("../../assets/images/Pillars.png");
+    background:         linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url("../../assets/images/Pillars.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -1394,8 +1394,8 @@ section{
 
 /*--------------------- 12- Prayer Area CSS (Start) -----------------*/
 .prayer{
-    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url("../../assets/images/Background/Prayer.png");
-    background:         linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url("../../assets/images/Background/Prayer.png");
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url("../../assets/images/Prayer.png");
+    background:         linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url("../../assets/images/Prayer.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -1874,8 +1874,8 @@ section{
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     gap: 3rem;
-    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url("../../assets/images/Background/Counter.png");
-    background:         linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url("../../assets/images/Background/Counter.png");
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url("../../assets/images/Counter.png");
+    background:         linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url("../../assets/images/Counter.png");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -2156,12 +2156,13 @@ section{
 
 
 /*--------------------- 18- footer Area CSS (Start) ----------------*/
-.footer{
-    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(1, 146, 103, 0.2)), url("../../assets/images/Background/Footer.png");
-    background:         linear-gradient(rgba(0, 0, 0, 0.5), rgba(1, 146, 103, 0.2)), url("../../assets/images/Background/Footer.png");
+.footer {
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(1, 146, 103, 0.2)),
+                linear-gradient(rgba(0, 0, 0, 0.5), rgba(1, 146, 103, 0.2));
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
+    background-image: url('Footer.png');
 }
 
 .footer .box-container{

@@ -32,6 +32,11 @@ gem "redis", "~> 4.0"
 
 gem 'bootstrap', '~> 5.0.0'
 
+gem 'jquery-rails'
+gem 'swiper'
+gem 'aos'
+
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
