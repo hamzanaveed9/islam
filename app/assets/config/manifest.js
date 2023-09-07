@@ -2,3 +2,8 @@
 //= link_directory ../stylesheets .css
 //= link_tree ../../javascript .js
 //= link_tree ../../../vendor/javascript .js
+//= link jquery-3.6.0.js
+//= link swiper.js
+//= link aos
+//= link home-slider.js
+//= link swiper.css

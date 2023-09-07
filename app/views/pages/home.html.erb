@@ -10,7 +10,8 @@
   <title>Salam | Islamic Center</title>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 </head>
   <!-- ==================== Scroll-Top Area (Start) ==================== -->
@@ -58,7 +59,7 @@
         
           <div class="content">
             <div class="text" data-aos="fade-right">
-              <div class="logo"><img src="./assets/images/Logo/Logo.png" alt="logo"></div>
+              <div class="logo"><%= image_tag("Logo.png", alt: "logo") %></div>
               <h5>بسم الله الرحمن الرحيم</h5>
               <h2>أَبْشِرُوا وَسَدِّدُوا وَقَارِبُوا</h2>
               <div class="heading">
@@ -81,7 +82,7 @@
 
           <div class="content">
             <div class="text" data-aos="fade-right">
-              <div class="logo"><img src="./assets/images/Logo/Logo.png" alt="logo"></div>
+              <div class="logo"><%= image_tag("Logo.png", alt: "logo") %></div>
               <h5>بسم الله الرحمن الرحيم</h5>
               <h2>يَقُولُ اللَّهُ إِنْ ظَنَّ بِي خَيْرًا فَلَهُ وَإِنْ ظَنَّ شَرًّا فَلَهُ</h2>
               <div class="heading">
@@ -97,7 +98,7 @@
           </div>
 
           <div class="image">
-            <%= image_tag("Home-2.png", alt: "logo") %>
+          <%= image_tag("Home-2.png", alt: "logo") %>
           </div>
 
         </div>
@@ -106,7 +107,7 @@
 
           <div class="content">
             <div class="text" data-aos="fade-right">
-              <div class="logo"><img src="./assets/images/Logo/Logo.png" alt="logo"></div>
+              <div class="logo"><%= image_tag("Logo.png", alt: "logo") %></div>
               <h5>بسم الله الرحمن الرحيم</h5>
               <h2>قَالَ اللَّهُ أَنْفِقْ يَا ابْنَ آدَمَ أُنْفِقْ عَلَيْك</h2>
               <div class="heading">
@@ -148,7 +149,7 @@
         <div class="heading">
           <h1>welcome to <br> salam islamic center</h1>
           <div class="design">
-            <img src="./assets/images/Logo/Logo.png" alt="" >
+            <%= image_tag("Logo.png", alt: "logo") %>
           </div>
         </div>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias vero, libero dignissimos quis id assumenda? Error necessitatibus repudiandae maiores. Eius minima numquam modi ea quibusdam dolorum aliquid dicta est vitae.</p>
@@ -192,63 +193,63 @@
 
     <div class="heading">
       <h1>our services</h1>
-      <div class="design"><img src="./assets/images/Logo/Logo.png" alt="" ></div>
+      <div class="design"><%= image_tag("Logo.png", alt: "logo") %></div>
     </div>
     
     <div class="box-container">
     
       <div class="service-item">
         <div class="image">
-          <img src="./assets/images/Services/Service-1.png" alt="">
+        <%= image_tag("Service-1.png", alt: "Service-1") %>
         </div>
         <h3>quran learning</h3>
       </div>
 
       <div class="service-item">
         <div class="image">
-          <img src="./assets/images/Services/Service-2.png" alt="">
+        <%= image_tag("Service-2.png", alt: "Service-2") %>
         </div>
         <h3>Mosque Renovation</h3>
       </div>
 
       <div class="service-item">
         <div class="image">
-          <img src="./assets/images/Services/Service-3.png" alt="">
+        <%= image_tag("Service-3.png", alt: "Service-3") %>
         </div>
         <h3>Funeral Service</h3>
       </div>
       
       <div class="service-item">
         <div class="image">
-          <img src="./assets/images/Services/Service-4.png" alt="">
+                <%= image_tag("Service-4.png", alt: "Service-4") %>
         </div>
         <h3>providing shelter</h3>
       </div>
 
       <div class="service-item">
         <div class="image">
-          <img src="./assets/images/Services/Service-5.png" alt="">
+                  <%= image_tag("Service-5.png", alt: "Service-5") %>
         </div>
         <h3>marriage</h3>
       </div>
 
       <div class="service-item">
         <div class="image">
-          <img src="./assets/images/Services/Service-6.png" alt="">
+                  <%= image_tag("Service-6.png", alt: "Service-6") %>
         </div>
         <h3>education</h3>
       </div>
       
       <div class="service-item">
         <div class="image">
-          <img src="./assets/images/Services/Service-7.png" alt="">
+                <%= image_tag("Service-7.png", alt: "Service-7") %>
         </div>
         <h3>Food</h3>
       </div>
       
       <div class="service-item">
         <div class="image">
-          <img src="./assets/images/Services/Service-8.png" alt="">
+                <%= image_tag("Service-8.png", alt: "Service-8") %>
         </div>
         <h3>family counselling</h3>
       </div>
@@ -266,7 +267,7 @@
     <div class="heading">
       <h1>upcoming events</h1>
       <div class="design">
-        <img src="./assets/images/Logo/Logo.png" alt="" >
+              <%= image_tag("Logo.png", alt: "Logo") %>
       </div>
     </div>
 
@@ -285,7 +286,6 @@
             <h4><i class="fas fa-tag"></i><span>families, young, adults</span></h4>
           </div>
         </div>
-
         <div class="event-item">
           <div class="date">
             <h2>26 <br> jan</h2>
@@ -326,7 +326,7 @@
             <h4><i class="fas fa-tag"></i><span>families, young, adults</span></h4>
           </div>
           <div class="image">
-            <img src="./assets/images/Event/Event.png" alt="">
+          <%= image_tag("Event.png", alt: "Event") %>
           </div>
         </div>
       </div>
@@ -345,7 +345,7 @@
     <div class="heading">
       <h1>our contact</h1>
       <div class="design">
-        <img src="./assets/images/Logo/Logo.png" alt="" >
+        <%= image_tag("Logo.png", alt: "Logo") %>
       </div>
     </div>
 
@@ -404,7 +404,7 @@
 
       <div class="footer-item">
         <a class="logo" href="#">
-          <img src="./assets/images/Logo/Logo.png" alt="logo">
+        <%= image_tag("Logo.png", alt: "Logo") %>
           <div class="logo-name">
             <h3>salam</h3>
             <p>islamic center</p>
@@ -467,15 +467,15 @@
 
     
 
+  
 
   <!-- JQuery -->
-  <script src="./assets/vendors/jquery/jquery-3.6.0.js"></script>
-
+ <%= javascript_include_tag 'jquery-3.6.0' %>
   <!-- SWIPER JS -->
-  <script src="./assets/vendors/swiper/swiper.js"></script>
-
+  <%= javascript_include_tag 'swiper.js' %>
+  <%= javascript_include_tag 'home-slider.js' %>
   <!-- Animation -->
-  <script src="./assets/vendors/AOS/aos.js"></script>
+ <%= javascript_include_tag 'aos.js' %>
 
 
   <!-- ========== Custom Script ========== -->
@@ -508,29 +508,4 @@
         duration: 1000
     })
   </script>
-
-  <script>
-      /*--------------- Home Slider ---------------*/ 
-    var swiper = new Swiper(".home-slider", {
-
-        loop:true,
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false, 
-        },
-
-        pagination: {
-          el: ".swiper-pagination1",
-          clickable:true,
-        },
-
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-
-    }); 
-  </script>
-
- 
 </html>

@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <%= favicon_link_tag asset_path('favicon.ico') %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag 'all.min' %>
+    <%= stylesheet_link_tag 'aos' %>
+    <%= stylesheet_link_tag 'responsive' %>
+    <%= stylesheet_link_tag 'swiper' %>
+    <%= stylesheet_link_tag  'main' %>
     <%= javascript_importmap_tags %>
   </head>
 
