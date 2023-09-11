@@ -168,11 +168,10 @@
  <p>His vision is to promote awareness, understanding, and respect in a multi-faith environment, as well as putting his effort into helping the Muslim community around him thrive and excel.</p> 
 <%
 =end%>
-        <%
-=begin%>
- <a class="btn" href="#contact">get quote</a> 
-<%
-=end%>
+    
+ <a class="btn" href="#contact">Detail Page</a> 
+
+
 
       </div>
 
@@ -232,6 +231,8 @@
         </div>
         <h3>Khutba or Prayer Service</h3>
       </div>
+
+      <div class="noMobileView" style="width:100%;"></div>
       
       <div class="service-item">
         <div class="image">
@@ -254,7 +255,9 @@
         <h3>Separation or Divorce/Khula</h3>
       </div>
       
-      <div class="service-item">
+      <%
+=begin%>
+ <div class="service-item">
         <div class="image">
                 <%= image_tag("Service-7.png", alt: "Service-7") %>
         </div>
@@ -266,7 +269,9 @@
                 <%= image_tag("Service-8.png", alt: "Service-8") %>
         </div>
         <h3>family counselling</h3>
-      </div>
+      </div> 
+<%
+=end%>
 
     </div>
 
