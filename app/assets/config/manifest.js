@@ -6,4 +6,6 @@
 //= link swiper.js
 //= link aos
 //= link home-slider.js
+//= link script.js
+//= link scroll-spy
 //= link swiper.css
