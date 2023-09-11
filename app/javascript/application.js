@@ -6,4 +6,6 @@ import "jquery_ujs"
 import "swiper"
 import 'aos'
 import 'home-slider'
+import 'script'
+import 'scroll-spy'
 
