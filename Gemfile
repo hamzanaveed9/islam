@@ -86,3 +86,8 @@ gem "sentry-ruby", "~> 5.11"
 
 gem "sentry-rails", "~> 5.11"
 
+gem 'devise'
+
+gem 'activestorage'
+gem 'mini_magick' 
+gem 'devise'

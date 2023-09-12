@@ -1,0 +1,44 @@
+<!-- app/views/sliders/new.html.erb -->
+<h1>Add a New Slider</h1>
+
+<%= form_with(model: @slider, url: sliders_path, method: :post, local: true, html: { multipart: true }) do |f| %>
+  <div class="field">
+    <%= f.label :images, 'Upload Images (up to 3)' %>
+    <%= f.file_field :images, multiple: true, accept: 'image/*', onchange: 'previewImages(this)' %>
+    <div id="image-preview"></div>
+  </div>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Create Slider" %>
+  </div>
+<% end %>
+
+<script>
+  function previewImages(input) {
+    var preview = document.getElementById('image-preview');
+    preview.innerHTML = '';
+
+    if (input.files) {
+      for (var i = 0; i < input.files.length; i++) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+          var img = document.createElement('img');
+          img.src = e.target.result;
+          img.className = 'preview-image';
+          preview.appendChild(img);
+        };
+        reader.readAsDataURL(input.files[i]);
+      }
+    }
+  }
+</script>

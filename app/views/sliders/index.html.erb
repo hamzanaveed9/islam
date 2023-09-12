@@ -1,0 +1,16 @@
+<!-- app/views/sliders/index.html.erb -->
+<h1>Slider Images and Text</h1>
+
+<%= link_to 'New Slider', new_slider_path %>
+
+<% @sliders.each do |slider| %>
+  <div class="slider">
+    <% if slider.images.attached? %>
+      <% slider.images.each do |image| %>
+        <%= image_tag image %>
+      <% end %>
+    <% end %>
+    <h2><%= slider.title %></h2>
+    <p><%= slider.description %></p>
+  </div>
+<% end %>

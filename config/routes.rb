@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
+  devise_for :admins
+  devise_for :users
   root 'pages#home'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  resources :sliders, only: [:index, :new, :create]
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  namespace :admin do
+    get 'dashboard', to: 'admin#dashboard'
+    get 'manage_users', to: 'admin#manage_users'
+    # Add more admin routes as needed
+  end
+
 end
