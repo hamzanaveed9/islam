@@ -9,6 +9,7 @@ gem "rails", "~> 6.1.4"
 # for admin panel: gem "rails", github: "rails/rails
 gem 'trestle'
 gem 'trestle-auth'
+gem 'trestle-active_storage'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"

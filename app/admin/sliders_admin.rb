@@ -14,9 +14,9 @@ Trestle.resource(:sliders) do
     actions
   end
 
-  # active_storage_fields do
-  #   [:background_image, :logo]
-  # end
+  active_storage_fields do
+    [:background_image, :logo]
+  end
 
   form do |user|
     text_field :header
@@ -25,7 +25,7 @@ Trestle.resource(:sliders) do
     text_area :description
     text_field :link_text
     text_field :link_address
-    # active_storage_field :logo
-    # active_storage_field :background_image
+    active_storage_field :logo
+    active_storage_field :background_image
   end
 end
