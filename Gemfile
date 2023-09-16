@@ -8,6 +8,7 @@ gem "rails", "~> 7.0.7", ">= 7.0.7.2"
 
 # for admin panel: gem "rails", github: "rails/rails
 gem 'trestle'
+gem 'trestle-auth'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
