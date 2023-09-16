@@ -4,11 +4,12 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "3.0.3"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.0.7", ">= 7.0.7.2"
+gem "rails", "~> 6.1.4"
 
 # for admin panel: gem "rails", github: "rails/rails
 gem 'trestle'
 gem 'trestle-auth'
+gem 'trestle-active_storage'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
