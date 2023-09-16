@@ -1,6 +1,6 @@
 Trestle.resource(:sliders) do
   menu do
-    item :sliders, icon: "fa fa-star"
+    item :sliders, icon: "fas fa-camera"
   end
 
   table do
@@ -12,5 +12,20 @@ Trestle.resource(:sliders) do
     column :link_text
     column :link_address
     actions
+  end
+
+  # active_storage_fields do
+  #   [:background_image, :logo]
+  # end
+
+  form do |user|
+    text_field :header
+    text_field :title
+    text_field :context
+    text_area :description
+    text_field :link_text
+    text_field :link_address
+    # active_storage_field :logo
+    # active_storage_field :background_image
   end
 end

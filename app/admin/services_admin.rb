@@ -1,6 +1,6 @@
 Trestle.resource(:services) do
   menu do
-    item :services, icon: "fa fa-star"
+    item :services, icon: "fa fa-folder"
   end
 
   table do
