@@ -126,30 +126,30 @@
             </div>
 
           </div>
-        <% end %>
-
-        <div class="swiper-slide home-item">
-          <% @sliders.each do |slider| %>
-            <div class="content">
-              <div class="text" data-aos="fade-right">
-                <div class="logo"><%= image_tag(slider&.logo, alt: "logo") %></div>
-                <h5><%= slider&.header %></h5>
-                <h2><%= slider&.title %></h2>
-                <div class="heading">
-                  <div class="design">
-                    <p class="design-info"><%= slider&.context %></p>
+        <% else %>
+          <div class="swiper-slide home-item">
+            <% @sliders.each do |slider| %>
+              <div class="content">
+                <div class="text" data-aos="fade-right">
+                  <div class="logo"><%= image_tag(slider&.logo, alt: "logo") %></div>
+                  <h5><%= slider&.header %></h5>
+                  <h2><%= slider&.title %></h2>
+                  <div class="heading">
+                    <div class="design">
+                      <p class="design-info"><%= slider&.context %></p>
+                    </div>
                   </div>
+                  <p><%= slider&.description %></p>
+                  <a class="btn" href="<%= slider&.link_address %>"><%= slider&.link_text %></a>
                 </div>
-                <p><%= slider&.description %></p>
-                <a class="btn" href="<%= slider&.link_address %>"><%= slider&.link_text %></a>
               </div>
-            </div>
 
-            <div class="image">
-              <%= image_tag(slider&.background_image, alt: "slider_image") %>
-            </div>
-          <% end %>
-        </div>
+              <div class="image">
+                <%= image_tag(slider&.background_image, alt: "slider_image") %>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
 
       </div>
 
@@ -166,6 +166,7 @@
 
 
   <!-- ==================== About Area (Start) ==================== -->
+  <% if @about.blank? %>
   <section class="about" id="about">
 
     <div class="box-container">
@@ -222,6 +223,41 @@
     </div>
 
   </section>
+  <% else %>
+  <section class="about" id="about">
+    <div class="box-container">
+      <div class="content" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
+        <div class="heading">
+          <h1>welcome to <br> <%= @about&.title %></h1>
+          <div class="design">
+            <%= image_tag("salam_logo.png", alt: "logo", class: "logo") %>
+          </div>
+        </div>
+        <p><%= @about&.description %></p>
+        <a class="btn" href="<%= @about&.link_text %>">Detail Page</a>
+      </div>
+
+      <div class="image">
+        <div>
+          <div class="image1">
+            <%= image_tag(@about&.images[0], alt: "about1") if @about&.images&.attached? %>
+          </div>
+          <div class="image2">
+            <%= image_tag(@about&.images[1], alt: "about2") if @about&.images&.attached? %>
+          </div>
+        </div>
+        <div>
+          <div class="image3">
+            <%= image_tag(@about&.images[2], alt: "about3") if @about&.images&.attached? %>
+          </div>
+          <div class="image4">
+            <%= image_tag(@about&.images[3], alt: "about4") if @about&.images&.attached? %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <% end %>
   <!-- ==================== About Area (End) ==================== -->
 
 
