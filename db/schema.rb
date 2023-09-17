@@ -68,7 +68,7 @@ ActiveRecord::Schema.define(version: 2023_09_17_223244) do
     t.text "details"
     t.string "scholar"
     t.date "date"
-    t.string "event_type", default: [], array: true
+    t.string "event_type"
     t.datetime "start_time"
     t.datetime "end_time"
     t.datetime "created_at", precision: 6, null: false

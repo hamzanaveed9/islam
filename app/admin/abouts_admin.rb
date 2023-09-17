@@ -21,6 +21,9 @@ Trestle.resource(:abouts) do
     text_area :description
     text_field :link_text
     text_field :link_address
-    active_storage_field :images, multiple: true
+    active_storage_field :images
+    active_storage_field :images
+    active_storage_field :images
+    active_storage_field :images
   end
 end

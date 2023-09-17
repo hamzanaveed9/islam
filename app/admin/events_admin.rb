@@ -15,13 +15,18 @@ Trestle.resource(:events) do
     actions
   end
 
+  active_storage_fields do
+    [:image]
+  end
+
   form do |event|
     text_field :heading
     text_area :details
     text_field :scholar
     date_field :date
-    select :event_type, Event::EVENT_TYPES, multiple: true, collection: Event::EVENT_TYPES
+    select :event_type, Event::EVENT_TYPES
     datetime_field :start_time
     datetime_field :end_time
+    active_storage_field :image
   end
 end
