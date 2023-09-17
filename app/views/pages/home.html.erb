@@ -50,83 +50,98 @@
 
 
   <!-- ==================== Home Area (Start) ==================== -->
+  <% if @sliders.blank? %>
   <section class="home" id="home">
 
     <div class="swiper-container home-slider">
       <div class="swiper-wrapper">
 
-        <% if @sliders.blank? %>
-          <div class="swiper-slide home-item">
-          
-            <div class="content">
-              <div class="text" data-aos="fade-right">
-                <div class="logo"><%= image_tag("salam_logo.png", alt: "logo") %></div>
-                <h5>بسم الله الرحمن الرحيم</h5>
-                <h2>أَبْشِرُوا وَسَدِّدُوا وَقَارِبُوا</h2>
-                <div class="heading">
-                  <div class="design">
-                    <p class="design-info">( al-Adab al-Mufrad 254 )</p>
-                  </div>
+        <div class="swiper-slide home-item">
+        
+          <div class="content">
+            <div class="text" data-aos="fade-right">
+              <div class="logo"><%= image_tag("Logo.png", alt: "logo") %></div>
+              <h5>بسم الله الرحمن الرحيم</h5>
+              <h2>أَبْشِرُوا وَسَدِّدُوا وَقَارِبُوا</h2>
+              <div class="heading">
+                <div class="design">
+                  <p class="design-info">( al-Adab al-Mufrad 254 )</p>
                 </div>
-                <p>Give glad tidings, follow the right course, and seek nearness to Allah.</p>
-                <a class="btn" href="#contact">contact us</a>
               </div>
+              <p>Give glad tidings, follow the right course, and seek nearness to Allah.</p>
+              <a class="btn" href="#contact">contact us</a>
             </div>
-          
-            <div class="image">
-              <%= image_tag("Home-1.png", alt: "logo") %>
+          </div>
+        
+          <div class="image">
+            <%= image_tag("Home-1.png", alt: "logo") %>
+          </div>
+        
+        </div>
+
+        <div class="swiper-slide home-item">
+
+          <div class="content">
+            <div class="text" data-aos="fade-right">
+              <div class="logo"><%= image_tag("Logo.png", alt: "logo") %></div>
+              <h5>بسم الله الرحمن الرحيم</h5>
+              <h2>يَقُولُ اللَّهُ إِنْ ظَنَّ بِي خَيْرًا فَلَهُ وَإِنْ ظَنَّ شَرًّا فَلَهُ</h2>
+              <div class="heading">
+                <div class="design">
+                  <p class="design-info">( Sahih Ibn Hibban 639 )</p>
+                </div>
+              </div>
+              <p>Allah Almighty says: I am as My servants expects of Me. If he thinks good of Me, he will have it. If he thinks evil of
+              Me, he will have it.
+              </p>
+              <a class="btn" href="#contact">contact us</a>
             </div>
-          
           </div>
 
-          <div class="swiper-slide home-item">
-
-            <div class="content">
-              <div class="text" data-aos="fade-right">
-                <div class="logo"><%= image_tag("salam_logo.png", alt: "logo") %></div>
-                <h5>بسم الله الرحمن الرحيم</h5>
-                <h2>يَقُولُ اللَّهُ إِنْ ظَنَّ بِي خَيْرًا فَلَهُ وَإِنْ ظَنَّ شَرًّا فَلَهُ</h2>
-                <div class="heading">
-                  <div class="design">
-                    <p class="design-info">( Sahih Ibn Hibban 639 )</p>
-                  </div>
-                </div>
-                <p>Allah Almighty says: I am as My servants expects of Me. If he thinks good of Me, he will have it. If he thinks evil of
-                Me, he will have it.
-                </p>
-                <a class="btn" href="#contact">contact us</a>
-              </div>
-            </div>
-
-            <div class="image">
-            <%= image_tag("Home-2.png", alt: "logo") %>
-            </div>
-
+          <div class="image">
+          <%= image_tag("Home-2.png", alt: "logo") %>
           </div>
 
-          <div class="swiper-slide home-item">
+        </div>
 
-            <div class="content">
-              <div class="text" data-aos="fade-right">
-                <div class="logo"><%= image_tag("salam_logo.png", alt: "logo") %></div>
-                <h5>بسم الله الرحمن الرحيم</h5>
-                <h2>قَالَ اللَّهُ أَنْفِقْ يَا ابْنَ آدَمَ أُنْفِقْ عَلَيْك</h2>
-                <div class="heading">
-                  <div class="design">
-                    <p class="design-info">( Sahih al-Bukhari 5352 )</p>
-                  </div>
+        <div class="swiper-slide home-item">
+
+          <div class="content">
+            <div class="text" data-aos="fade-right">
+              <div class="logo"><%= image_tag("Logo.png", alt: "logo") %></div>
+              <h5>بسم الله الرحمن الرحيم</h5>
+              <h2>قَالَ اللَّهُ أَنْفِقْ يَا ابْنَ آدَمَ أُنْفِقْ عَلَيْك</h2>
+              <div class="heading">
+                <div class="design">
+                  <p class="design-info">( Sahih al-Bukhari 5352 )</p>
                 </div>
-                <p>Allah said, 'O son of Adam! Spend, and I shall spend on you</p>
-                <a class="btn" href="#contact">contact us</a>
               </div>
+              <p>Allah said, 'O son of Adam! Spend, and I shall spend on you</p>
+              <a class="btn" href="#contact">contact us</a>
             </div>
-            
-            <div class="image">
-              <%= image_tag("Home-3.png", alt: "logo") %>
-            </div>
-
           </div>
-        <% end %>
+          
+          <div class="image">
+            <%= image_tag("Home-3.png", alt: "logo") %>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="swiper-pagination swiper-pagination1"></div>
+
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+    </div>
+
+  </section>
+  <% else %>
+  <section class="home" id="home">
+
+    <div class="swiper-container home-slider">
+      <div class="swiper-wrapper">
 
         <div class="swiper-slide home-item">
           <% @sliders.each do |slider| %>
@@ -161,11 +176,13 @@
     </div>
 
   </section>
+  <% end %>
   <!-- ==================== Home Area (End) ==================== -->
 
 
 
   <!-- ==================== About Area (Start) ==================== -->
+  <% if @about.blank? %>
   <section class="about" id="about">
 
     <div class="box-container">
@@ -222,6 +239,41 @@
     </div>
 
   </section>
+  <% else %>
+  <section class="about" id="about">
+    <div class="box-container">
+      <div class="content" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
+        <div class="heading">
+          <h1>welcome to <br> <%= @about&.title %></h1>
+          <div class="design">
+            <%= image_tag("salam_logo.png", alt: "logo", class: "logo") %>
+          </div>
+        </div>
+        <p><%= @about&.description %></p>
+        <a class="btn" href="<%= @about&.link_text %>">Detail Page</a>
+      </div>
+
+      <div class="image">
+        <div>
+          <div class="image1">
+            <%= image_tag(@about&.images[0], alt: "about1") if @about&.images&.attached? %>
+          </div>
+          <div class="image2">
+            <%= image_tag(@about&.images[1], alt: "about2") if @about&.images&.attached? %>
+          </div>
+        </div>
+        <div>
+          <div class="image3">
+            <%= image_tag(@about&.images[2], alt: "about3") if @about&.images&.attached? %>
+          </div>
+          <div class="image4">
+            <%= image_tag(@about&.images[3], alt: "about4") if @about&.images&.attached? %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <% end %>
   <!-- ==================== About Area (End) ==================== -->
 
 
