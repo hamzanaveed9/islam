@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Title -->
+  <title>Imam Sidyot | Event Details</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/salam_logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+  <!-- ==================== Scroll-Top Area (Start) ==================== -->
+  <a href="#" class="scroll-top">
+    <i class="fas fa-caret-up"></i>
+  </a>
+  <!-- ==================== Scroll-Top Area (End) ==================== -->
+
+  <!-- ==================== Header Area (Start) ==================== -->
+  <header class="header">
+    <i class="fa-solid fa-bars-staggered" id="menu-btn"></i>
+    <a class="logo" href="#">
+      <%= image_tag("salam_logo.png", alt: "logo") %>
+      <div class="logo-name">
+        <h3>Imam Sidyot</h3>
+        <p>Empowering Excellence</p>
+      </div>
+    </a>
+    <nav class="navbar">
+      <a href="#home">home</a>
+      <a href="#about">about</a>
+      <a href="#services">services</a>
+      <a href="#events">event</a>
+    </nav>
+    <a class="btn" href="#contact">contact us</a>
+  </header>
+  <!-- ==================== Header Area (End) ==================== -->
+
+  <!-- ==================== Event Details Area (Start) ==================== -->
+  <section class="events" id="events">
+      <div class="heading">
+        <h1>upcoming events</h1>
+        <div class="design">
+          <%= image_tag("salam_logo.png", alt: "Logo") %>
+        </div>
+      </div>
+
+      <div class="box-container">
+
+        <div class="event-box">
+          <div class="latest-event">
+            <div class="content">
+              <h3 class="label">latest event</h3>
+              <h2><span>topic :</span> <%= @event&.heading %></h2>
+              <p><%= @event&.details %></p>
+              <div class="description">
+                <span>scholar : <%= @event&.scholar %></span>
+                <span>timing : <%= @event&.start_time&.strftime("%I:%M %p") %> - <%= @event&.end_time&.strftime("%I:%M %p") %></span>
+                <span>date : <%= @event&.date&.strftime("%m/%d/%Y") %></span>
+              </div>
+              <h4><i class="fas fa-tag"></i><span><%= @event&.event_type %></span></h4>
+            </div>
+            <div class="image">
+              <%= image_tag(@event&.image) if @event&.image&.attached? %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <!-- ==================== Event Details Area (End) ==================== -->
+
+  <!-- ==================== Footer Area (Start) ==================== -->
+  <footer class="footer">
+    <div class="box-container">
+      <div class="footer-item">
+        <a class="logo" href="#">
+          <%= image_tag("salam_logo.png", alt: "Logo") %>
+          <div class="logo-name">
+            <h3>Imam Sidyot</h3>
+            <p>Empowering Excellence</p>
+          </div>
+        </a>
+        <p>His vision is to promote awareness, understanding, and respect in a multi-faith environment, as well as putting his effort into helping the Muslim community around him thrive and excel.</p>
+      </div>
+
+
+    </div>
+
+    <div class="content">
+      <p>© Copyright 2023 <span>Imam Sidyot</span>, All rights reserved.</p>
+    </div>
+  </footer>
+  <!-- ==================== Footer Area (End) ==================== -->
+</body>
+</html>

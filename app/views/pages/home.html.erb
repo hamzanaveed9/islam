@@ -423,38 +423,42 @@
       <div class="box-container">
         <div class="event-box1">
           <% @events&.each do |event| %>
-            <div class="event-item">
-              <div class="date">
-                <h2><%= event&.date&.strftime("%d %b") %></h2>
-                <p><%= event&.date&.strftime("%a") %></p>
+              <div class="event-item">
+                <div class="date">
+                  <h2><%= event&.date&.strftime("%d %b") %></h2>
+                  <p><%= event&.date&.strftime("%a") %></p>
+                </div>
+                <div class="detail">
+                  <%= link_to event_path(event) do %>
+                    <h3><%= event&.heading %></h3>
+                    <p><%= event&.scholar %> | <span class="timing"><%= event&.start_time&.strftime("%I:%M %p") %></span></p>
+                    <h4><i class="fas fa-tag"></i><span><%= event&.event_type %></span></h4>
+                  <% end %>
+                </div>
               </div>
-              <div class="detail">
-                <h3><%= event&.heading %></h3>
-                <p><%= event&.scholar %> | <span class="timing"><%= event&.start_time&.strftime("%I:%M %p") %></span></p>
-                <h4><i class="fas fa-tag"></i><span><%= event&.event_type %></span></h4>
-              </div>
-            </div>
           <% end %>
         </div>
 
         <div class="event-box2">
           <% if @latest_event %>
-            <div class="latest-event">
-              <div class="content">
-                <h3 class="label">latest event</h3>
-                <h2><span>topic :</span> <%= @latest_event&.heading %></h2>
-                <p><%= @latest_event&.details %></p>
-                <div class="description">
-                  <span>scholar : <%= @latest_event&.scholar %></span>
-                  <span>timing : <%= @latest_event&.start_time&.strftime("%I:%M %p") %> - <%= @latest_event&.end_time&.strftime("%I:%M %p") %></span>
-                  <span>date : <%= @latest_event&.date&.strftime("%m/%d/%Y") %></span>
+            <%= link_to event_path(@latest_event) do %>
+              <div class="latest-event">
+                <div class="content">
+                  <h3 class="label">latest event</h3>
+                  <h2><span>topic :</span> <%= @latest_event&.heading %></h2>
+                  <p><%= @latest_event&.details %></p>
+                  <div class="description">
+                    <span>scholar : <%= @latest_event&.scholar %></span>
+                    <span>timing : <%= @latest_event&.start_time&.strftime("%I:%M %p") %> - <%= @latest_event&.end_time&.strftime("%I:%M %p") %></span>
+                    <span>date : <%= @latest_event&.date&.strftime("%m/%d/%Y") %></span>
+                  </div>
+                  <h4><i class="fas fa-tag"></i><span><%= @latest_event&.event_type %></span></h4>
                 </div>
-                <h4><i class="fas fa-tag"></i><span><%= @latest_event&.event_type %></span></h4>
+                <div class="image">
+                  <%= image_tag(@latest_event&.image) if @latest_event&.image&.attached? %>
+                </div>
               </div>
-              <div class="image">
-                <%= image_tag(@latest_event&.image) if @latest_event&.image&.attached? %>
-              </div>
-            </div>
+            <% end %>
           <% end %>
         </div>
       </div>
