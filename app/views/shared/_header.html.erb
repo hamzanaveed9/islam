@@ -1,0 +1,46 @@
+<% if @header_setting.present? %>
+  <header class="header">
+    <i class="fa-solid fa-bars-staggered" id="menu-btn"></i>
+
+    <a class="logo" href="#">
+      <% if @header_setting.logo_image.present? %>
+        <%= image_tag @header_setting.logo_image, alt: "logo", class: "logo", height: @header_setting.logo_height, width: @header_setting.logo_width %>
+      <% end %>
+      <div class="logo-name">
+        <h3><%= @header_setting&.logo_text %></h3>
+        <p><%= @header_setting&.tagline %></p>
+      </div>
+    </a>
+
+    <nav class="navbar">
+      <% @header_setting.menu_order.split("\n").each do |menu_item| %>
+        <a href="#<%= menu_item.downcase %>"><%= menu_item %></a>
+      <% end %>
+    </nav>
+
+    <a class="btn" href="#contact">contact us</a>
+  </header>
+<% else %>
+  <header class="header">
+
+  <i class="fa-solid fa-bars-staggered" id="menu-btn"></i>
+
+  <a class="logo" href="#">
+    <%= image_tag("salam_logo.png", alt: "logo", class: "logo") %>
+    <div class="logo-name">
+      <h3>Imam Sidyot</h3>
+      <p>Empowering Excellence</p>
+    </div>
+  </a>
+
+  <nav class="navbar">
+    <a href="#home">home</a>
+    <a href="#about">about</a>
+    <a href="#services">services</a>
+    <a href="#events">event</a>
+  </nav>
+
+  <a class="btn" href="#contact">contact us</a>
+
+  </header>
+<% end %>

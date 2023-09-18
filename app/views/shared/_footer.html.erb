@@ -1,0 +1,123 @@
+  <% if @header_setting.present? %>
+    <footer class="footer">
+
+    <div class="box-container">
+
+      <div class="footer-item">
+        <a class="logo" href="#">
+        <% if @header_setting.logo_image.present? %>
+          <%= image_tag @header_setting.logo_image, alt: "logo", class: "logo", height: @header_setting.logo_height, width: @header_setting.logo_width %>
+        <% end %>
+          <div class="logo-name">
+            <h3><%= @header_setting&.logo_text %></h3>
+            <p><%= @header_setting&.tagline %></p>
+          </div>
+        </a>
+        <p><%= @header_setting&.footer_description %></p>
+      </div>
+
+      <div class="footer-item">
+        <h2>useful links</h2>
+        <span></span>
+        <div class="links">
+          <% @header_setting.menu_order.split("\n").each do |menu_item| %>
+            <a href="#<%= menu_item.downcase %>"><i class="fas fa-long-arrow-alt-right"></i> <%= menu_item %></a>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="footer-item">
+        <h2>office timings</h2>
+        <span></span>
+        <div class="timing">
+          <p>Mon-Fri:<%= @header_setting.timings %></p>
+          <p>Sat: <%= @header_setting.timings %> </p>
+        </div>
+        <div class="social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-item">
+        <h2>contact info</h2>
+        <span></span>
+        <div class="info">
+          <p><i class="phone fas fa-phone"></i><span><%= @header_setting.phone1 %></span></p>
+          <p><i class="phone fas fa-phone"></i><span><%= @header_setting.phone2 %></span></p>
+          <p><i class="envelope fas fa-envelope"></i><span class="gmail"><%= @header_setting&.email %></span></p>
+        </div>
+      
+      </div>
+
+    </div>
+
+    <div class="content">
+      <p>© Copyright 2023 <span>Imam Sidyot</span>, All rights reserved.</p>
+    </div>
+
+  </footer>
+
+  <% else %>
+    <footer class="footer">
+
+      <div class="box-container">
+
+        <div class="footer-item">
+          <a class="logo" href="#">
+          <%= image_tag("salam_logo.png", alt: "Logo") %>
+            <div class="logo-name">
+              <h3>Imam Sidyot</h3>
+              <p>Empowering Excellence</p>
+            </div>
+          </a>
+          <p>His vision is to promote awareness, understanding, and respect in a multi-faith environment, as well as putting his effort into helping the Muslim community around him thrive and excel.</p>
+        </div>
+
+        <div class="footer-item">
+          <h2>useful links</h2>
+          <span></span>
+          <div class="links">
+            <a href="#home"><i class="fas fa-long-arrow-alt-right"></i>home</a>
+            <a href="#about"><i class="fas fa-long-arrow-alt-right"></i>about</a>
+            <a href="#services"><i class="fas fa-long-arrow-alt-right"></i>services</a>
+            <a href="#events"><i class="fas fa-long-arrow-alt-right"></i>events</a>
+          </div>
+        </div>
+
+        <div class="footer-item">
+          <h2>office timings</h2>
+          <span></span>
+          <div class="timing">
+            <p>Mon-Fri: 8:00 - 20:00</p>
+            <p>Sat: 8:00 - 20:00 </p>
+          </div>
+          <div class="social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-item">
+          <h2>contact info</h2>
+          <span></span>
+          <div class="info">
+            <p><i class="phone fas fa-phone"></i><span>306.341.8888</span></p>
+            <p><i class="phone fas fa-phone"></i><span>18774064626</span></p>
+            <p><i class="envelope fas fa-envelope"></i><span class="gmail">imamsaskatoon@gmail.com</span></p>
+          </div>
+        
+        </div>
+
+      </div>
+
+      <div class="content">
+        <p>© Copyright 2023 <span>Imam Sidyot</span>, All rights reserved.</p>
+      </div>
+
+    </footer>
+  <% end %>
