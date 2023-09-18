@@ -32,7 +32,7 @@
     </a>
     <nav class="navbar">
       <a href="#home">home</a>
-      <a href="#about">about</a>
+      <%= link_to 'about', about_us_url %>
       <a href="#services">services</a>
       <a href="#events">event</a>
     </nav>
@@ -41,9 +41,9 @@
   <!-- ==================== Header Area (End) ==================== -->
 
   <!-- ==================== Event Details Area (Start) ==================== -->
-  <section class="events" id="events">
+  <section class="events" id="events" style='margin-top: 90px'>
       <div class="heading">
-        <h1>upcoming events</h1>
+        <h1>Event's Details Page</h1>
         <div class="design">
           <%= image_tag("salam_logo.png", alt: "Logo") %>
         </div>

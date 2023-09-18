@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'pages#home'
+
   resources :events, only: [:show]
-  root 'pages#home'  
+  get '/about_us', to: 'pages#about_us'
 end

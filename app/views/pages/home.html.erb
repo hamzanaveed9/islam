@@ -37,7 +37,7 @@
 
     <nav class="navbar">
       <a href="#home">home</a>
-      <a href="#about">about</a>
+      <%= link_to 'about', about_us_url %>
       <a href="#services">services</a>
       <a href="#events">event</a>
     </nav>
@@ -558,7 +558,7 @@
         <span></span>
         <div class="links">
           <a href="#home"><i class="fas fa-long-arrow-alt-right"></i>home</a>
-          <a href="#about"><i class="fas fa-long-arrow-alt-right"></i>about</a>
+          <%= link_to about_us_url do %><i class="fas fa-long-arrow-alt-right"></i>about<% end %>
           <a href="#services"><i class="fas fa-long-arrow-alt-right"></i>services</a>
           <a href="#events"><i class="fas fa-long-arrow-alt-right"></i>events</a>
           <%

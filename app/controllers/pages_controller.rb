@@ -5,4 +5,8 @@ class PagesController < ApplicationController
     @events = Event.all
     @latest_event = Event.order(:date).first
   end
+
+  def about_us
+    @about = About.first
+  end
 end
