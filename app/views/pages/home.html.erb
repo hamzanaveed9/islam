@@ -37,7 +37,7 @@
 
     <nav class="navbar">
       <a href="#home">home</a>
-      <a href="#about">about</a>
+      <%= link_to 'about', about_us_url %>
       <a href="#services">services</a>
       <a href="#events">event</a>
     </nav>
@@ -50,122 +50,103 @@
 
 
   <!-- ==================== Home Area (Start) ==================== -->
-  <% if @sliders.blank? %>
   <section class="home" id="home">
 
     <div class="swiper-container home-slider">
       <div class="swiper-wrapper">
-
-        <div class="swiper-slide home-item">
-        
-          <div class="content">
-            <div class="text" data-aos="fade-right">
-              <div class="logo"><%= image_tag("Logo.png", alt: "logo") %></div>
-              <h5>بسم الله الرحمن الرحيم</h5>
-              <h2>أَبْشِرُوا وَسَدِّدُوا وَقَارِبُوا</h2>
-              <div class="heading">
-                <div class="design">
-                  <p class="design-info">( al-Adab al-Mufrad 254 )</p>
-                </div>
-              </div>
-              <p>Give glad tidings, follow the right course, and seek nearness to Allah.</p>
-              <a class="btn" href="#contact">contact us</a>
-            </div>
-          </div>
-        
-          <div class="image">
-            <%= image_tag("Home-1.png", alt: "logo") %>
-          </div>
-        
-        </div>
-
-        <div class="swiper-slide home-item">
-
-          <div class="content">
-            <div class="text" data-aos="fade-right">
-              <div class="logo"><%= image_tag("Logo.png", alt: "logo") %></div>
-              <h5>بسم الله الرحمن الرحيم</h5>
-              <h2>يَقُولُ اللَّهُ إِنْ ظَنَّ بِي خَيْرًا فَلَهُ وَإِنْ ظَنَّ شَرًّا فَلَهُ</h2>
-              <div class="heading">
-                <div class="design">
-                  <p class="design-info">( Sahih Ibn Hibban 639 )</p>
-                </div>
-              </div>
-              <p>Allah Almighty says: I am as My servants expects of Me. If he thinks good of Me, he will have it. If he thinks evil of
-              Me, he will have it.
-              </p>
-              <a class="btn" href="#contact">contact us</a>
-            </div>
-          </div>
-
-          <div class="image">
-          <%= image_tag("Home-2.png", alt: "logo") %>
-          </div>
-
-        </div>
-
-        <div class="swiper-slide home-item">
-
-          <div class="content">
-            <div class="text" data-aos="fade-right">
-              <div class="logo"><%= image_tag("Logo.png", alt: "logo") %></div>
-              <h5>بسم الله الرحمن الرحيم</h5>
-              <h2>قَالَ اللَّهُ أَنْفِقْ يَا ابْنَ آدَمَ أُنْفِقْ عَلَيْك</h2>
-              <div class="heading">
-                <div class="design">
-                  <p class="design-info">( Sahih al-Bukhari 5352 )</p>
-                </div>
-              </div>
-              <p>Allah said, 'O son of Adam! Spend, and I shall spend on you</p>
-              <a class="btn" href="#contact">contact us</a>
-            </div>
-          </div>
-          
-          <div class="image">
-            <%= image_tag("Home-3.png", alt: "logo") %>
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="swiper-pagination swiper-pagination1"></div>
-
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-
-    </div>
-
-  </section>
-  <% else %>
-  <section class="home" id="home">
-
-    <div class="swiper-container home-slider">
-      <div class="swiper-wrapper">
-
-        <div class="swiper-slide home-item">
-          <% @sliders.each do |slider| %>
+        <% if @sliders.blank? %>
+          <div class="swiper-slide home-item">
             <div class="content">
               <div class="text" data-aos="fade-right">
-                <div class="logo"><%= image_tag(slider&.logo, alt: "logo") %></div>
-                <h5><%= slider&.header %></h5>
-                <h2><%= slider&.title %></h2>
+                <div class="logo"><%= image_tag("Logo.png", alt: "logo") %></div>
+                <h5>بسم الله الرحمن الرحيم</h5>
+                <h2>أَبْشِرُوا وَسَدِّدُوا وَقَارِبُوا</h2>
                 <div class="heading">
                   <div class="design">
-                    <p class="design-info"><%= slider&.context %></p>
+                    <p class="design-info">( al-Adab al-Mufrad 254 )</p>
                   </div>
                 </div>
-                <p><%= slider&.description %></p>
-                <a class="btn" href="<%= slider&.link_address %>"><%= slider&.link_text %></a>
+                <p>Give glad tidings, follow the right course, and seek nearness to Allah.</p>
+                <a class="btn" href="#contact">contact us</a>
+              </div>
+            </div>
+          
+            <div class="image">
+              <%= image_tag("Home-1.png", alt: "logo") %>
+            </div>
+          </div>
+
+          <div class="swiper-slide home-item">
+
+            <div class="content">
+              <div class="text" data-aos="fade-right">
+                <div class="logo"><%= image_tag("Logo.png", alt: "logo") %></div>
+                <h5>بسم الله الرحمن الرحيم</h5>
+                <h2>يَقُولُ اللَّهُ إِنْ ظَنَّ بِي خَيْرًا فَلَهُ وَإِنْ ظَنَّ شَرًّا فَلَهُ</h2>
+                <div class="heading">
+                  <div class="design">
+                    <p class="design-info">( Sahih Ibn Hibban 639 )</p>
+                  </div>
+                </div>
+                <p>Allah Almighty says: I am as My servants expects of Me. If he thinks good of Me, he will have it. If he thinks evil of
+                Me, he will have it.
+                </p>
+                <a class="btn" href="#contact">contact us</a>
               </div>
             </div>
 
             <div class="image">
-              <%= image_tag(slider&.background_image, alt: "slider_image") %>
+            <%= image_tag("Home-2.png", alt: "logo") %>
+            </div>
+
+          </div>
+
+          <div class="swiper-slide home-item">
+
+            <div class="content">
+              <div class="text" data-aos="fade-right">
+                <div class="logo"><%= image_tag("Logo.png", alt: "logo") %></div>
+                <h5>بسم الله الرحمن الرحيم</h5>
+                <h2>قَالَ اللَّهُ أَنْفِقْ يَا ابْنَ آدَمَ أُنْفِقْ عَلَيْك</h2>
+                <div class="heading">
+                  <div class="design">
+                    <p class="design-info">( Sahih al-Bukhari 5352 )</p>
+                  </div>
+                </div>
+                <p>Allah said, 'O son of Adam! Spend, and I shall spend on you</p>
+                <a class="btn" href="#contact">contact us</a>
+              </div>
+            </div>
+            
+            <div class="image">
+              <%= image_tag("Home-3.png", alt: "logo") %>
+            </div>
+
+          </div>
+        <% else %>
+          <% @sliders.each do |slider| %>
+            <div class="swiper-slide home-item">
+              <div class="content">
+                <div class="text" data-aos="fade-right">
+                  <div class="logo"><%= image_tag(slider&.logo, alt: "logo") %></div>
+                  <h5><%= slider&.header %></h5>
+                  <h2><%= slider&.title %></h2>
+                  <div class="heading">
+                    <div class="design">
+                      <p class="design-info"><%= slider&.context %></p>
+                    </div>
+                  </div>
+                  <p><%= slider&.description %></p>
+                  <a class="btn" href="<%= slider&.link_address %>"><%= slider&.link_text %></a>
+                </div>
+              </div>
+
+              <div class="image">
+                <%= image_tag(slider&.background_image, alt: "slider_image") %>
+              </div>
             </div>
           <% end %>
-        </div>
-
+        <% end %>      
       </div>
 
       <div class="swiper-pagination swiper-pagination1"></div>
@@ -176,7 +157,6 @@
     </div>
 
   </section>
-  <% end %>
   <!-- ==================== Home Area (End) ==================== -->
 
 
@@ -443,38 +423,42 @@
       <div class="box-container">
         <div class="event-box1">
           <% @events&.each do |event| %>
-            <div class="event-item">
-              <div class="date">
-                <h2><%= event&.date&.strftime("%d %b") %></h2>
-                <p><%= event&.date&.strftime("%a") %></p>
+              <div class="event-item">
+                <div class="date">
+                  <h2><%= event&.date&.strftime("%d %b") %></h2>
+                  <p><%= event&.date&.strftime("%a") %></p>
+                </div>
+                <div class="detail">
+                  <%= link_to event_path(event) do %>
+                    <h3><%= event&.heading %></h3>
+                    <p><%= event&.scholar %> | <span class="timing"><%= event&.start_time&.strftime("%I:%M %p") %></span></p>
+                    <h4><i class="fas fa-tag"></i><span><%= event&.event_type %></span></h4>
+                  <% end %>
+                </div>
               </div>
-              <div class="detail">
-                <h3><%= event&.heading %></h3>
-                <p><%= event&.scholar %> | <span class="timing"><%= event&.start_time&.strftime("%I:%M %p") %></span></p>
-                <h4><i class="fas fa-tag"></i><span><%= event&.event_type %></span></h4>
-              </div>
-            </div>
           <% end %>
         </div>
 
         <div class="event-box2">
           <% if @latest_event %>
-            <div class="latest-event">
-              <div class="content">
-                <h3 class="label">latest event</h3>
-                <h2><span>topic :</span> <%= @latest_event&.heading %></h2>
-                <p><%= @latest_event&.details %></p>
-                <div class="description">
-                  <span>scholar : <%= @latest_event&.scholar %></span>
-                  <span>timing : <%= @latest_event&.start_time&.strftime("%I:%M %p") %> - <%= @latest_event&.end_time&.strftime("%I:%M %p") %></span>
-                  <span>date : <%= @latest_event&.date&.strftime("%m/%d/%Y") %></span>
+            <%= link_to event_path(@latest_event) do %>
+              <div class="latest-event">
+                <div class="content">
+                  <h3 class="label">latest event</h3>
+                  <h2><span>topic :</span> <%= @latest_event&.heading %></h2>
+                  <p><%= @latest_event&.details %></p>
+                  <div class="description">
+                    <span>scholar : <%= @latest_event&.scholar %></span>
+                    <span>timing : <%= @latest_event&.start_time&.strftime("%I:%M %p") %> - <%= @latest_event&.end_time&.strftime("%I:%M %p") %></span>
+                    <span>date : <%= @latest_event&.date&.strftime("%m/%d/%Y") %></span>
+                  </div>
+                  <h4><i class="fas fa-tag"></i><span><%= @latest_event&.event_type %></span></h4>
                 </div>
-                <h4><i class="fas fa-tag"></i><span><%= @latest_event&.event_type %></span></h4>
+                <div class="image">
+                  <%= image_tag(@latest_event&.image) if @latest_event&.image&.attached? %>
+                </div>
               </div>
-              <div class="image">
-                <%= image_tag(@latest_event&.image) if @latest_event&.image&.attached? %>
-              </div>
-            </div>
+            <% end %>
           <% end %>
         </div>
       </div>
@@ -574,7 +558,7 @@
         <span></span>
         <div class="links">
           <a href="#home"><i class="fas fa-long-arrow-alt-right"></i>home</a>
-          <a href="#about"><i class="fas fa-long-arrow-alt-right"></i>about</a>
+          <%= link_to about_us_url do %><i class="fas fa-long-arrow-alt-right"></i>about<% end %>
           <a href="#services"><i class="fas fa-long-arrow-alt-right"></i>services</a>
           <a href="#events"><i class="fas fa-long-arrow-alt-right"></i>events</a>
           <%

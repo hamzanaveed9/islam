@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Title -->
+  <title>Imam Sidyot | Event Details</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/salam_logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+  <!-- ==================== Scroll-Top Area (Start) ==================== -->
+  <a href="#" class="scroll-top">
+    <i class="fas fa-caret-up"></i>
+  </a>
+  <!-- ==================== Scroll-Top Area (End) ==================== -->
+
+  <!-- ==================== Header Area (Start) ==================== -->
+  <header class="header">
+    <i class="fa-solid fa-bars-staggered" id="menu-btn"></i>
+    <a class="logo" href="#">
+      <%= image_tag("salam_logo.png", alt: "logo") %>
+      <div class="logo-name">
+        <h3>Imam Sidyot</h3>
+        <p>Empowering Excellence</p>
+      </div>
+    </a>
+    <nav class="navbar">
+      <a href="#home">home</a>
+      <%= link_to 'about', about_us_url %>
+      <a href="#services">services</a>
+      <a href="#events">event</a>
+    </nav>
+    <a class="btn" href="#contact">contact us</a>
+  </header>
+  <!-- ==================== Header Area (End) ==================== -->
+
+  <!-- ==================== About Area (Start) ==================== -->
+  <% if @about.blank? %>
+  <section class="about" id="about" style='margin-top: 90px'>
+
+    <div class="box-container">
+
+      <div class="content">
+        <div class="heading">
+          <h1>welcome to <br> Imam Sidyot Empowering Excellence</h1>
+          <div class="design">
+            <%= image_tag("salam_logo.png", alt: "logo") %>
+          </div>
+        </div>
+        <p>Imam Ilyas Sidyot is a dedicated, hardworking, compassionate, and resourceful Imam. He has spent his time working throughout Canada, excelling in religious leadership, family counseling, and community building. He also has worked hard in facilitating community outreach initiatives, interfaith programs and establishing positive relationships in diverse settings. With over 25 years of experience, he has developed a wide range of tools, skills, to help navigate any challenges with skill and sensitivity by the will of Allah (SWT). </p>
+        <%
+=begin%>
+ <ul>
+          <li>Helping needy people</li>
+          <li>providing shelter</li>
+          <li>Special ChildCare</li>
+        </ul> 
+<%
+=end%>
+<br>
+<%
+=begin%>
+ <p>His vision is to promote awareness, understanding, and respect in a multi-faith environment, as well as putting his effort into helping the Muslim community around him thrive and excel.</p> 
+<%
+=end%>
+    
+ <a class="btn" href="#contact">Detail Page</a> 
+      </div>
+      <div class="image">
+        <div>
+          <div class="image1">
+            <%= image_tag("About-1.png", alt: "about1") %>
+          </div>
+          <div class="image2">
+            <%= image_tag("About-2.png", alt: "about1") %>
+          </div>
+        </div>
+        <div>
+          <div class="image3">
+            <%= image_tag("About-3.png", alt: "about1") %>
+          </div>
+          <div class="image4">
+            <%= image_tag("About-4.png", alt: "about1") %>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+  <% else %>
+  <section class="about" id="about">
+    <div class="box-container">
+      <div class="content" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
+        <div class="heading">
+          <h1>welcome to <br> <%= @about&.title %></h1>
+          <div class="design">
+            <%= image_tag("salam_logo.png", alt: "logo", class: "logo") %>
+          </div>
+        </div>
+        <p><%= @about&.description %></p>
+        <a class="btn" href="<%= @about&.link_text %>">Detail Page</a>
+      </div>
+
+      <div class="image">
+        <div>
+          <div class="image1">
+            <%= image_tag(@about&.images[0], alt: "about1") if @about&.images&.attached? %>
+          </div>
+          <div class="image2">
+            <%= image_tag(@about&.images[1], alt: "about2") if @about&.images&.attached? %>
+          </div>
+        </div>
+        <div>
+          <div class="image3">
+            <%= image_tag(@about&.images[2], alt: "about3") if @about&.images&.attached? %>
+          </div>
+          <div class="image4">
+            <%= image_tag(@about&.images[3], alt: "about4") if @about&.images&.attached? %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <% end %>
+  <!-- ==================== About Area (End) ==================== -->
+
+  <!-- ==================== Footer Area (Start) ==================== -->
+  <footer class="footer">
+    <div class="box-container">
+      <div class="footer-item">
+        <a class="logo" href="#">
+          <%= image_tag("salam_logo.png", alt: "Logo") %>
+          <div class="logo-name">
+            <h3>Imam Sidyot</h3>
+            <p>Empowering Excellence</p>
+          </div>
+        </a>
+        <p>His vision is to promote awareness, understanding, and respect in a multi-faith environment, as well as putting his effort into helping the Muslim community around him thrive and excel.</p>
+      </div>
+
+
+    </div>
+
+    <div class="content">
+      <p>© Copyright 2023 <span>Imam Sidyot</span>, All rights reserved.</p>
+    </div>
+  </footer>
+  <!-- ==================== Footer Area (End) ==================== -->
+</body>
+</html>

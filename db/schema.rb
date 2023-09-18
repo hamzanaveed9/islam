@@ -75,6 +75,24 @@ ActiveRecord::Schema.define(version: 2023_09_17_223244) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "header_settings", force: :cascade do |t|
+    t.string "logo_image"
+    t.string "logo_text"
+    t.string "tagline"
+    t.integer "logo_height", default: 100
+    t.integer "logo_width", default: 200
+    t.text "menu_order", default: "home\nGallery\nabout\nservices\nevent"
+    t.text "menu_text", default: "Home\nGallery\nAbout\nServices\nEvent"
+    t.string "footer_description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "office_working_days"
+    t.string "timings"
+    t.string "phone1"
+    t.string "phone2"
+    t.string "email"
+  end
+
   create_table "services", force: :cascade do |t|
     t.string "name"
     t.string "logo"
@@ -93,6 +111,13 @@ ActiveRecord::Schema.define(version: 2023_09_17_223244) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "background_image"
     t.string "logo"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
