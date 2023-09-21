@@ -27,7 +27,7 @@
 
     <i class="fa-solid fa-bars-staggered" id="menu-btn"></i>
 
-    <a class="logo" href="#">
+    <a class="logo" href="/">
       <%= image_tag("salam_logo.png", alt: "logo", class: "logo") %>
       <div class="logo-name">
         <h3>Imam Sidyot</h3>
@@ -36,7 +36,7 @@
     </a>
 
     <nav class="navbar">
-      <a href="#home">home</a>
+      <%= link_to 'home', root_path %>
       <%= link_to 'about', about_us_url %>
       <a href="#services">services</a>
       <a href="#events">event</a>
@@ -543,7 +543,7 @@
     <div class="box-container">
 
       <div class="footer-item">
-        <a class="logo" href="#">
+        <a class="logo" href="/">
         <%= image_tag("salam_logo.png", alt: "Logo") %>
           <div class="logo-name">
             <h3>Imam Sidyot</h3>
@@ -557,7 +557,7 @@
         <h2>useful links</h2>
         <span></span>
         <div class="links">
-          <a href="#home"><i class="fas fa-long-arrow-alt-right"></i>home</a>
+          <a href="/"><i class="fas fa-long-arrow-alt-right"></i>home</a>
           <%= link_to about_us_url do %><i class="fas fa-long-arrow-alt-right"></i>about<% end %>
           <a href="#services"><i class="fas fa-long-arrow-alt-right"></i>services</a>
           <a href="#events"><i class="fas fa-long-arrow-alt-right"></i>events</a>
@@ -579,10 +579,9 @@
           <p>Sat: 8:00 - 20:00 </p>
         </div>
         <div class="social">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.facebook.com/sidyot?mibextid=eBUYbo"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/Imamilyas"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.youtube.com/@Imam-Ilyas-sidyot"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
 
