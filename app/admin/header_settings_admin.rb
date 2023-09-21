@@ -1,6 +1,6 @@
 Trestle.resource(:header_settings) do
   menu do
-    item "Settings", icon: "fa-solid fa-cog"
+    item "Settings", icon: "fa fa-solid fa-cog"
   end
 
   form do |header_setting|

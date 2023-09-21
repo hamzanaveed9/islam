@@ -1,7 +1,7 @@
 class About < ApplicationRecord
   has_many_attached :images
 
-  before_save :check_existing_entry
+  before_create :check_existing_entry
 
   private
 
