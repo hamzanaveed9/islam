@@ -9,7 +9,7 @@ Trestle.resource(:events) do
     column :details
     column :scholar
     column :date
-    column :event_type
+    column :event_types
     column :start_time
     column :end_time
     actions
@@ -24,7 +24,7 @@ Trestle.resource(:events) do
     text_area :details
     text_field :scholar
     date_field :date
-    select :event_type, Event::EVENT_TYPES
+    select :event_types, Event::EVENT_TYPES, { label: "Event Types" }, multiple: true
     datetime_field :start_time
     datetime_field :end_time
     active_storage_field :image

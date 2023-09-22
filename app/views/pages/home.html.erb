@@ -432,7 +432,7 @@
                   <%= link_to event_path(event) do %>
                     <h3><%= event&.heading %></h3>
                     <p><%= event&.scholar %> | <span class="timing"><%= event&.start_time&.strftime("%I:%M %p") %></span></p>
-                    <h4><i class="fas fa-tag"></i><span><%= event&.event_type %></span></h4>
+                    <h4><i class="fas fa-tag"></i><span><%= event&.event_types&.join(', ') %></span></h4>
                   <% end %>
                 </div>
               </div>
@@ -452,7 +452,7 @@
                     <span>timing : <%= @latest_event&.start_time&.strftime("%I:%M %p") %> - <%= @latest_event&.end_time&.strftime("%I:%M %p") %></span>
                     <span>date : <%= @latest_event&.date&.strftime("%m/%d/%Y") %></span>
                   </div>
-                  <h4><i class="fas fa-tag"></i><span><%= @latest_event&.event_type %></span></h4>
+                  <h4><i class="fas fa-tag"></i><span><%= @latest_event&.event_types&.join(',') %></span></h4>
                 </div>
                 <div class="image">
                   <%= image_tag(@latest_event&.image) if @latest_event&.image&.attached? %>
