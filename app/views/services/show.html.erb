@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Title -->
+  <title>Imam Sidyot | Service Details</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/salam_logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+  <!-- ==================== Scroll-Top Area (Start) ==================== -->
+  <a href="#" class="scroll-top">
+    <i class="fas fa-caret-up"></i>
+  </a>
+  <!-- ==================== Scroll-Top Area (End) ==================== -->
+
+  <!-- ==================== Header Area (Start) ==================== -->
+  <header class="header">
+    <i class="fa-solid fa-bars-staggered" id="menu-btn"></i>
+    <a class="logo" href="/">
+      <%= image_tag("salam_logo.png", alt: "logo") %>
+      <div class="logo-name">
+        <h3>Imam Sidyot</h3>
+        <p>Empowering Excellence</p>
+      </div>
+    </a>
+    <nav class="navbar">
+      <%= link_to 'home', root_path %>
+      <%= link_to 'about', about_us_url %>
+      <a href="#services">services</a>
+      <a href="#events">event</a>
+    </nav>
+    <a class="btn" href="#contact">contact us</a>
+  </header>
+  <!-- ==================== Header Area (End) ==================== -->
+
+  <!-- ==================== Event Details Area (Start) ==================== -->
+  <section class="events" id="events" style='margin-top: 90px'>
+    <div class="heading">
+      <h1>Service's Details Page</h1>
+      <div class="design">
+        <%= image_tag("salam_logo.png", alt: "Logo") %>
+      </div>
+    </div>
+    <div class="image">
+      <%= @service&.logo&.attached? ? image_tag(@service&.logo) : image_tag("Home-1.png", alt: "logo") %>
+    </div>
+
+    <div class="left-heading" style='margin: 10px 0px'>
+    <h1><%= @service&.name %></h1>
+    </div>
+    <div class='detail'>
+      <p style='margin-bottom: 10px; font: 20px'><%= @service&.description %></p>
+    </div>
+
+    <div class="container">
+      <div class="event-box">
+        <div class="latest-event">
+          <div class="content">            
+            <div class="description">
+              <span>feedbacks : <%= @service.feedbacks.count %></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ==================== Event Details Area (End) ==================== -->
+
+  <!-- ==================== Footer Area (Start) ==================== -->
+  <footer class="footer">
+
+    <div class="box-container">
+
+      <div class="footer-item">
+        <a class="logo" href="/">
+        <%= image_tag("salam_logo.png", alt: "Logo") %>
+          <div class="logo-name">
+            <h3>Imam Sidyot</h3>
+            <p>Empowering Excellence</p>
+          </div>
+        </a>
+        <p>His vision is to promote awareness, understanding, and respect in a multi-faith environment, as well as putting his effort into helping the Muslim community around him thrive and excel.</p>
+      </div>
+
+      <div class="footer-item">
+        <h2>useful links</h2>
+        <span></span>
+        <div class="links">
+          <a href="/"><i class="fas fa-long-arrow-alt-right"></i>home</a>
+          <%= link_to about_us_url do %><i class="fas fa-long-arrow-alt-right"></i>about<% end %>
+          <a href="#services"><i class="fas fa-long-arrow-alt-right"></i>services</a>
+          <a href="#events"><i class="fas fa-long-arrow-alt-right"></i>events</a>
+          <%
+=begin%>
+ <a href="#donation"><i class="fas fa-long-arrow-alt-right"></i>donation</a>
+          <a href="#volunteers"><i class="fas fa-long-arrow-alt-right"></i>volunteers</a>
+          <a href="#testimonials"><i class="fas fa-long-arrow-alt-right"></i>testimonials</a> 
+<%
+=end%>
+        </div>
+      </div>
+
+      <div class="footer-item">
+        <h2>office timings</h2>
+        <span></span>
+        <div class="timing">
+          <p>Mon-Fri: 8:00 - 20:00</p>
+          <p>Sat: 8:00 - 20:00 </p>
+        </div>
+        <div class="social">
+          <a href="https://www.facebook.com/sidyot?mibextid=eBUYbo"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/Imamilyas"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.youtube.com/@Imam-Ilyas-sidyot"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-item">
+        <h2>contact info</h2>
+        <span></span>
+        <div class="info">
+          <p><i class="phone fas fa-phone"></i><span>306.341.8888</span></p>
+          <p><i class="phone fas fa-phone"></i><span>18774064626</span></p>
+          <p><i class="envelope fas fa-envelope"></i><span class="gmail">imamsaskatoon@gmail.com</span></p>
+          <%
+=begin%>
+ <p><i class="address fas fa-map"></i><span>karachi, pakistan</span></p> 
+<%
+=end%>
+        </div>
+       
+      </div>
+
+    </div>
+
+    <div class="content">
+      <p>© Copyright 2023 <span>Imam Sidyot</span>, All rights reserved.</p>
+    </div>
+
+  </footer>
+  <!-- ==================== Footer Area (End) ==================== -->
+</body>
+</html>
