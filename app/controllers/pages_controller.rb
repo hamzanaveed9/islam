@@ -4,6 +4,7 @@ class PagesController < ApplicationController
     @about = About.first
     @events = Event.all
     @latest_event = Event.order(:date).first
+    @services = Service.all
   end
 
   def about_us
