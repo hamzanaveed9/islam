@@ -265,72 +265,73 @@
       <h1>our services</h1>
       <div class="design"><%= image_tag("salam_logo.png", alt: "logo") %></div>
     </div>
-    
-    <div class="box-container">
-    
-      <div class="service-item">
-        <div class="image">
-        <%= image_tag("Service-1.png", alt: "Service-1") %>
-        </div>
-        <h3>Nikah & Marriage </h3>
-      </div>
-
-      <div class="service-item">
-        <div class="image">
-        <%= image_tag("Service-2.png", alt: "Service-2") %>
-        </div>
-        <h3>Counselling</h3>
-      </div>
-
-      <div class="service-item">
-        <div class="image">
-        <%= image_tag("Service-3.png", alt: "Service-3") %>
-        </div>
-        <h3>Khutba or Prayer Service</h3>
-      </div>
-
-      <div class="noMobileView" style="width:100%;"></div>
+    <% if @services.blank? %>      
+      <div class="box-container">
       
-      <div class="service-item">
-        <div class="image">
-                <%= image_tag("Service-4.png", alt: "Service-4") %>
+        <div class="service-item">
+          <div class="image">
+          <%= image_tag("Service-1.png", alt: "Service-1") %>
+          </div>
+          <h3>Nikah & Marriage </h3>
         </div>
-        <h3>Q&A and experts advise</h3>
-      </div>
 
-      <div class="service-item">
-        <div class="image">
-                  <%= image_tag("Service-5.png", alt: "Service-5") %>
+        <div class="service-item">
+          <div class="image">
+          <%= image_tag("Service-2.png", alt: "Service-2") %>
+          </div>
+          <h3>Counselling</h3>
         </div>
-        <h3>Speech or Presentation</h3>
-      </div>
 
-      <div class="service-item">
-        <div class="image">
-                  <%= image_tag("Service-6.png", alt: "Service-6") %>
+        <div class="service-item">
+          <div class="image">
+          <%= image_tag("Service-3.png", alt: "Service-3") %>
+          </div>
+          <h3>Khutba or Prayer Service</h3>
         </div>
-        <h3>Separation or Divorce/Khula</h3>
-      </div>
-      
-      <%
-=begin%>
- <div class="service-item">
-        <div class="image">
-                <%= image_tag("Service-7.png", alt: "Service-7") %>
-        </div>
-        <h3>Food</h3>
-      </div>
-      
-      <div class="service-item">
-        <div class="image">
-                <%= image_tag("Service-8.png", alt: "Service-8") %>
-        </div>
-        <h3>family counselling</h3>
-      </div> 
-<%
-=end%>
 
-    </div>
+        <div class="noMobileView" style="width:100%;"></div>
+        
+        <div class="service-item">
+          <div class="image">
+                  <%= image_tag("Service-4.png", alt: "Service-4") %>
+          </div>
+          <h3>Q&A and experts advise</h3>
+        </div>
+
+        <div class="service-item">
+          <div class="image">
+                    <%= image_tag("Service-5.png", alt: "Service-5") %>
+          </div>
+          <h3>Speech or Presentation</h3>
+        </div>
+
+        <div class="service-item">
+          <div class="image">
+                    <%= image_tag("Service-6.png", alt: "Service-6") %>
+          </div>
+          <h3>Separation or Divorce/Khula</h3>
+        </div>
+      </div>
+    <% else %>
+      <div class="box-container">
+        <% service_count = 0 %>
+        <% @services&.each do |service| %>
+          <div class="service-item">
+            <%= link_to service_path(service) do %>
+              <div class="image">
+                <%= image_tag(service&.logo, alt: "Service-logo") if service&.logo&.attached? %>
+              </div>
+              <h3><%= service&.name %></h3>
+            <% end %>
+          </div>
+          <% service_count += 1 %>
+
+          <% if service_count % 3 == 0 %>
+            <div class="noMobileView" style="width:100%;"></div>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
 
   </section>
   <!-- ==================== Services Area (End) ==================== -->
@@ -432,7 +433,7 @@
                   <%= link_to event_path(event) do %>
                     <h3><%= event&.heading %></h3>
                     <p><%= event&.scholar %> | <span class="timing"><%= event&.start_time&.strftime("%I:%M %p") %></span></p>
-                    <h4><i class="fas fa-tag"></i><span><%= event&.event_type %></span></h4>
+                    <h4><i class="fas fa-tag"></i><span><%= event&.event_types&.join(', ') %></span></h4>
                   <% end %>
                 </div>
               </div>
@@ -452,7 +453,7 @@
                     <span>timing : <%= @latest_event&.start_time&.strftime("%I:%M %p") %> - <%= @latest_event&.end_time&.strftime("%I:%M %p") %></span>
                     <span>date : <%= @latest_event&.date&.strftime("%m/%d/%Y") %></span>
                   </div>
-                  <h4><i class="fas fa-tag"></i><span><%= @latest_event&.event_type %></span></h4>
+                  <h4><i class="fas fa-tag"></i><span><%= @latest_event&.event_types&.join(',') %></span></h4>
                 </div>
                 <div class="image">
                   <%= image_tag(@latest_event&.image) if @latest_event&.image&.attached? %>

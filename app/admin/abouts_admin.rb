@@ -16,7 +16,7 @@ Trestle.resource(:abouts) do
     [:images]
   end
 
-  form do |user|
+  form do |about|
     text_field :title
     text_area :description
     text_field :link_text

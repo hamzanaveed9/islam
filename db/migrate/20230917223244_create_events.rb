@@ -5,7 +5,7 @@ class CreateEvents < ActiveRecord::Migration[6.1]
       t.text :details
       t.string :scholar
       t.date :date
-      t.string :event_type #, array: true, default: []
+      t.string :event_types, array: true, default: []
       t.datetime :start_time
       t.datetime :end_time
 
