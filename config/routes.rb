@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   resources :events, only: [:show]
   resources :services, only: [:show]
   resources :feedbacks, only: [:new, :create]
+  resources :galleries, only: [:index, :show]
   get '/about_us', to: 'pages#about_us'
 end
