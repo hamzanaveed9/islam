@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>  
+
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- Title -->
-  <title>Imam Sidyot | Service Details</title>
+  <title>Imam Sidyot | Empowering Excellence</title>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="/salam_logo.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-</head>
+<link rel="icon" type="image/x-icon" href="/salam_logo.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-<body>
+</head>
   <!-- ==================== Scroll-Top Area (Start) ==================== -->
   <a href="#" class="scroll-top">
     <i class="fas fa-caret-up"></i>
@@ -41,37 +41,68 @@
   </header>
   <!-- ==================== Header Area (End) ==================== -->
 
-  <!-- ==================== Event Details Area (Start) ==================== -->
+  <!-- ==================== Gallery Details Area (Start) ==================== -->
   <section class="events" id="events" style='margin-top: 90px'>
     <div class="heading">
-      <h1>Service's Details Page</h1>
+      <h1>Gallery's Details Page</h1>
       <div class="design">
         <%= image_tag("salam_logo.png", alt: "Logo") %>
       </div>
     </div>
     <div class="image">
-      <%= @service&.logo&.attached? ? image_tag(@service&.logo) : image_tag("Home-1.png", alt: "logo") %>
+      <%= @gallery&.front_image&.attached? ? image_tag(@gallery&.front_image) : image_tag("Home-1.png", alt: "logo") %>
     </div>
 
     <div class="left-heading" style='margin: 10px 0px'>
-    <h1><%= @service&.name %></h1>
+    <h1><%= @gallery&.title %></h1>
     </div>
     <div class='detail'>
-      <p style='margin-bottom: 10px; font: 20px'><%= @service&.description %></p>
+      <p style='margin-bottom: 10px; font: 20px'><%= @gallery&.description %></p>
     </div>
 
-    <div class="container">
-      <div class="event-box">
-        <div class="latest-event">
-          <div class="content">            
-            <div class="description">
-              <span>feedbacks : <%= @service.feedbacks.count %></span>
+    <!-- ==================== Slider Area (Start) ==================== -->
+    
+    <!-- ==================== Slider Area (End) ==================== -->
+  </section>
+  <!-- ==================== Gallery Details Area (End) ==================== -->
+
+
+
+  <!-- ==================== Slider Area (Start) ==================== -->
+  <section class="home" id="home" style='margin-bottom: 80px'>
+
+    <div class="swiper-container home-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide home-item">
+          <div class="image">
+            <%= image_tag(@gallery&.slider_image_1) %>
           </div>
         </div>
+
+        <div class="swiper-slide home-item">
+          <div class="image">
+            <%= image_tag(@gallery&.slider_image_2) %>
+          </div>
+
+        </div>
+
+        <div class="swiper-slide home-item">
+          <div class="image">
+            <%= image_tag(@gallery&.slider_image_3) %>
+          </div>
+
+        </div>
       </div>
+
+      <div class="swiper-pagination swiper-pagination1"></div>
+
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
     </div>
+
   </section>
-  <!-- ==================== Event Details Area (End) ==================== -->
+  <!-- ==================== Slider Area (End) ==================== -->
 
   <!-- ==================== Footer Area (Start) ==================== -->
   <footer class="footer">
@@ -146,5 +177,53 @@
 
   </footer>
   <!-- ==================== Footer Area (End) ==================== -->
-</body>
+
+
+
+
+    
+
+  
+
+  <!-- JQuery -->
+ <%= javascript_include_tag 'jquery-3.6.0' %>
+  <!-- SWIPER JS -->
+  <%= javascript_include_tag 'swiper.js' %>
+  <%= javascript_include_tag 'home-slider.js' %>
+    <%= javascript_include_tag 'script.js' %>
+        <%= javascript_include_tag 'scroll-spy.js' %>
+  <!-- Animation -->
+ <%= javascript_include_tag 'aos.js' %>
+
+
+  <!-- ========== Custom Script ========== -->
+
+  <!-- Contact-Form Script -->
+  <script>
+      jQuery('#contact-form').on('submit',function(e){
+      jQuery('#contact-form #msg').html('');
+      jQuery('#contact-form #submit').html('Please wait');
+      jQuery('#contact-form #submit').attr('disabled',true);
+      jQuery.ajax({
+          url:'assets/php/submit.php',
+          type:'post',
+          data:jQuery('#contact-form').serialize(),
+          success:function(result){
+              jQuery('#contact-form #msg').html(result);
+              jQuery('#contact-form #submit').html('Submit');
+              jQuery('#contact-form #submit').attr('disabled',false);
+              jQuery('#contact-form')[0].reset();
+          }
+      });
+      e.preventDefault();
+      });
+  </script>
+
+  <!-- INITIALIZING AOS -->
+  <script>
+    AOS.init({
+        delay: 400,
+        duration: 1000
+    })
+  </script>
 </html>
