@@ -27,7 +27,7 @@
 
     <i class="fa-solid fa-bars-staggered" id="menu-btn"></i>
 
-    <a class="logo" href="#">
+    <a class="logo" href="/">
       <%= image_tag("salam_logo.png", alt: "logo", class: "logo") %>
       <div class="logo-name">
         <h3>Imam Sidyot</h3>
@@ -36,10 +36,11 @@
     </a>
 
     <nav class="navbar">
-      <a href="#home">home</a>
+      <%= link_to 'home', root_path %>
       <%= link_to 'about', about_us_url %>
       <a href="#services">services</a>
       <a href="#events">event</a>
+      <%= link_to 'gallery', galleries_path %>
     </nav>
 
     <a class="btn" href="#contact">contact us</a>
@@ -265,72 +266,73 @@
       <h1>our services</h1>
       <div class="design"><%= image_tag("salam_logo.png", alt: "logo") %></div>
     </div>
-    
-    <div class="box-container">
-    
-      <div class="service-item">
-        <div class="image">
-        <%= image_tag("Service-1.png", alt: "Service-1") %>
-        </div>
-        <h3>Nikah & Marriage </h3>
-      </div>
-
-      <div class="service-item">
-        <div class="image">
-        <%= image_tag("Service-2.png", alt: "Service-2") %>
-        </div>
-        <h3>Counselling</h3>
-      </div>
-
-      <div class="service-item">
-        <div class="image">
-        <%= image_tag("Service-3.png", alt: "Service-3") %>
-        </div>
-        <h3>Khutba or Prayer Service</h3>
-      </div>
-
-      <div class="noMobileView" style="width:100%;"></div>
+    <% if @services.blank? %>      
+      <div class="box-container">
       
-      <div class="service-item">
-        <div class="image">
-                <%= image_tag("Service-4.png", alt: "Service-4") %>
+        <div class="service-item">
+          <div class="image">
+          <%= image_tag("Service-1.png", alt: "Service-1") %>
+          </div>
+          <h3>Nikah & Marriage </h3>
         </div>
-        <h3>Q&A and experts advise</h3>
-      </div>
 
-      <div class="service-item">
-        <div class="image">
-                  <%= image_tag("Service-5.png", alt: "Service-5") %>
+        <div class="service-item">
+          <div class="image">
+          <%= image_tag("Service-2.png", alt: "Service-2") %>
+          </div>
+          <h3>Counselling</h3>
         </div>
-        <h3>Speech or Presentation</h3>
-      </div>
 
-      <div class="service-item">
-        <div class="image">
-                  <%= image_tag("Service-6.png", alt: "Service-6") %>
+        <div class="service-item">
+          <div class="image">
+          <%= image_tag("Service-3.png", alt: "Service-3") %>
+          </div>
+          <h3>Khutba or Prayer Service</h3>
         </div>
-        <h3>Separation or Divorce/Khula</h3>
-      </div>
-      
-      <%
-=begin%>
- <div class="service-item">
-        <div class="image">
-                <%= image_tag("Service-7.png", alt: "Service-7") %>
-        </div>
-        <h3>Food</h3>
-      </div>
-      
-      <div class="service-item">
-        <div class="image">
-                <%= image_tag("Service-8.png", alt: "Service-8") %>
-        </div>
-        <h3>family counselling</h3>
-      </div> 
-<%
-=end%>
 
-    </div>
+        <div class="noMobileView" style="width:100%;"></div>
+        
+        <div class="service-item">
+          <div class="image">
+                  <%= image_tag("Service-4.png", alt: "Service-4") %>
+          </div>
+          <h3>Q&A and experts advise</h3>
+        </div>
+
+        <div class="service-item">
+          <div class="image">
+                    <%= image_tag("Service-5.png", alt: "Service-5") %>
+          </div>
+          <h3>Speech or Presentation</h3>
+        </div>
+
+        <div class="service-item">
+          <div class="image">
+                    <%= image_tag("Service-6.png", alt: "Service-6") %>
+          </div>
+          <h3>Separation or Divorce/Khula</h3>
+        </div>
+      </div>
+    <% else %>
+      <div class="box-container">
+        <% service_count = 0 %>
+        <% @services&.each do |service| %>
+          <div class="service-item">
+            <%= link_to service_path(service) do %>
+              <div class="image">
+                <%= image_tag(service&.logo, alt: "Service-logo") if service&.logo&.attached? %>
+              </div>
+              <h3><%= service&.name %></h3>
+            <% end %>
+          </div>
+          <% service_count += 1 %>
+
+          <% if service_count % 3 == 0 %>
+            <div class="noMobileView" style="width:100%;"></div>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
 
   </section>
   <!-- ==================== Services Area (End) ==================== -->
@@ -432,7 +434,7 @@
                   <%= link_to event_path(event) do %>
                     <h3><%= event&.heading %></h3>
                     <p><%= event&.scholar %> | <span class="timing"><%= event&.start_time&.strftime("%I:%M %p") %></span></p>
-                    <h4><i class="fas fa-tag"></i><span><%= event&.event_type %></span></h4>
+                    <h4><i class="fas fa-tag"></i><span><%= event&.event_types&.join(', ') %></span></h4>
                   <% end %>
                 </div>
               </div>
@@ -452,7 +454,7 @@
                     <span>timing : <%= @latest_event&.start_time&.strftime("%I:%M %p") %> - <%= @latest_event&.end_time&.strftime("%I:%M %p") %></span>
                     <span>date : <%= @latest_event&.date&.strftime("%m/%d/%Y") %></span>
                   </div>
-                  <h4><i class="fas fa-tag"></i><span><%= @latest_event&.event_type %></span></h4>
+                  <h4><i class="fas fa-tag"></i><span><%= @latest_event&.event_types&.join(',') %></span></h4>
                 </div>
                 <div class="image">
                   <%= image_tag(@latest_event&.image) if @latest_event&.image&.attached? %>
@@ -543,7 +545,7 @@
     <div class="box-container">
 
       <div class="footer-item">
-        <a class="logo" href="#">
+        <a class="logo" href="/">
         <%= image_tag("salam_logo.png", alt: "Logo") %>
           <div class="logo-name">
             <h3>Imam Sidyot</h3>
@@ -557,10 +559,11 @@
         <h2>useful links</h2>
         <span></span>
         <div class="links">
-          <a href="#home"><i class="fas fa-long-arrow-alt-right"></i>home</a>
+          <a href="/"><i class="fas fa-long-arrow-alt-right"></i>home</a>
           <%= link_to about_us_url do %><i class="fas fa-long-arrow-alt-right"></i>about<% end %>
           <a href="#services"><i class="fas fa-long-arrow-alt-right"></i>services</a>
           <a href="#events"><i class="fas fa-long-arrow-alt-right"></i>events</a>
+          <%= link_to galleries_path do %><i class="fas fa-long-arrow-alt-right"></i>gallery<% end %>
           <%
 =begin%>
  <a href="#donation"><i class="fas fa-long-arrow-alt-right"></i>donation</a>
@@ -579,10 +582,9 @@
           <p>Sat: 8:00 - 20:00 </p>
         </div>
         <div class="social">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.facebook.com/sidyot?mibextid=eBUYbo"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/Imamilyas"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.youtube.com/@Imam-Ilyas-sidyot"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
 

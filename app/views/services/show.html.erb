@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- Title -->
-  <title>Imam Sidyot | Event Details</title>
+  <title>Imam Sidyot | Service Details</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/salam_logo.png">
@@ -44,20 +44,20 @@
   <!-- ==================== Event Details Area (Start) ==================== -->
   <section class="events" id="events" style='margin-top: 90px'>
     <div class="heading">
-      <h1>Event's Details Page</h1>
+      <h1>Service's Details Page</h1>
       <div class="design">
         <%= image_tag("salam_logo.png", alt: "Logo") %>
       </div>
     </div>
     <div class="image">
-      <%= @event&.image&.attached? ? image_tag(@event&.image) : image_tag("Home-1.png", alt: "logo") %>
+      <%= @service&.logo&.attached? ? image_tag(@service&.logo) : image_tag("Home-1.png", alt: "logo") %>
     </div>
 
     <div class="left-heading" style='margin: 10px 0px'>
-    <h1><%= @event&.heading %></h1>
+    <h1><%= @service&.name %></h1>
     </div>
     <div class='detail'>
-      <p style='margin-bottom: 10px; font: 20px'><%= @event&.details %></p>
+      <p style='margin-bottom: 10px; font: 20px'><%= @service&.description %></p>
     </div>
 
     <div class="container">
@@ -65,14 +65,7 @@
         <div class="latest-event">
           <div class="content">            
             <div class="description">
-              <span>scholar : <%= @event&.scholar %></span>
-              <span>timing : <%= @event&.start_time&.strftime("%I:%M %p") %> - <%= @event&.end_time&.strftime("%I:%M %p") %></span>
-              <span>date : <%= @event&.date&.strftime("%m/%d/%Y") %></span>
-            </div>
-            <h4><i class="fas fa-tag"></i><span><%= @event&.event_types&.join(', ') %></span></h4>
-          </div>
-          <div class="image">
-            <% image_tag(@event&.image) if @event&.image&.attached? %>
+              <span>feedbacks : <%= @service.feedbacks.count %></span>
           </div>
         </div>
       </div>
