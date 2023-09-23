@@ -73,25 +73,31 @@
 
     <div class="swiper-container home-slider">
       <div class="swiper-wrapper">
+        <% if @gallery&.slider_image_1&.attached? %>
         <div class="swiper-slide home-item">
           <div class="image">
-            <%= image_tag(@gallery&.slider_image_1) %>
+            <%= image_tag(@gallery&.slider_image_1) if @gallery&.slider_image_1&.attached? %>
           </div>
         </div>
+        <% end %>
 
-        <div class="swiper-slide home-item">
-          <div class="image">
-            <%= image_tag(@gallery&.slider_image_2) %>
+        <% if @gallery&.slider_image_2&.attached? %>
+          <div class="swiper-slide home-item">
+            <div class="image">
+              <%= image_tag(@gallery&.slider_image_2) if @gallery&.slider_image_2&.attached? %>
+            </div>
+
           </div>
+        <% end %>
 
-        </div>
-
-        <div class="swiper-slide home-item">
-          <div class="image">
-            <%= image_tag(@gallery&.slider_image_3) %>
+        <% if @gallery&.slider_image_3&.attached? %>
+          <div class="swiper-slide home-item">
+            <div class="image">
+              <%= image_tag(@gallery&.slider_image_3) %>
+            </div>
           </div>
+        <% end %>
 
-        </div>
       </div>
 
       <div class="swiper-pagination swiper-pagination1"></div>
