@@ -24,6 +24,7 @@ Trestle.resource(:galleries) do
       active_storage_field :slider_image_1
       active_storage_field :slider_image_2
       active_storage_field :slider_image_3
+      active_storage_field :images
     end
   end
 

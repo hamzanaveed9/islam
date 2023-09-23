@@ -70,6 +70,32 @@
         </div>
       </div>
     </div>
+    <h1>Feedback Form</h1>
+    <%= form_with(model: @feedback, url: feedbacks_path, html: { class: 'form' }) do |form| %>
+      <div class="mb-3">
+        <%= form.label :name, class: 'form-label' %>
+        <%= form.text_field :name, class: 'form-control' %>
+      </div>
+
+      <div class="mb-3">
+        <%= form.label :email, class: 'form-label' %>
+        <%= form.text_field :email, class: 'form-control' %>
+      </div>
+
+      <div class="mb-3">
+        <%= form.label :subject, class: 'form-label' %>
+        <%= form.text_field :subject, class: 'form-control' %>
+      </div>
+
+      <div class="mb-3">
+        <%= form.label :message, class: 'form-label' %>
+        <%= form.text_area :message, class: 'form-control', rows: 4 %>
+      </div>
+
+      <%= form.hidden_field :service_id, value: @service.id %>
+
+      <%= form.submit 'Submit Feedback', class: 'btn btn-primary' %>
+    <% end %>
   </section>
   <!-- ==================== Event Details Area (End) ==================== -->
 

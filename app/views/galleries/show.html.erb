@@ -106,8 +106,23 @@
       <div class="swiper-button-prev"></div>
 
     </div>
-
   </section>
+  <div class="container">
+    <div class="row">
+    <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <h1 class="gallery-title">Gallery</h1>
+    </div>
+    <br/>
+    <% if @gallery.images.present? %>
+      <div class="row">
+        <% @gallery.images.each do |image_url| %>
+          <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+            <%= image_tag(image_url, class: 'img-responsive') %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
   <!-- ==================== Slider Area (End) ==================== -->
 
   <!-- ==================== Footer Area (Start) ==================== -->
