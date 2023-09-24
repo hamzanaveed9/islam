@@ -20,33 +20,7 @@
   </a>
   <!-- ==================== Scroll-Top Area (End) ==================== -->
 
-
-
-  <!-- ==================== Header Area (Start) ==================== -->
-  <header class="header">
-
-    <i class="fa-solid fa-bars-staggered" id="menu-btn"></i>
-
-    <a class="logo" href="/">
-      <%= image_tag("salam_logo.png", alt: "logo", class: "logo") %>
-      <div class="logo-name">
-        <h3>Imam Sidyot</h3>
-        <p>Empowering Excellence</p>
-      </div>
-    </a>
-
-    <nav class="navbar">
-      <%= link_to 'home', root_path %>
-      <%= link_to 'about', about_us_url %>
-      <a href="#services">services</a>
-      <a href="#events">event</a>
-      <%= link_to 'gallery', galleries_path %>
-    </nav>
-
-    <a class="btn" href="#contact">contact us</a>
-
-  </header>
-  <!-- ==================== Header Area (End) ==================== -->
+  <%= render partial: 'shared/header' %>
   
   <!-- ==================== Services Area (Start) ==================== -->
   <section class="services digg_pagination" id="services" style='margin-top: 90px'>
@@ -79,81 +53,7 @@
     <%= will_paginate %>
   </div>
   <!-- ==================== Services Area (End) ==================== -->
-
-
-  <!-- ==================== Footer Area (Start) ==================== -->
-  <footer class="footer">
-
-    <div class="box-container">
-
-      <div class="footer-item">
-        <a class="logo" href="/" style='border: none !important'>
-        <%= image_tag("salam_logo.png", alt: "Logo") %>
-          <div class="logo-name">
-            <h3>Imam Sidyot</h3>
-            <p>Empowering Excellence</p>
-          </div>
-        </a>
-        <p>His vision is to promote awareness, understanding, and respect in a multi-faith environment, as well as putting his effort into helping the Muslim community around him thrive and excel.</p>
-      </div>
-
-      <div class="footer-item">
-        <h2>useful links</h2>
-        <span></span>
-        <div class="links">
-          <a href="/"><i class="fas fa-long-arrow-alt-right"></i>home</a>
-          <%= link_to about_us_url do %><i class="fas fa-long-arrow-alt-right"></i>about<% end %>
-          <a href="#services"><i class="fas fa-long-arrow-alt-right"></i>services</a>
-          <a href="#events"><i class="fas fa-long-arrow-alt-right"></i>events</a>
-          <%= link_to galleries_path do %><i class="fas fa-long-arrow-alt-right"></i>gallery<% end %>
-          <%
-=begin%>
- <a href="#donation"><i class="fas fa-long-arrow-alt-right"></i>donation</a>
-          <a href="#volunteers"><i class="fas fa-long-arrow-alt-right"></i>volunteers</a>
-          <a href="#testimonials"><i class="fas fa-long-arrow-alt-right"></i>testimonials</a> 
-<%
-=end%>
-        </div>
-      </div>
-
-      <div class="footer-item">
-        <h2>office timings</h2>
-        <span></span>
-        <div class="timing">
-          <p>Mon-Fri: 8:00 - 20:00</p>
-          <p>Sat: 8:00 - 20:00 </p>
-        </div>
-        <div class="social">
-          <a href="https://www.facebook.com/sidyot?mibextid=eBUYbo"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://twitter.com/Imamilyas"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.youtube.com/@Imam-Ilyas-sidyot"><i class="fab fa-youtube"></i></a>
-        </div>
-      </div>
-
-      <div class="footer-item">
-        <h2>contact info</h2>
-        <span></span>
-        <div class="info">
-          <p><i class="phone fas fa-phone"></i><span>306.341.8888</span></p>
-          <p><i class="phone fas fa-phone"></i><span>18774064626</span></p>
-          <p><i class="envelope fas fa-envelope"></i><span class="gmail">imamsaskatoon@gmail.com</span></p>
-          <%
-=begin%>
- <p><i class="address fas fa-map"></i><span>karachi, pakistan</span></p> 
-<%
-=end%>
-        </div>
-       
-      </div>
-
-    </div>
-
-    <div class="content">
-      <p>© Copyright 2023 <span>Imam Sidyot</span>, All rights reserved.</p>
-    </div>
-
-  </footer>
-  <!-- ==================== Footer Area (End) ==================== -->
+  <%= render partial: 'shared/footer' %>
 
   <!-- JQuery -->
  <%= javascript_include_tag 'jquery-3.6.0' %>
