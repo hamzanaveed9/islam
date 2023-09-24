@@ -75,7 +75,10 @@
       </div>
     </div>
 
-    <%= paginate @galleries %>
+    <div class="d-flex mt-4">
+      <%= link_to_previous_page @galleries, "&larr; Previous Page".html_safe, class: "btn btn-outline-primary rounded-pill mr-auto" %>
+      <%= link_to_next_page @galleries, "Next Page &rarr;".html_safe, class: "btn btn-outline-primary rounded-pill ml-auto" %>
+    </div>
   </section>
   <!-- ==================== Services Area (End) ==================== -->
 
