@@ -29,26 +29,31 @@
       <h1>our Gallery</h1>
       <div class="design"><%= image_tag("salam_logo.png", alt: "logo") %></div>
     </div>
-    <div class="box-container">
-      <% gallery_count = 0 %>
-      <% @galleries&.each do |gallery| %>
-        <div class="service-item">
-          <%= link_to gallery_path(gallery), style:'border: none !important' do %>
-            <div class="image">
-              <%= image_tag(gallery&.front_image, alt: "gallery-logo") if gallery&.front_image&.attached? %>
-            </div>
-            <h3><%= gallery&.title %></h3>
-          <% end %>
-        </div>
-        <% gallery_count += 1 %>
+      <div class="box-container">
+        <% gallery_count = 0 %>
+        <% @galleries&.each do |gallery| %>
+          <div class="service-item">
+            <%= link_to gallery_path(gallery) do %>
+              <div class="image">
+                <%= image_tag(gallery&.front_image, alt: "gallery-logo") if gallery&.front_image&.attached? %>
+              </div>
+              <h3><%= gallery&.title %></h3>
+            <% end %>
+          </div>
+          <% gallery_count += 1 %>
 
-        <% if gallery_count % 3 == 0 %>
-          <div class="noMobileView" style="width:100%;"></div>
+          <% if gallery_count % 3 == 0 %>
+            <div class="noMobileView" style="width:100%;"></div>
+          <% end %>
         <% end %>
-      <% end %>
+      </div>
+    </div>
+
+    <div class="d-flex mt-4">
+      <%= link_to_previous_page @galleries, "&larr; Previous Page".html_safe, class: "btn btn-outline-primary rounded-pill mr-auto" %>
+      <%= link_to_next_page @galleries, "Next Page &rarr;".html_safe, class: "btn btn-outline-primary rounded-pill ml-auto" %>
     </div>
   </section>
-
   <!-- ==================== Services Area (End) ==================== -->
 
   <%= render partial: 'shared/footer' %>
