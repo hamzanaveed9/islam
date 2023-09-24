@@ -102,7 +102,7 @@
             <div class="swiper-slide home-item">
               <div class="content">
                 <div class="text" data-aos="fade-right">
-                  <div class="logo"><%= image_tag(slider&.logo, alt: "logo") %></div>
+                  <div class="logo"><%#= image_tag(slider&.logo, alt: "logo") %></div>
                   <h5><%= slider&.header %></h5>
                   <h2><%= slider&.title %></h2>
                   <div class="heading">
@@ -110,7 +110,7 @@
                       <p class="design-info"><%= slider&.context %></p>
                     </div>
                   </div>
-                  <p><%= slider&.description %></p>
+                  <p><%= slider&.description.html_safe %></p>
                   <a class="btn" href="<%= slider&.link_address %>"><%= slider&.link_text %></a>
                 </div>
               </div>
@@ -135,7 +135,6 @@
 
 
 
-  <!-- ==================== About Area (Start) ==================== -->
   <% if @about.blank? %>
   <section class="about" id="about">
 

@@ -99,7 +99,7 @@
             <%= image_tag("salam_logo.png", alt: "logo", class: "logo") %>
           </div>
         </div>
-        <p><%= @about&.description %></p>
+        <p><%= @about&.description.html_safe %></p>
         <a class="btn" href="<%= @about&.link_text %>">Detail Page</a>
       </div>
 

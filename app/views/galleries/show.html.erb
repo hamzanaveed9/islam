@@ -38,7 +38,7 @@
     <h1><%= @gallery&.title %></h1>
     </div>
     <div class='detail'>
-      <p style='margin-bottom: 10px; font: 20px'><%= @gallery&.description %></p>
+      <p style='margin-bottom: 10px; font: 20px'><%= @gallery&.description.html_safe %></p>
     </div>
 
     <!-- ==================== Slider Area (Start) ==================== -->
