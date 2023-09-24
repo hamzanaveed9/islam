@@ -10,5 +10,6 @@ class PagesController < ApplicationController
 
   def about_us
     @about = About.first
+    @feedback = Feedback.new
   end
 end

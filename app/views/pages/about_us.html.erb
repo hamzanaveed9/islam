@@ -33,26 +33,7 @@
   </a>
   <!-- ==================== Scroll-Top Area (End) ==================== -->
 
-  <!-- ==================== Header Area (Start) ==================== -->
-  <header class="header">
-    <i class="fa-solid fa-bars-staggered" id="menu-btn"></i>
-    <a class="logo" href="/">
-      <%= image_tag("salam_logo.png", alt: "logo") %>
-      <div class="logo-name">
-        <h3>Imam Sidyot</h3>
-        <p>Empowering Excellence</p>
-      </div>
-    </a>
-    <nav class="navbar">
-      <%= link_to 'home', root_path %>
-      <%= link_to 'about', about_us_url %>
-      <a href="#services">services</a>
-      <a href="#events">event</a>
-      <%= link_to 'gallery', galleries_path %>
-    </nav>
-    <a class="btn" href="#contact">contact us</a>
-  </header>
-  <!-- ==================== Header Area (End) ==================== -->
+  <%= render partial: 'shared/header' %>
 
   <!-- ==================== About Area (Start) ==================== -->
   <% if @about.blank? %>
@@ -188,102 +169,32 @@
     </div>
 
     <div class="box-container">
+      <%= form_with(model: @feedback, url: feedbacks_path, html: { class: 'contact-form' }) do |form| %>
+        <h2>Get In Touch</h2>
+        <div class="mb-3" style='margin-top: 5px'>
+          <%= form.text_field :name, class: 'box form-control', placeholder: 'Name' %>
+        </div>
 
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d924234.6303368191!2d66.59494515823903!3d25.193389461148573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e06651d4bbf%3A0x9cf92f44555a0c23!2sKarachi%2C%20Karachi%20City%2C%20Sindh%2C%20Pakistan!5e0!3m2!1sen!2s!4v1645287442276!5m2!1sen!2s" style="border:0;" allowfullscreen="" loading="lazy" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000"></iframe>
-      
-      <form method="post" class="contact-form" id="contact-form">
+        <div class="mb-3">
+          <%= form.text_field :email, class: 'box form-control', placeholder: 'Email' %>
+        </div>
 
-        <h2>get in touch</h2>
+        <div class="mb-3">
+          <%= form.text_field :subject, class: 'box form-control', placeholder: 'Subject' %>
+        </div>
 
-        <input type="text" name="name" class="box" id="name" placeholder="name" required >
-        <input type="email" name="email" class="box" id="email" placeholder="email" required >
-        <input type="text" name="subject" class="box" id="subject" placeholder="subject" required >         
-        <textarea cols="30" rows="10" name="comment" class="box" id="comment" placeholder="message"></textarea>
-        
-        <button type="submit" class="btn" name="submit" id="submit">submit</button>
-  
-        <span class="alert" id="msg"></span>
-  
-      </form>
+        <div class="mb-3">
+          <%= form.text_area :message, class: 'box form-control', placeholder: 'Message', rows: 4 %>
+        </div>
+
+        <%= form.submit 'Submit Feedback', class: 'btn btn-primary' %>
+      <% end %>
 
     </div>
 
   </section>
   <!-- ==================== Contact Area (End) ==================== -->
-
-  <!-- ==================== Footer Area (Start) ==================== -->
-  <footer class="footer">
-
-    <div class="box-container">
-
-      <div class="footer-item">
-        <a class="logo" href="/">
-        <%= image_tag("salam_logo.png", alt: "Logo") %>
-          <div class="logo-name">
-            <h3>Imam Sidyot</h3>
-            <p>Empowering Excellence</p>
-          </div>
-        </a>
-        <p>His vision is to promote awareness, understanding, and respect in a multi-faith environment, as well as putting his effort into helping the Muslim community around him thrive and excel.</p>
-      </div>
-
-      <div class="footer-item">
-        <h2>useful links</h2>
-        <span></span>
-        <div class="links">
-          <a href="/"><i class="fas fa-long-arrow-alt-right"></i>home</a>
-          <%= link_to about_us_url do %><i class="fas fa-long-arrow-alt-right"></i>about<% end %>
-          <a href="#services"><i class="fas fa-long-arrow-alt-right"></i>services</a>
-          <a href="#events"><i class="fas fa-long-arrow-alt-right"></i>events</a>
-          <%= link_to galleries_path do %><i class="fas fa-long-arrow-alt-right"></i>gallery<% end %>
-          <%
-=begin%>
- <a href="#donation"><i class="fas fa-long-arrow-alt-right"></i>donation</a>
-          <a href="#volunteers"><i class="fas fa-long-arrow-alt-right"></i>volunteers</a>
-          <a href="#testimonials"><i class="fas fa-long-arrow-alt-right"></i>testimonials</a> 
-<%
-=end%>
-        </div>
-      </div>
-
-      <div class="footer-item">
-        <h2>office timings</h2>
-        <span></span>
-        <div class="timing">
-          <p>Mon-Fri: 8:00 - 20:00</p>
-          <p>Sat: 8:00 - 20:00 </p>
-        </div>
-        <div class="social">
-          <a href="https://www.facebook.com/sidyot?mibextid=eBUYbo"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://twitter.com/Imamilyas"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.youtube.com/@Imam-Ilyas-sidyot"><i class="fab fa-youtube"></i></a>
-        </div>
-      </div>
-
-      <div class="footer-item">
-        <h2>contact info</h2>
-        <span></span>
-        <div class="info">
-          <p><i class="phone fas fa-phone"></i><span>306.341.8888</span></p>
-          <p><i class="phone fas fa-phone"></i><span>18774064626</span></p>
-          <p><i class="envelope fas fa-envelope"></i><span class="gmail">imamsaskatoon@gmail.com</span></p>
-          <%
-=begin%>
- <p><i class="address fas fa-map"></i><span>karachi, pakistan</span></p> 
-<%
-=end%>
-        </div>
-       
-      </div>
-
-    </div>
-
-    <div class="content">
-      <p>© Copyright 2023 <span>Imam Sidyot</span>, All rights reserved.</p>
-    </div>
-
-  </footer>
-  <!-- ==================== Footer Area (End) ==================== -->
+  <%= render partial: 'shared/footer' %>
 </body>
 
 <!-- JQuery -->
