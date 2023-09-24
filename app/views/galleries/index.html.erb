@@ -33,7 +33,7 @@
         <% gallery_count = 0 %>
         <% @galleries&.each do |gallery| %>
           <div class="service-item">
-            <%= link_to gallery_path(gallery) do %>
+            <%= link_to gallery_path(gallery), style:'border: none !important' do %>
               <div class="image">
                 <%= image_tag(gallery&.front_image, alt: "gallery-logo") if gallery&.front_image&.attached? %>
               </div>
