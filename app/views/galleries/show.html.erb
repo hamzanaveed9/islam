@@ -69,6 +69,7 @@
 
 
   <!-- ==================== Slider Area (Start) ==================== -->
+  <% if @gallery&.slider_image_1&.attached? || @gallery&.slider_image_2&.attached? || @gallery&.slider_image_3&.attached? %>
   <section class="home" id="home" style='margin-bottom: 80px'>
 
     <div class="swiper-container home-slider">
@@ -107,23 +108,32 @@
 
     </div>
   </section>
-  <div class="container">
-    <div class="row">
-    <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <h1 class="gallery-title">Gallery</h1>
+  <% end %>
+  
+  <!-- ==================== Slider Area (End) ==================== -->
+
+  <% unless @gallery&.images&.blank? %>      
+  <section class="services" id="services">
+
+    <div class="heading">
+      <h1>our Images</h1>
+      <div class="design"><%= image_tag("salam_logo.png", alt: "logo") %></div>
     </div>
-    <br/>
-    <% if @gallery.images.present? %>
-      <div class="row">
-        <% @gallery.images.each do |image_url| %>
-          <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
-            <%= image_tag(image_url, class: 'img-responsive') %>
+      <div class="box-container">
+        <% image_count = 0 %>
+        <% @gallery&.images&.each do |image| %>
+          <div class="service-item">
+            <%= image_tag(image, alt: "Service-logo") %>
           </div>
+          <% image_count += 1 %>
+
+          <% if image_count % 3 == 0 %>
+            <div class="noMobileView" style="width:100%;"></div>
+          <% end %>
         <% end %>
       </div>
-    <% end %>
-  </div>
-  <!-- ==================== Slider Area (End) ==================== -->
+  </section>
+  <% end %>
 
   <!-- ==================== Footer Area (Start) ==================== -->
   <footer class="footer">
