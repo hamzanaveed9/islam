@@ -1,6 +1,6 @@
 class GalleriesController < ApplicationController
   def index
-    @galleries = Gallery.all
+    @galleries = Gallery.order(:created_at).page params[:page]
   end
 
   def show
