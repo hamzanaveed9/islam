@@ -49,51 +49,9 @@
 
 
 
-  <!-- ==================== Slider Area (Start) ==================== -->
-  <% if @gallery&.slider_image_1&.attached? || @gallery&.slider_image_2&.attached? || @gallery&.slider_image_3&.attached? %>
-  <section class="home" id="home" style='margin-bottom: 80px'>
-
-    <div class="swiper-container home-slider">
-      <div class="swiper-wrapper">
-        <% if @gallery&.slider_image_1&.attached? %>
-        <div class="swiper-slide home-item">
-          <div class="image">
-            <%= image_tag(@gallery&.slider_image_1) if @gallery&.slider_image_1&.attached? %>
-          </div>
-        </div>
-        <% end %>
-
-        <% if @gallery&.slider_image_2&.attached? %>
-          <div class="swiper-slide home-item">
-            <div class="image">
-              <%= image_tag(@gallery&.slider_image_2) if @gallery&.slider_image_2&.attached? %>
-            </div>
-
-          </div>
-        <% end %>
-
-        <% if @gallery&.slider_image_3&.attached? %>
-          <div class="swiper-slide home-item">
-            <div class="image">
-              <%= image_tag(@gallery&.slider_image_3) %>
-            </div>
-          </div>
-        <% end %>
-
-      </div>
-
-      <div class="swiper-pagination swiper-pagination1"></div>
-
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-
-    </div>
-  </section>
-  <% end %>
-  
   <!-- ==================== Slider Area (End) ==================== -->
 
-  <% unless @gallery&.images&.blank? %>      
+  <% unless @gallery&.photos&.blank? %>      
   <section class="services" id="services">
 
     <div class="heading">
@@ -102,9 +60,9 @@
     </div>
       <div class="box-container">
         <% image_count = 0 %>
-        <% @gallery&.images&.each do |image| %>
+        <% @gallery&.photos&.each do |gallery_photo| %>
           <div class="service-item">
-            <%= image_tag(image, alt: "Service-logo") %>
+            <%= image_tag(gallery_photo.image, alt: "Service-logo") %>
           </div>
           <% image_count += 1 %>
 
