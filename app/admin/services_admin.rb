@@ -11,6 +11,9 @@ Trestle.resource(:services) do
     column :id
     column :name
     column :description
+    column :active, label: "Active" do |event|
+      event.active ? status_tag("Yes", :success) : status_tag("No", :danger)
+    end
     actions
   end
 
@@ -23,6 +26,8 @@ Trestle.resource(:services) do
       text_field :name
       editor :description
       active_storage_field :logo
+      check_box :active, label: "Active"
+
     end
 
     tab :feedbacks, badge: service.feedbacks.count do

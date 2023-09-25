@@ -21,60 +21,42 @@
   <!-- ==================== Scroll-Top Area (End) ==================== -->
 
   <%= render partial: 'shared/header' %>
-
-  <!-- ==================== Gallery Details Area (Start) ==================== -->
-  <section class="events" id="events" style='margin-top: 90px'>
-    <div class="heading">
-      <h1>Gallery's Details Page</h1>
-      <div class="design">
-        <%= image_tag("salam_logo.png", alt: "Logo") %>
-      </div>
-    </div>
-    <div class="image">
-      <%= @gallery&.front_image&.attached? ? image_tag(@gallery&.front_image) : image_tag("Home-1.png", alt: "logo") %>
-    </div>
-
-    <div class="left-heading" style='margin: 10px 0px'>
-    <h1><%= @gallery&.title %></h1>
-    </div>
-    <div class='detail'>
-      <p style='margin-bottom: 10px; font: 20px'><%= @gallery&.description.html_safe %></p>
-    </div>
-
-    <!-- ==================== Slider Area (Start) ==================== -->
-    
-    <!-- ==================== Slider Area (End) ==================== -->
-  </section>
-  <!-- ==================== Gallery Details Area (End) ==================== -->
-
-
-
-  <!-- ==================== Slider Area (End) ==================== -->
-
-  <% unless @gallery&.photos&.blank? %>      
-  <section class="services" id="services">
+  
+  <!-- ==================== Services Area (Start) ==================== -->
+  <section class="services digg_pagination" id="services" style='margin-top: 90px'>
 
     <div class="heading">
-      <h1>our Images</h1>
+      <h1>our Events</h1>
       <div class="design"><%= image_tag("salam_logo.png", alt: "logo") %></div>
     </div>
       <div class="box-container">
-        <% image_count = 0 %>
-        <% @gallery&.photos&.each do |gallery_photo| %>
+        <% event_count = 0 %>
+        <% @events&.each do |event| %>
           <div class="service-item">
-            <%= image_tag(gallery_photo.image, alt: "Service-logo") %>
+            <%= link_to event_path(event), style:'border: none !important' do %>
+              <div class="image">
+                <%= image_tag(event&.image) if event&.image&.attached? %>
+              </div>
+              <h3><%= event&.heading %></h3>
+            <% end %>
           </div>
-          <% image_count += 1 %>
+          <% event_count += 1 %>
 
-          <% if image_count % 3 == 0 %>
+          <% if event_count % 3 == 0 %>
             <div class="noMobileView" style="width:100%;"></div>
           <% end %>
         <% end %>
       </div>
+    </div>
+
+    <div class="d-flex mt-4">
+      <%= link_to_previous_page @events, "&larr; Previous Page".html_safe, class: "btn btn-outline-primary rounded-pill mr-auto" %>
+      <%= link_to_next_page @events, "Next Page &rarr;".html_safe, class: "btn btn-outline-primary rounded-pill ml-auto" %>
+    </div>
   </section>
-  <% end %>
+  <!-- ==================== Services Area (End) ==================== -->
+
   <%= render partial: 'shared/footer' %>
-  
 
   <!-- JQuery -->
  <%= javascript_include_tag 'jquery-3.6.0' %>
