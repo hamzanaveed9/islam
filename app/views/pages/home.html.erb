@@ -102,7 +102,7 @@
             <div class="swiper-slide home-item">
               <div class="content">
                 <div class="text" data-aos="fade-right">
-                  <div class="logo"><%#= image_tag(slider&.logo, alt: "logo") %></div>
+                  <div class="logo"><%= image_tag(slider&.logo, alt: "logo") %></div>
                   <h5><%= slider&.header %></h5>
                   <h2><%= slider&.title %></h2>
                   <div class="heading">
@@ -455,34 +455,50 @@
 
     <div class="contact-info" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000">
     
-      <div class="info-item">
-        <i class="fas fa-phone"></i>
-        <h3>phone number</h3>
-        <p>306.341.8888</p>
-      </div>
+      <% if @contacts.blank? %>
+        <div class="info-item">
+          <i class="fas fa-phone"></i>
+          <h3>phone number</h3>
+          <p>306.341.8888</p>
+        </div>
+        
+        <div class="info-item">
+          <i class="fas fa-phone"></i>
+          <h3>phone number</h3>
+          <p>18774064626</p>
+        </div>
       
-      <div class="info-item">
-        <i class="fas fa-phone"></i>
-        <h3>phone number</h3>
-        <p>18774064626</p>
-      </div>
-    
-      <div class="info-item">
-        <i class="fas fa-envelope"></i>
-        <h3>email address</h3>
-        <p class="gmail">imamsaskatoon@gmail.com</p>
-      </div>
-    
-      <%
-=begin%>
- <div class="info-item">
-        <i class="address fas fa-map"></i>
-        <h3>office location</h3>
-        <p>london, UK</p>
-      </div> 
-<%
-=end%>
-    
+        <div class="info-item">
+          <i class="fas fa-envelope"></i>
+          <h3>email address</h3>
+          <p class="gmail">imamsaskatoon@gmail.com</p>
+        </div>
+      <% else %>
+        <div class="info-item">
+          <i class="fas fa-phone"></i>
+          <h3>phone number</h3>
+          <% @contacts.each do |contact| %>
+            <p><%= contact.phone %></p>
+          <% end %>
+        </div>
+        
+        <div class="info-item">
+          <i class="fas fa-phone"></i>
+          <h3>Mobile number</h3>
+          <% @contacts.each do |contact| %>
+            <p><%= contact.mobile %></p>
+          <% end %>
+        </div>
+      
+        <div class="info-item">
+          <i class="fas fa-envelope"></i>
+          <h3>email address</h3>
+          <% @contacts.each do |contact| %>
+            <p class="gmail"><%= contact.email %></p>
+          <% end %>
+        </div>
+      <% end %>
+
     </div>
 
     <div class="box-container">
