@@ -1,5 +1,6 @@
 class About < ApplicationRecord
   has_many_attached :images
+  has_many :feedbacks
 
   before_create :check_existing_entry
 

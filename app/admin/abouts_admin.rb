@@ -3,6 +3,10 @@ Trestle.resource(:abouts) do
     item :abouts, icon: "fa fa-info-circle"
   end
 
+  collection do
+    model.includes(:feedbacks)
+  end
+
   table do
     column :id
     column :title
@@ -17,13 +21,16 @@ Trestle.resource(:abouts) do
   end
 
   form do |about|
-    text_field :title
-    text_area :description
-    text_field :link_text
-    text_field :link_address
-    active_storage_field :images
-    active_storage_field :images
-    active_storage_field :images
-    active_storage_field :images
+    tab :about do
+      text_field :title
+      text_area :description
+      text_field :link_text
+      text_field :link_address
+      active_storage_field :images, label: 'Add four images for About Us'
+    end
+
+    tab :feedbacks, badge: about.feedbacks.count do
+      table FeedbacksAdmin.table, collection: about.feedbacks
+    end
   end
 end

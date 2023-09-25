@@ -11,6 +11,9 @@ Trestle.resource(:sliders) do
     column :description
     column :link_text
     column :link_address
+    column :active, label: "Active" do |event|
+      event.active ? status_tag("Yes", :success) : status_tag("No", :danger)
+    end
     actions
   end
 
@@ -26,6 +29,8 @@ Trestle.resource(:sliders) do
     text_field :link_text
     text_field :link_address
     active_storage_field :logo
+    check_box :active, label: "Active"
+
 
     # Active Storage field for background image
     active_storage_field :background_image, label: 'Background Image'
