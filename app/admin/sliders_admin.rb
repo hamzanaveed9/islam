@@ -5,13 +5,6 @@ Trestle.resource(:sliders) do
 
   table do
     column :id
-    # column :logo, header: nil, align: :center, class: "logo-column" do |slider|
-    #   if slider.logo.attached?
-    #     variant = slider.logo.variant(resize: '100x100')
-    #     url = Rails.application.routes.url_helpers.rails_representation_url(variant, only_path: true)
-    #     admin_link_to(image_tag(url, alt: "slider_logo"), slider)
-    #   end
-    # end
     column :header
     column :title
     column :context
@@ -29,10 +22,12 @@ Trestle.resource(:sliders) do
     text_field :header
     text_field :title
     text_field :context
-    text_area :description
+    editor :description
     text_field :link_text
     text_field :link_address
     active_storage_field :logo
-    active_storage_field :background_image
+
+    # Active Storage field for background image
+    active_storage_field :background_image, label: 'Background Image'
   end
 end

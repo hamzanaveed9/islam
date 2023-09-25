@@ -21,7 +21,7 @@ Trestle.resource(:services) do
   form do |service|
     tab :service do
       text_field :name
-      text_area :description
+      editor :description
       active_storage_field :logo
     end
 

@@ -98,6 +98,9 @@ GEM
       activesupport (>= 6.1)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
+    image_processing (1.12.2)
+      mini_magick (>= 4.9.5, < 5)
+      ruby-vips (>= 2.0.17, < 3)
     importmap-rails (1.2.1)
       actionpack (>= 6.0.0)
       railties (>= 6.0.0)
@@ -135,6 +138,7 @@ GEM
     marcel (1.0.2)
     matrix (0.4.2)
     method_source (1.0.0)
+    mini_magick (4.12.0)
     mini_mime (1.1.5)
     minitest (5.20.0)
     msgpack (1.7.2)
@@ -199,6 +203,8 @@ GEM
     reline (0.3.8)
       io-console (~> 0.5)
     rexml (3.2.6)
+    ruby-vips (2.1.4)
+      ffi (~> 1.12)
     rubyzip (2.3.2)
     sassc (2.4.0)
       ffi (~> 1.9)
@@ -231,6 +237,8 @@ GEM
     thor (1.2.2)
     tilt (2.2.0)
     timeout (0.4.0)
+    tinymce-rails (5.10.7.1)
+      railties (>= 3.1.1)
     trestle (0.9.8)
       activemodel (>= 4.2.0)
       kaminari (>= 1.1.0)
@@ -242,6 +250,9 @@ GEM
     trestle-auth (0.4.4)
       bcrypt (~> 3.1.7)
       trestle (~> 0.9.0, >= 0.9.3)
+    trestle-tinymce (0.3.1)
+      tinymce-rails (~> 5.1)
+      trestle (~> 0.9.0)
     turbo-rails (1.4.0)
       actionpack (>= 6.0.0)
       activejob (>= 6.0.0)
@@ -276,9 +287,11 @@ DEPENDENCIES
   capybara
   debug
   dockerfile-rails (>= 1.5)
+  image_processing (~> 1.2)
   importmap-rails
   jbuilder
   jquery-rails
+  kaminari
   pg (~> 1.5)
   puma (~> 5.0)
   rails (~> 6.1.4)
@@ -289,9 +302,11 @@ DEPENDENCIES
   sprockets-rails
   stimulus-rails
   swiper
+  tinymce-rails
   trestle
   trestle-active_storage
   trestle-auth
+  trestle-tinymce
   turbo-rails
   tzinfo-data
   web-console

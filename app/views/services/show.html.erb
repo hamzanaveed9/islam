@@ -57,7 +57,7 @@
     <h1><%= @service&.name %></h1>
     </div>
     <div class='detail'>
-      <p style='margin-bottom: 10px; font: 20px'><%= @service&.description %></p>
+      <p style='margin-bottom: 10px; font: 20px'><%= @service&.description.html_safe %></p>
     </div>
 
     <div class="container">
@@ -65,86 +65,40 @@
         <div class="latest-event">
           <div class="content">            
             <div class="description">
-              <span>feedbacks : <%= @service.feedbacks.count %></span>
+              <span>feedbacks : <%= @feedbacks.count %></span>
+          </div>
+          <div>
+            <%# @feedbacks.each_with_index do |feedback, index| %>
+              <p><%# "#{index + 1}: #{feedback.message}" %></p>
+            <%# end %>
           </div>
         </div>
+    
+    <%= form_with(model: @feedback, url: feedbacks_path, html: { class: 'contact-form' }) do |form| %>
+      <h1>Submit Your Feedback</h1>
+      <div class="mb-3" style='margin-top: 5px'>
+        <%= form.text_field :name, class: 'box form-control', placeholder: 'Name' %>
       </div>
+
+      <div class="mb-3">
+        <%= form.text_field :email, class: 'box form-control', placeholder: 'Email' %>
+      </div>
+
+      <div class="mb-3">
+        <%= form.text_field :subject, class: 'box form-control', placeholder: 'Subject' %>
+      </div>
+
+      <div class="mb-3">
+        <%= form.text_area :message, class: 'box form-control', placeholder: 'Message', rows: 4 %>
+      </div>
+
+      <%= form.hidden_field :service_id, value: @service.id %>
+
+      <%= form.submit 'Submit Feedback', class: 'btn btn-primary' %>
+    <% end %>
     </div>
   </section>
   <!-- ==================== Event Details Area (End) ==================== -->
-
-  <!-- ==================== Footer Area (Start) ==================== -->
-  <footer class="footer">
-
-    <div class="box-container">
-
-      <div class="footer-item">
-        <a class="logo" href="/">
-        <%= image_tag("salam_logo.png", alt: "Logo") %>
-          <div class="logo-name">
-            <h3>Imam Sidyot</h3>
-            <p>Empowering Excellence</p>
-          </div>
-        </a>
-        <p>His vision is to promote awareness, understanding, and respect in a multi-faith environment, as well as putting his effort into helping the Muslim community around him thrive and excel.</p>
-      </div>
-
-      <div class="footer-item">
-        <h2>useful links</h2>
-        <span></span>
-        <div class="links">
-          <a href="/"><i class="fas fa-long-arrow-alt-right"></i>home</a>
-          <%= link_to about_us_url do %><i class="fas fa-long-arrow-alt-right"></i>about<% end %>
-          <a href="#services"><i class="fas fa-long-arrow-alt-right"></i>services</a>
-          <a href="#events"><i class="fas fa-long-arrow-alt-right"></i>events</a>
-          <%= link_to galleries_path do %><i class="fas fa-long-arrow-alt-right"></i>gallery<% end %>
-          <%
-=begin%>
- <a href="#donation"><i class="fas fa-long-arrow-alt-right"></i>donation</a>
-          <a href="#volunteers"><i class="fas fa-long-arrow-alt-right"></i>volunteers</a>
-          <a href="#testimonials"><i class="fas fa-long-arrow-alt-right"></i>testimonials</a> 
-<%
-=end%>
-        </div>
-      </div>
-
-      <div class="footer-item">
-        <h2>office timings</h2>
-        <span></span>
-        <div class="timing">
-          <p>Mon-Fri: 8:00 - 20:00</p>
-          <p>Sat: 8:00 - 20:00 </p>
-        </div>
-        <div class="social">
-          <a href="https://www.facebook.com/sidyot?mibextid=eBUYbo"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://twitter.com/Imamilyas"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.youtube.com/@Imam-Ilyas-sidyot"><i class="fab fa-youtube"></i></a>
-        </div>
-      </div>
-
-      <div class="footer-item">
-        <h2>contact info</h2>
-        <span></span>
-        <div class="info">
-          <p><i class="phone fas fa-phone"></i><span>306.341.8888</span></p>
-          <p><i class="phone fas fa-phone"></i><span>18774064626</span></p>
-          <p><i class="envelope fas fa-envelope"></i><span class="gmail">imamsaskatoon@gmail.com</span></p>
-          <%
-=begin%>
- <p><i class="address fas fa-map"></i><span>karachi, pakistan</span></p> 
-<%
-=end%>
-        </div>
-       
-      </div>
-
-    </div>
-
-    <div class="content">
-      <p>© Copyright 2023 <span>Imam Sidyot</span>, All rights reserved.</p>
-    </div>
-
-  </footer>
-  <!-- ==================== Footer Area (End) ==================== -->
+  <%= render partial: 'shared/footer' %>
 </body>
 </html>

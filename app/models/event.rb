@@ -1,5 +1,5 @@
 class Event < ApplicationRecord
-  EVENT_TYPES = ['Families', 'Young', 'Adults']
+  EVENT_TYPES = ['Families', 'Young', 'Adults', 'Ladies Only']
 
   has_one_attached :image
 

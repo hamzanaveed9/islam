@@ -9,6 +9,7 @@ Trestle.resource(:feedbacks) do
     column :email
     column :subject
     column :message
+    column :service
     actions
   end
 
