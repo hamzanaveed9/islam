@@ -8,6 +8,9 @@ Trestle.resource(:photos) do
     column :title
     column :description
     column :gallery
+    column :active, label: "Active" do |event|
+      event.active ? status_tag("Yes", :success) : status_tag("No", :danger)
+    end
     actions
   end
 
@@ -21,6 +24,7 @@ Trestle.resource(:photos) do
       text_area :description
       select :gallery_id, Gallery.all.map { |g| [g.title, g.id] }
       active_storage_field :image, label: 'Photo'
+      check_box :active, label: "Active"
     end
   end
 end

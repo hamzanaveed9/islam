@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Title -->
+  <title>Imam Sidyot | Empowering Excellence</title>
+
+  <!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/salam_logo.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+  <!-- ==================== Scroll-Top Area (Start) ==================== -->
+  <a href="#" class="scroll-top">
+    <i class="fas fa-caret-up"></i>
+  </a>
+  <!-- ==================== Scroll-Top Area (End) ==================== -->
+
+  <%= render partial: 'shared/header' %>
+  
+  <!-- ==================== Services Area (Start) ==================== -->
+  <section class="services digg_pagination" id="services" style='margin-top: 90px'>
+
+    <div class="heading">
+      <h1>our Events</h1>
+      <div class="design"><%= image_tag("salam_logo.png", alt: "logo") %></div>
+    </div>
+      <div class="box-container">
+        <% event_count = 0 %>
+        <% @events&.each do |event| %>
+          <div class="service-item">
+            <%= link_to event_path(event), style:'border: none !important' do %>
+              <div class="image">
+                <%= image_tag(event&.image) if event&.image&.attached? %>
+              </div>
+              <h3><%= event&.heading %></h3>
+            <% end %>
+          </div>
+          <% event_count += 1 %>
+
+          <% if event_count % 3 == 0 %>
+            <div class="noMobileView" style="width:100%;"></div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="d-flex mt-4">
+      <%= link_to_previous_page @events, "&larr; Previous Page".html_safe, class: "btn btn-outline-primary rounded-pill mr-auto" %>
+      <%= link_to_next_page @events, "Next Page &rarr;".html_safe, class: "btn btn-outline-primary rounded-pill ml-auto" %>
+    </div>
+  </section>
+  <!-- ==================== Services Area (End) ==================== -->
+
+  <%= render partial: 'shared/footer' %>
+
+  <!-- JQuery -->
+ <%= javascript_include_tag 'jquery-3.6.0' %>
+  <!-- SWIPER JS -->
+  <%= javascript_include_tag 'swiper.js' %>
+  <%= javascript_include_tag 'home-slider.js' %>
+    <%= javascript_include_tag 'script.js' %>
+        <%= javascript_include_tag 'scroll-spy.js' %>
+  <!-- Animation -->
+ <%= javascript_include_tag 'aos.js' %>
+
+
+  <!-- ========== Custom Script ========== -->
+
+  <!-- Contact-Form Script -->
+  <script>
+      jQuery('#contact-form').on('submit',function(e){
+      jQuery('#contact-form #msg').html('');
+      jQuery('#contact-form #submit').html('Please wait');
+      jQuery('#contact-form #submit').attr('disabled',true);
+      jQuery.ajax({
+          url:'assets/php/submit.php',
+          type:'post',
+          data:jQuery('#contact-form').serialize(),
+          success:function(result){
+              jQuery('#contact-form #msg').html(result);
+              jQuery('#contact-form #submit').html('Submit');
+              jQuery('#contact-form #submit').attr('disabled',false);
+              jQuery('#contact-form')[0].reset();
+          }
+      });
+      e.preventDefault();
+      });
+  </script>
+
+  <!-- INITIALIZING AOS -->
+  <script>
+    AOS.init({
+        delay: 400,
+        duration: 1000
+    })
+  </script>
+</html>

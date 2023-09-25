@@ -12,6 +12,9 @@ Trestle.resource(:events) do
     column :event_types
     column :start_time
     column :end_time
+    column :active, label: "Active" do |event|
+      event.active ? status_tag("Yes", :success) : status_tag("No", :danger)
+    end
     actions
   end
 
@@ -28,5 +31,6 @@ Trestle.resource(:events) do
     datetime_field :start_time
     datetime_field :end_time
     active_storage_field :image
+    check_box :active, label: "Active"
   end
 end

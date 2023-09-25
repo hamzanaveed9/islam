@@ -7,6 +7,9 @@ Trestle.resource(:galleries) do
     column :id
     column :title
     column :description
+    column :active, label: "Active" do |event|
+      event.active ? status_tag("Yes", :success) : status_tag("No", :danger)
+    end
     actions
   end
 
@@ -19,6 +22,8 @@ Trestle.resource(:galleries) do
       text_field :title
       editor :description
       active_storage_field :front_image
+      check_box :active, label: "Active"
+
     end
   end
 end
