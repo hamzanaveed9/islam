@@ -4,7 +4,7 @@ class FeedbacksController < ApplicationController
   end
 
   def create
-    @feedback = Feedback.new(feedback_params)
+    @feedback = build_feedback
 
     if @feedback.save
       respond_to do |format|
@@ -19,6 +19,17 @@ class FeedbacksController < ApplicationController
   private
 
   def feedback_params
-    params.require(:feedback).permit(:name, :email, :subject, :comment, :service_id,:message)
+    params.require(:feedback).permit(:name, :email, :subject, :comment, :service_id, :message)
+  end
+
+  private
+
+  def build_feedback
+    about = About.first
+    if about.present?
+      about.feedbacks.new(feedback_params)
+    else
+      Feedback.new(feedback_params)
+    end
   end
 end
