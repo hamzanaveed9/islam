@@ -27,7 +27,7 @@ Trestle.resource(:events) do
     text_area :details
     text_field :scholar
     date_field :date
-    select :event_types, Event::EVENT_TYPES, { label: "Event Types" }, multiple: true
+   # select :event_types, Event::EVENT_TYPES, { label: "Event Types" }, multiple: true
     datetime_field :start_time
     datetime_field :end_time
     active_storage_field :image

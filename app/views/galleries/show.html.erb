@@ -23,22 +23,18 @@
   <%= render partial: 'shared/header' %>
 
   <!-- ==================== Gallery Details Area (Start) ==================== -->
-  <section class="events" id="events" style='margin-top: 90px'>
-    <div class="heading">
-      <h1>Gallery's Details Page</h1>
+  <section class="events gallery" id="events" style='margin-top: 90px'>
+    <div class="start-heading">
+      <h1><%= @gallery&.title %></h1>
       <div class="design">
         <%= image_tag("salam_logo.png", alt: "Logo") %>
       </div>
     </div>
-    <div class="image">
+    <div class="image thumb-image-event">
       <%= @gallery&.front_image&.attached? ? image_tag(@gallery&.front_image) : image_tag("Home-1.png", alt: "logo") %>
     </div>
-
-    <div class="left-heading" style='margin: 10px 0px'>
-    <h1><%= @gallery&.title %></h1>
-    </div>
     <div class='detail'>
-      <p style='margin-bottom: 10px; font: 20px'><%= @gallery&.description.html_safe %></p>
+        <p><%= @gallery&.description.html_safe %></p>
     </div>
 
     <!-- ==================== Slider Area (Start) ==================== -->
@@ -46,7 +42,6 @@
     <!-- ==================== Slider Area (End) ==================== -->
   </section>
   <!-- ==================== Gallery Details Area (End) ==================== -->
-
 
 
   <!-- ==================== Slider Area (End) ==================== -->

@@ -3,8 +3,8 @@ class Event < ApplicationRecord
 
   has_one_attached :image
 
-  before_validation :sanitize_event_types
-  validate :at_least_one_event_type_selected
+  # before_validation :sanitize_event_types
+  # validate :at_least_one_event_type_selected
 
   private
 

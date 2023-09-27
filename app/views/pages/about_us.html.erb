@@ -184,9 +184,16 @@
 
     </div>
 
+
+<div class="about-form">
+        <div class="heading">
+        <h1>Get In Touch</h1>
+        <div class="design">
+          <%= image_tag("salam_logo.png", alt: "Logo") %>
+        </div>
+      </div>
     <div class="box-container">
       <%= form_with(model: @feedback, url: feedbacks_path, html: { class: 'contact-form' }) do |form| %>
-        <h2>Get In Touch</h2>
         <div class="mb-3" style='margin-top: 5px'>
           <%= form.text_field :name, class: 'box form-control', placeholder: 'Name' %>
         </div>
@@ -207,6 +214,7 @@
       <% end %>
 
     </div>
+</div>
 
   </section>
   <!-- ==================== Contact Area (End) ==================== -->
