@@ -81,6 +81,7 @@ ActiveRecord::Schema.define(version: 2023_09_25_191525) do
     t.datetime "end_time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "active", default: true
   end
 
   create_table "feedbacks", force: :cascade do |t|
@@ -91,6 +92,7 @@ ActiveRecord::Schema.define(version: 2023_09_25_191525) do
     t.bigint "service_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "active", default: true
     t.bigint "about_id"
     t.index ["about_id"], name: "index_feedbacks_on_about_id"
     t.index ["service_id"], name: "index_feedbacks_on_service_id"
@@ -101,6 +103,7 @@ ActiveRecord::Schema.define(version: 2023_09_25_191525) do
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "active", default: true
   end
 
   create_table "header_settings", force: :cascade do |t|
@@ -121,12 +124,24 @@ ActiveRecord::Schema.define(version: 2023_09_25_191525) do
     t.string "email"
   end
 
+  create_table "photos", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.string "image"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "gallery_id"
+    t.boolean "active", default: true
+    t.index ["gallery_id"], name: "index_photos_on_gallery_id"
+  end
+
   create_table "services", force: :cascade do |t|
     t.string "name"
     t.string "logo"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "description"
+    t.boolean "active", default: true
   end
 
   create_table "sliders", force: :cascade do |t|
@@ -142,6 +157,7 @@ ActiveRecord::Schema.define(version: 2023_09_25_191525) do
     t.string "logo"
     t.string "background_type"
     t.string "background_video_url"
+    t.boolean "active", default: true
   end
 
   create_table "users", force: :cascade do |t|
