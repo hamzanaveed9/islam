@@ -42,62 +42,66 @@
   <!-- ==================== Header Area (End) ==================== -->
 
   <!-- ==================== Event Details Area (Start) ==================== -->
-  <section class="events" id="events" style='margin-top: 90px'>
-    <div class="heading">
-      <h1>Service's Details Page</h1>
+  <section class="services" id="services">
+    <div class="start-heading">
+      <h1><%= @service&.name %></h1>
       <div class="design">
         <%= image_tag("salam_logo.png", alt: "Logo") %>
       </div>
     </div>
-    <div class="image">
+
+    <div class="image thumb-image-service">
       <%= @service&.logo&.attached? ? image_tag(@service&.logo) : image_tag("Home-1.png", alt: "logo") %>
     </div>
 
-    <div class="left-heading" style='margin: 10px 0px'>
-    <h1><%= @service&.name %></h1>
-    </div>
-    <div class='detail'>
-      <p style='margin-bottom: 10px; font: 20px'><%= @service&.description.html_safe %></p>
+    <div class='detail descriptionp'>
+      <p><%= @service&.description.html_safe %></p>
+      <p><span style="font-size:13px;color:#000;">feedbacks : <%= @service.feedbacks.count %></span></p>
     </div>
 
-    <div class="container">
-      <div class="event-box">
-        <div class="latest-event">
-          <div class="content">            
-            <div class="description">
-              <span>feedbacks : <%= @feedbacks.count %></span>
-          </div>
-          <div>
-            <%# @feedbacks.each_with_index do |feedback, index| %>
-              <p><%# "#{index + 1}: #{feedback.message}" %></p>
-            <%# end %>
-          </div>
-        </div>
-    
-    <%= form_with(model: @feedback, url: feedbacks_path, html: { class: 'contact-form' }) do |form| %>
-      <h1>Submit Your Feedback</h1>
-      <div class="mb-3" style='margin-top: 5px'>
+        <div class="heading">
+      <h1>Feedback Form</h1>
+      <div class="design">
+        <%= image_tag("salam_logo.png", alt: "Logo") %>
+      </div>
+    </div>
+    <div class="feedback-container">   
+      <%= form_with(model: @feedback, url: feedbacks_path, html: { class: 'form contact-form' }) do |form| %>
+        <div class="mb-1">
+          <%#= form.label :name, class: 'form-label' %>
         <%= form.text_field :name, class: 'box form-control', placeholder: 'Name' %>
-      </div>
+        </div>
 
-      <div class="mb-3">
-        <%= form.text_field :email, class: 'box form-control', placeholder: 'Email' %>
-      </div>
+        <div class="mb-1">
+          <%#= form.label :email, class: 'form-label' %>
+          <%= form.text_field :email, class: 'box form-control', placeholder: 'Email' %>
+        </div>
 
-      <div class="mb-3">
-        <%= form.text_field :subject, class: 'box form-control', placeholder: 'Subject' %>
-      </div>
+        <div class="mb-1">
+          <%#= form.label :subject, class: 'form-label' %>
+          <%= form.text_field :subject, class: 'box form-control', placeholder: 'Subject' %>
+        </div>
 
-      <div class="mb-3">
-        <%= form.text_area :message, class: 'box form-control', placeholder: 'Message', rows: 4 %>
-      </div>
+        <div class="mb-1">
+          <%#= form.label :message, class: 'form-label' %>
+          <%= form.text_area :message, class: 'box form-control', placeholder: 'Message', rows: 3 %>
+        </div>
 
-      <%= form.hidden_field :service_id, value: @service.id %>
+        <%= form.hidden_field :service_id, value: @service.id %>
 
-      <%= form.submit 'Submit Feedback', class: 'btn btn-primary' %>
-    <% end %>
+        <%= form.submit 'Submit Feedback', class: 'btn btn-primary' %>
+      <% end %>
     </div>
+
+
+
+
+
+
+
   </section>
+
+  
   <!-- ==================== Event Details Area (End) ==================== -->
   <%= render partial: 'shared/footer' %>
 </body>
