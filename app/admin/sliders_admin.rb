@@ -22,17 +22,25 @@ Trestle.resource(:sliders) do
   end
 
   form do |slider|
-    text_field :header
-    text_field :title
-    text_field :context
-    editor :description
-    text_field :link_text
-    text_field :link_address
-    active_storage_field :logo
-    check_box :active, label: "Active"
+    tab :image_slider do
+      text_field :header
+      text_field :title
+      text_field :context
+      editor :description
+      text_field :link_text
+      text_field :link_address
+      active_storage_field :logo
+      check_box :active, label: "Active"
+      # Active Storage field for background image
+      active_storage_field :background_image, label: 'Background Image'
+    end
 
-
-    # Active Storage field for background image
-    active_storage_field :background_image, label: 'Background Image'
+    tab :video_slider do
+      check_box :active, label: "Active"
+      # Active Storage field for background image
+      text_field :background_video_url, label: 'Background Video'
+    end
   end
+  
+
 end
