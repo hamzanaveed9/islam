@@ -21,7 +21,20 @@
         <span></span>
         <div class="links">
           <% @header_setting.menu_order.split("\n").each do |menu_item| %>
-            <a href="#<%= menu_item.downcase %>"><i class="fas fa-long-arrow-alt-right"></i> <%= menu_item %></a>
+            <% case menu_item.downcase.strip %>
+              <% when 'home' %>
+                <%= link_to menu_item, root_path %>
+              <% when 'about' %>
+                <%= link_to menu_item, about_us_path %>
+              <% when 'services' %>
+                <%= link_to menu_item, services_path %>
+              <% when 'event' %>
+                <%= link_to menu_item, events_path %>
+              <% when 'gallery' %>
+                <%= link_to menu_item, galleries_path %>
+              <% else %>
+                <a href="#<%= menu_item.downcase %>"><%= menu_item %></a>
+            <% end %>
           <% end %>
         </div>
       </div>

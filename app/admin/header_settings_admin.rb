@@ -31,5 +31,11 @@ Trestle.resource(:header_settings) do
       text_field :office_working_days,label:'Weekdays timings', placeholder: "Weekdays timings e.g., 8:00 am - 6:00 pm"
       text_field :timings, label:'Weekend timings', placeholder: "Weekend timings e.g., 8:00 am - 6:00 pm"
     end
+
+    tab :footer_contacts do
+      text_field :phone1,label:'Phone1'
+      text_field :phone2, label:'Phone2'
+      text_field :email, label:'email'
+    end
   end
 end
