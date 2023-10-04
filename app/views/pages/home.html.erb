@@ -115,7 +115,7 @@
                 <div class="swiper-slide home-item">
                   <div class="content">
                     <div class="text" data-aos="fade-right">
-                      <div class="logo"><%= image_tag(slider&.logo, alt: "logo") %></div>
+                      <div class="logo"><%# image_tag(slider&.logo, alt: "logo") %></div>
                       <h5><%= slider&.header %></h5>
                       <h2><%= slider&.title %></h2>
                       <% if slider.link_text.present? %>
@@ -316,7 +316,7 @@
         <% service_count = 0 %>
         <% @services&.each do |service| %>
           <% if service.active? %>
-            <div class="service-item">
+            <div class="service-item border-rad-color">
               <%= link_to service_path(service) do %>
                 <div class="image">
                   <%= image_tag(service&.logo, alt: "Service-logo") if service&.logo&.attached? %>
