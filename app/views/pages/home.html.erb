@@ -118,13 +118,17 @@
                       <div class="logo"><%= image_tag(slider&.logo, alt: "logo") %></div>
                       <h5><%= slider&.header %></h5>
                       <h2><%= slider&.title %></h2>
-                      <div class="heading">
-                        <div class="design">
-                          <p class="design-info"><%= slider&.context %></p>
+                      <% if slider.link_text.present? %>
+                        <div class="heading">
+                          <div class="design">
+                            <p class="design-info"><%= slider&.context %></p>
+                          </div>
                         </div>
-                      </div>
+                      <% end %>
                       <p><%= slider&.description.html_safe %></p>
-                      <a class="btn" href="<%= slider&.link_address %>"><%= slider&.link_text %></a>
+                      <% if slider.link_text.present? %>
+                        <a class="btn" href="<%= slider&.link_address %>"><%= slider&.link_text %></a>
+                      <% end %>
                     </div>
                   </div>
                   <div class="image">
@@ -216,25 +220,33 @@
             <%= image_tag("salam_logo.png", alt: "logo", class: "logo") %>
           </div>
         </div>
-        <p><%= @about&.description %></p>
-        <a class="btn" href="<%= @about&.link_text %>">Detail Page</a>
+        <p><%= @about&.short_description %></p>
+        <a class="btn" href="/about_us">Detail Page</a>
       </div>
 
       <div class="image">
         <div>
           <div class="image1">
-            <%= image_tag(@about&.images[0], alt: "about1") if @about&.images&.attached? %>
+            <% if @about&.images[0].present? %>
+              <%= image_tag(@about&.images[0], alt: "about1") if @about&.images&.attached? %>
+            <% end %>
           </div>
           <div class="image2">
-            <%= image_tag(@about&.images[1], alt: "about2") if @about&.images&.attached? %>
+            <% if @about&.images[1].present? %>
+              <%= image_tag(@about&.images[1], alt: "about2") if @about&.images&.attached? %>
+            <% end %>
           </div>
         </div>
         <div>
           <div class="image3">
-            <%= image_tag(@about&.images[2], alt: "about3") if @about&.images&.attached? %>
+            <% if @about&.images[2].present? %>
+              <%= image_tag(@about&.images[2], alt: "about3") if @about&.images&.attached? %>
+            <% end %>
           </div>
           <div class="image4">
-            <%= image_tag(@about&.images[3], alt: "about4") if @about&.images&.attached? %>
+            <% if @about&.images[3].present? %>
+              <%= image_tag(@about&.images[3], alt: "about4") if @about&.images&.attached? %>
+            <% end %>
           </div>
         </div>
       </div>
@@ -438,7 +450,7 @@
                 <div class="content">
                   <h3 class="label">latest event</h3>
                   <h2><span>topic :</span> <%= @latest_event&.heading %></h2>
-                  <p><%= @latest_event&.details %></p>
+                  <p><%= @latest_event&.details.html_safe %></p>
                   <div class="description">
                     <span>scholar : <%= @latest_event&.scholar %></span>
                     <span>timing : <%= @latest_event&.start_time&.strftime("%I:%M %p") %> - <%= @latest_event&.end_time&.strftime("%I:%M %p") %></span>

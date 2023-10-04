@@ -24,7 +24,7 @@ Trestle.resource(:events) do
 
   form do |event|
     text_field :heading
-    text_area :details
+    editor :details
     text_field :scholar
     date_field :date
     select :event_types, Event::EVENT_TYPES, { label: "Event Types" }, multiple: true
