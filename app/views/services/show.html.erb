@@ -56,11 +56,10 @@
 
     <div class='detail descriptionp'>
       <p><%= @service&.description.html_safe %></p>
-      <p><span style="font-size:13px;color:#000;">feedbacks : <%= @service.feedbacks.count %></span></p>
     </div>
 
         <div class="heading">
-      <h1>Feedback Form</h1>
+      <h1><%= @service.name %> Form</h1>
       <div class="design">
         <%= image_tag("salam_logo.png", alt: "Logo") %>
       </div>
@@ -89,7 +88,7 @@
 
         <%= form.hidden_field :service_id, value: @service.id %>
 
-        <%= form.submit 'Submit Feedback', class: 'btn btn-primary' %>
+        <%= form.submit 'Submit Response', class: 'btn btn-primary' %>
       <% end %>
     </div>
 
