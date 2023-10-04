@@ -164,6 +164,7 @@
           <p class="gmail">imamsaskatoon@gmail.com</p>
         </div>
       <% else %>
+        <% if @contacts&.first %>
         <div class="info-item">
           <i class="fas fa-user"></i>
           <h3>Imam details</h3>
@@ -171,23 +172,29 @@
           <p><%= @contacts.first.mobile %></p>
           <p><%= @contacts.first.email %></p>
         </div>
-        
-        <div class="info-item">
-          <i class="fas fa-user"></i>
-          <h3>Imam details</h3>
-          <p><%= @contacts&.second.phone %></p>
-          <p><%= @contacts&.second.mobile %></p>
-          <p><%= @contacts&.second.email %></p>
-        </div>
+      <% end %>
       
+      <% if @contacts&.second %>
         <div class="info-item">
           <i class="fas fa-user"></i>
           <h3>Imam details</h3>
-          <p><%= @contacts&.third.phone %></p>
-          <p><%= @contacts&.third.mobile %></p>
-          <p><%= @contacts&.third.email %></p>
+          <p><%= @contacts.second.phone %></p>
+          <p><%= @contacts.second.mobile %></p>
+          <p><%= @contacts.second.email %></p>
         </div>
       <% end %>
+      
+      <% if @contacts&.third %>
+        <div class="info-item">
+          <i class="fas fa-user"></i>
+          <h3>Imam details</h3>
+          <p><%= @contacts.third.phone %></p>
+          <p><%= @contacts.third.mobile %></p>
+          <p><%= @contacts.third.email %></p>
+        </div>
+      <% end %>
+    <% end %>
+    
 
     </div>
 
