@@ -10,6 +10,7 @@ Trestle.resource(:abouts) do
   table do
     column :id
     column :title
+    column :short_description
     column :description
     column :link_text
     column :link_address
@@ -23,7 +24,8 @@ Trestle.resource(:abouts) do
   form do |about|
     tab :about do
       text_field :title
-      text_area :description
+      text_area :short_description
+      editor :description
       text_field :link_text
       text_field :link_address
       active_storage_field :images, label: 'Add four images for About Us'
