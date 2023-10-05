@@ -45,8 +45,48 @@
 
 
   <!-- ==================== Slider Area (End) ==================== -->
+    <% unless @gallery&.photos&.blank? %>      
+      <section class="services" id="services">
+          <div class="heading">
+            <h1>our Images</h1>
+            <div class="design"><%= image_tag("salam_logo.png", alt: "logo") %></div>
+          </div>  
+      <div class="box-container">
+        <% image_count = 0 %>
+        <% @gallery&.photos&.each do |gallery_photo| %>
+          <div class="service-item customcolumn">
+            <%= image_tag(gallery_photo.image, alt: "Service-logo", onclick: "openModal(); currentSlide(#{image_count + 1});") %>
+          </div>
+          <% image_count += 1 %>
+        <% end %>
 
-  <% unless @gallery&.photos&.blank? %>      
+        <div class="modal" id="myModal">
+          <span class="close cursor" onclick="closeModal()">&times;</span>
+          <div class="modal-content">
+            <% image_count = 0 %>
+            <% @gallery&.photos&.each do |gallery_photo| %>
+              <div class="mySlides">
+                <%= image_tag(gallery_photo.image, alt: "Service-logo") %>
+              </div>
+              <% image_count += 1 %>
+            <% end %>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+        </div>
+        </div>
+      </section>
+  <% end %>
+  
+
+
+
+
+
+
+  <%
+=begin%>
+ <% unless @gallery&.photos&.blank? %>      
   <section class="services" id="services">
 
     <div class="heading">
@@ -67,7 +107,15 @@
         <% end %>
       </div>
   </section>
-  <% end %>
+  <% end %> 
+<%
+=end%>
+
+
+
+
+
+
   <%= render partial: 'shared/footer' %>
   
 
@@ -86,6 +134,44 @@
   <!-- ========== Custom Script ========== -->
 
   <!-- Contact-Form Script -->
+<script>
+  function openModal() {
+    document.getElementById("myModal").style.display = "block";
+  }
+
+  function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+  }
+
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+  }
+</script>
   <script>
       jQuery('#contact-form').on('submit',function(e){
       jQuery('#contact-form #msg').html('');

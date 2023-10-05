@@ -29,15 +29,31 @@
       <h1>our Gallery</h1>
       <div class="design"><%= image_tag("salam_logo.png", alt: "logo") %></div>
     </div>
-      <div class="box-container">
+
+      <div class="parenttabi">
         <% gallery_count = 0 %>
         <% @galleries&.each do |gallery| %>
-          <div class="service-item">
+          <div class="service-item tabi">
             <%= link_to gallery_path(gallery), style:'border: none !important' do %>
-              <div class="image">
+              <h4><%= gallery&.title %></h4>
+            <% end %>
+          </div>
+          <% gallery_count += 1 %>
+
+          <% if gallery_count % 3 == 0 %>
+            <div class="noMobileView" style="width:100%;"></div>
+          <% end %>
+        <% end %>
+      </div>
+
+
+
+      <div class="">
+        <% gallery_count = 0 %>
+        <% @galleries&.each do |gallery| %>
+          <div class="box-image">
+            <%= link_to gallery_path(gallery), style:'border: none !important' do %>
                 <%= image_tag(gallery&.front_image, alt: "gallery-logo") if gallery&.front_image&.attached? %>
-              </div>
-              <h3><%= gallery&.title %></h3>
             <% end %>
           </div>
           <% gallery_count += 1 %>
