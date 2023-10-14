@@ -93,8 +93,8 @@ ActiveRecord::Schema.define(version: 2023_10_04_183401) do
     t.bigint "service_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.boolean "active", default: true
     t.bigint "about_id"
+    t.boolean "active", default: true
     t.index ["about_id"], name: "index_feedbacks_on_about_id"
     t.index ["service_id"], name: "index_feedbacks_on_service_id"
   end
