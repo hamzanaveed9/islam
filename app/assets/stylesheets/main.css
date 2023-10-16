@@ -2564,7 +2564,7 @@ display: inline;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(2 2 2 / 75%) !important;
+    /* background-color: rgb(2 2 2 / 75%) !important; */
   }
   
   /* Modal Content */
