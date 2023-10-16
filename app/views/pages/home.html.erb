@@ -26,7 +26,7 @@
   <!-- ==================== Home Area (Start) ==================== -->
   <section class="home" id="home">
 
-    <div class="swiper-container home-slider">
+    <div class="swiper-container home-slider" style="width:100% !important;">
       <div class="swiper-wrapper">
         <% if @sliders.blank? %>
           <div class="swiper-slide home-item">
@@ -102,7 +102,7 @@
             <% if slider.active %>
               <% if slider.background_video_url.present? %>
                 <%= link_to slider.background_video_url do %>
-                  <div class="swiper-slide home-item">
+                  <div class="swiper-slide home-item onlyforvideo">
                     <% youtube_id = slider.background_video_url.match(/(?:\?v=|\/embed\/|\/v\/|\/vi\/|\/watch\?v=|\/watch\?feature=player_embedded&v=|\/watch\?feature=player_embedded&feature=player_embedded&v=)([^&\n]+)/).try(:[], 1) %>
                     <% if youtube_id.present? %>
                       <a href="https://www.youtube.com/watch?v=<%= youtube_id %>" target="_blank" rel="noopener noreferrer">
@@ -126,7 +126,7 @@
                             </div>
                           </div>
                         <% end %>
-                        <p><%= slider&.description.html_safe %></p>
+                        <%= slider&.description.html_safe %>
                         <% if slider.link_text.present? %>
                           <a class="btn" href="<%= slider&.link_address %>"><%= slider&.link_text %></a>
                         <% end %>

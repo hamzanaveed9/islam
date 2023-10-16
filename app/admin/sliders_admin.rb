@@ -29,7 +29,7 @@ Trestle.resource(:sliders) do
       editor :description
       text_field :link_text
       text_field :link_address
-      active_storage_field :logo
+      active_storage_field :logo, label: "Ideal Dimensions width: 200px and height: 200px"
       check_box :active, label: "Active"
       # Active Storage field for background image
       active_storage_field :background_image, label: 'Background Image'
