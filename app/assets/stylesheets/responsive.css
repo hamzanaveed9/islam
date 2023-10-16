@@ -34,7 +34,7 @@
     }
 
     .header .navbar a{
-        display: block;
+        display: block !important;
         font-size: 2rem;
         padding: 1.5rem 2rem;
         margin: 1rem 0;

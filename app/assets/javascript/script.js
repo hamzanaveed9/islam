@@ -30,7 +30,7 @@ $(document).ready(function(){
     }
   
     function fadeOut(){
-      setInterval(loader, 3000)
+      setInterval(loader, 1200)
     }
   
     window.onload = fadeOut;

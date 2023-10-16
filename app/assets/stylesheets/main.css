@@ -2564,13 +2564,13 @@ display: inline;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: black;
+    background-color: rgb(2 2 2 / 75%) !important;
   }
   
   /* Modal Content */
   .modal-content {
     position: relative;
-    background-color: #fefefe;
+    background-color: #ffffff00 !important;
     margin: auto;
     padding: 0;
     width: 90%;
@@ -2587,6 +2587,16 @@ display: inline;
     z-index: 9 ;
     font-weight: bold;
   }
+  @media screen and (max-width:1000px) {
+    .modal{
+        padding-top: 180px;
+    }
+    .mySlides img{
+        max-width: 500px !important;
+        max-height: 400px !important;
+        object-fit: cover !important;
+    }
+  }
   @media screen and (max-width:767px) {
         .close {
             color: white;
@@ -2601,6 +2611,18 @@ display: inline;
         .modal{
             padding-top: 250px;
         }
+        .mySlides img{
+            max-width: 300px !important;
+            max-height: 300px !important;
+            object-fit: cover !important;
+        }
+  }
+  @media screen and (max-width:300px) {
+    .mySlides img{
+        max-width: 200px !important;
+        max-height: 200px !important;
+        object-fit: cover !important;
+    }
   }
   
   .close:hover,
@@ -2677,11 +2699,13 @@ display: inline;
   .hover-shadow:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }  .mySlides {
-    background-color: #000;
+    background-color: #ffffff00 !important;
     text-align: center;
   }
   .mySlides img{
-    max-width:100% !important;
+    width:850px !important;
+    height: 450px !important;
+    object-fit: cover !important;
   }
   .box-image img{
     width: 100%;
@@ -2693,4 +2717,22 @@ display: inline;
         object-fit: cover;
       }
 }
-  
+.mySlides {
+    display: none;
+    animation: fade .6s ease-in-out;
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .onlyforvideo{
+    min-width: 100% !important;
+  }
+  .images-box-size{
+    max-width: 33.333% !important;
+  }
