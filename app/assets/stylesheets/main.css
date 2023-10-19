@@ -2573,8 +2573,7 @@ display: inline;
     background-color: #ffffff00 !important;
     margin: auto;
     padding: 0;
-    width: 90%;
-    max-width: 1200px;
+    width: 100%;
   }
   
   /* The Close Button */
@@ -2587,94 +2586,10 @@ display: inline;
     z-index: 9 ;
     font-weight: bold;
   }
-  @media screen and (max-width:1000px) {
-    .modal{
-        padding-top: 180px;
-    }
-    .mySlides img{
-        max-width: 500px !important;
-        max-height: 400px !important;
-        object-fit: cover !important;
-    }
-  }
-  @media screen and (max-width:767px) {
-        .close {
-            color: white;
-            position: absolute;
-            top: 150px;
-            right: 50px;
-            font-size: 35px;
-            z-index: 9 ;
-            font-weight: bold;
-        }
 
-        .modal{
-            padding-top: 250px;
-        }
-        .mySlides img{
-            max-width: 300px !important;
-            max-height: 300px !important;
-            object-fit: cover !important;
-        }
-  }
-  @media screen and (max-width:300px) {
-    .mySlides img{
-        max-width: 200px !important;
-        max-height: 200px !important;
-        object-fit: cover !important;
-    }
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #999;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  .mySlides {
-    display: none;
-  }
-  
-  .cursor {
-    cursor: pointer;
-  }
-  
-  /* Next & previous buttons */
-  .prev,
-  .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
-  }
-  
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  
-  /* On hover, add a black background color with a little bit see-through */
-  .prev,
-  .next {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  
-  /* Number text (1/3 etc) */
-  
-  img {
-    margin-bottom: -4px;
-  }
+
+
+
   
   .caption-container {
     text-align: center;
@@ -2698,15 +2613,8 @@ display: inline;
   
   .hover-shadow:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }  .mySlides {
-    background-color: #ffffff00 !important;
-    text-align: center;
-  }
-  .mySlides img{
-    width:850px !important;
-    height: 450px !important;
-    object-fit: cover !important;
-  }
+  }  
+
   .box-image img{
     width: 100%;
   }
@@ -2717,10 +2625,6 @@ display: inline;
         object-fit: cover;
       }
 }
-.mySlides {
-    display: none;
-    animation: fade .6s ease-in-out;
-  }
 
   @keyframes fade {
     0% {
@@ -2733,6 +2637,349 @@ display: inline;
   .onlyforvideo{
     min-width: 100% !important;
   }
-  .images-box-size{
-    max-width: 33.333% !important;
+  .box-container.images-box-size{
+    display: grid !important;
+    grid-template-columns: 33.333% 33.333% 33.333% !important;
   }
+  .images-box-size .service-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+/* this is slider css------------------------------------------------------------------------------------------ */
+.sectionistext .gallery-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.sectionistext .gallery-wrapper .content {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3vh 0;
+    background: darken(#2b2c36, 12%);
+    background: linear-gradient(
+        to left,
+        darken(#2b2c36, 8%),
+        darken(#2b2c36, 12%)
+    );
+}
+
+.sectionistext .gallery-wrapper .gallery.full {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.sectionistext .gallery-wrapper .gallery.full .swiper-container .swiper-wrapper {
+    display: flex;
+    height: 80vh;
+    align-items: center;
+}
+
+.sectionistext .gallery-wrapper .gallery.full .swiper-container .swiper-wrapper .swiper-slide {
+    position: relative;
+    height: 50vh;
+    transition: all 0.4s ease-out;
+    box-sizing: border-box;
+    width: auto;
+    opacity: 0.25;
+}
+
+.sectionistext .gallery-wrapper .gallery.full .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-prev,
+.sectionistext .gallery-wrapper .gallery.full .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-next {
+    width: 20% !important;
+}
+
+.sectionistext .gallery-wrapper .gallery.full .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active {
+    height: 80vh;
+    width: 60% !important;
+    opacity: 1;
+}
+
+.sectionistext .gallery-wrapper .gallery.full .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active:hover .zoom {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+}
+
+.sectionistext .gallery-wrapper .gallery.full .swiper-container .swiper-wrapper .swiper-slide .image {
+    width: 100%;
+    height: 100%;
+}
+
+.sectionistext .gallery-wrapper .gallery.full .swiper-container .swiper-wrapper .swiper-slide .image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.sectionistext .gallery-wrapper .gallery.full .swiper-container .swiper-wrapper .swiper-slide .overlay {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    height: auto;
+    padding: 50px 50px 30px 50px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.4) 50%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-out;
+}
+
+.sectionistext .gallery-wrapper .gallery.full .swiper-container .swiper-wrapper .swiper-slide .overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sectionistext .gallery-wrapper .gallery.full .swiper-container .swiper-wrapper .swiper-slide .overlay.show .text-wrap {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.sectionistext .gallery-wrapper .gallery.full .swiper-container .swiper-wrapper .swiper-slide .overlay .text-wrap {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(50px);
+    transition: all 0.4s linear;
+}
+
+.sectionistext .gallery-wrapper .gallery.full .swiper-container .swiper-wrapper .swiper-slide .overlay .text-wrap .name{
+    font-size: 2.2em;    
+    color: #fff;
+    font-weight: 700;
+}
+
+.sectionistext .gallery-wrapper .gallery.full .swiper-container .swiper-wrapper .swiper-slide .overlay .text-wrap .caption{
+    font-size: 1.16em;
+    color: #fff;
+    line-height: 1.7;
+}
+
+.sectionistext .gallery-wrapper .gallery.full .swiper-container .swiper-wrapper .swiper-slide .swiper-next-button,
+.sectionistext .gallery-wrapper .gallery.full .swiper-container .swiper-wrapper .swiper-slide .swiper-prev-button {
+    position: absolute;
+    z-index: 99;
+    outline: none;
+    transition: all 0.2s linear;
+    width: 20%;
+    height: 50vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sectionistext .gallery-wrapper .gallery.full .swiper-container .swiper-wrapper .swiper-slide .swiper-next-button.swiper-button-disabled,
+.sectionistext .gallery-wrapper .gallery.full .swiper-container .swiper-wrapper .swiper-slide .swiper-prev-button.swiper-button-disabled {
+    opacity: 0.2;
+}
+
+.sectionistext .swiper-next-button em,
+.sectionistext .swiper-prev-button em {
+    font-size: 40px;
+}
+
+.sectionistext .gallery-wrapper .gallery.full .swiper-container .swiper-wrapper .swiper-slide .swiper-next-button {
+    right: 0px;
+    padding-left: 5vw;
+    justify-content: flex-start;
+}
+
+.sectionistext .gallery-wrapper .gallery.full .swiper-container .swiper-wrapper .swiper-slide .swiper-prev-button {
+    left: 0px;
+    padding-right: 5vw;
+}
+
+.sectionistext .gallery-wrapper .gallery.thumb {
+    position: relative;
+    width: 100%;
+    max-width: 1020px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+}
+
+.sectionistext .gallery-wrapper .gallery.thumb .swiper-container {
+    width: 100%;
+}
+
+.sectionistext .gallery-wrapper .gallery.thumb .swiper-container .swiper-wrapper .swiper-slide {
+    position: relative;
+    height: 10vh;
+    cursor: pointer;
+}
+
+.sectionistext .gallery-wrapper .gallery.thumb .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-thumb-active .image {
+    box-shadow: inset 0px 0px 0px 2px #069367;
+    padding: 2px;
+}
+
+.sectionistext .gallery-wrapper .gallery.thumb .swiper-container .swiper-wrapper .swiper-slide .image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.sectionistext .gallery-wrapper .gallery.thumb .swiper-container .swiper-wrapper .swiper-slide .image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.sectionistext .gallery-wrapper .gallery.thumb .swiper-container .swiper-wrapper .swiper-slide .overlay {
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    opacity: 0;
+    transition: all 0.2s linear;
+}
+
+.sectionistext .swiper-next-button {
+    right: -5px;
+}
+
+.sectionistext .swiper-prev-button {
+    left: -5px;
+}
+
+.sectionistext .gallery-wrapper .gallery.thumb .swiper-next-button em {
+    transform: rotate(180deg);
+}
+
+.sectionistext .swiper-next-button,.sectionistext .swiper-prev-button {
+    position: absolute;
+    z-index: 99;
+    outline: none;
+    transition: all 0.2s linear;
+    width: 32px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff00 !important;
+    cursor: pointer;
+}
+
+.sectionistext .gallery-wrapper .gallery.thumb .swiper-next-button:hover,
+.sectionistext .gallery-wrapper .gallery.thumb .swiper-prev-button:hover {
+    background-color: darken(#019267, 10%);
+}
+
+.sectionistext .gallery-wrapper .gallery.thumb .swiper-next-button.swiper-button-disabled,
+.sectionistext .gallery-wrapper .gallery.thumb .swiper-prev-button.swiper-button-disabled {
+    opacity: 0.2;
+}
+
+
+
+
+
+/* Mobile */
+@media only screen and (max-width: 1024px) {
+    .sectionistext .gallery-wrapper .content {
+        padding: 5vh 0;
+    }
+
+    .sectionistext .gallery-wrapper .gallery.full .swiper-container .swiper-wrapper {
+        height: 70vh;
+    }
+
+    .sectionistext .gallery-wrapper .gallery.full .swiper-container .swiper-wrapper .swiper-slide {
+        height: 50vh;
+    }
+
+    .sectionistext .gallery-wrapper .gallery.full .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-prev,
+    .sectionistext .gallery-wrapper .gallery.full .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-next {
+        width: 10% !important;
+    }
+
+    .sectionistext .gallery-wrapper .gallery.full .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active {
+        height: 70vh;
+        width: 80% !important;
+    }
+
+    .sectionistext .gallery-wrapper .gallery.full .swiper-container .swiper-wrapper .swiper-slide .overlay {
+        padding: 20px;
+    }
+
+    .sectionistext .gallery-wrapper .gallery.full .swiper-container .swiper-wrapper .swiper-slide .overlay .text-wrap {
+        transform: translateY(0);
+    }
+
+    .sectionistext .gallery-wrapper .gallery.full .swiper-container .swiper-wrapper .swiper-slide .overlay .text-wrap .name {
+        font-size: 1.6em;
+    }
+
+    .sectionistext .gallery-wrapper .gallery.full .swiper-container .swiper-wrapper .swiper-slide .overlay .text-wrap .caption {
+        font-size: 1.06em;
+    }
+
+    .sectionistext .gallery-wrapper .gallery.full .swiper-container .swiper-wrapper .swiper-slide .swiper-next-button,
+    .sectionistext .gallery-wrapper .gallery.full .swiper-container .swiper-wrapper .swiper-slide .swiper-prev-button {
+        width: 10%;
+        height: 50vh;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sectionistext .gallery-wrapper .gallery.full .swiper-container .swiper-wrapper .swiper-slide .swiper-next-button em,
+    .sectionistext .gallery-wrapper .gallery.full .swiper-container .swiper-wrapper .swiper-slide .swiper-prev-button em {
+        font-size: 45px;
+    }
+
+    .sectionistext .gallery-wrapper .gallery.full .swiper-container .swiper-wrapper .swiper-slide .swiper-next-button {
+        padding-left: 0;
+    }
+
+    .sectionistext .gallery-wrapper .gallery.full .swiper-container .swiper-wrapper .swiper-slide .swiper-prev-button {
+        padding-right: 0;
+    }
+
+    .sectionistext .gallery-wrapper .gallery.thumb {
+        padding: 0 30px;
+        max-width: 100%;
+    }
+
+    .sectionistext .gallery-wrapper .gallery.thumb .swiper-container .swiper-wrapper .swiper-slide {
+        height: 80px;
+    }
+
+    .sectionistext .gallery-wrapper .gallery.thumb .swiper-next-button {
+        right: 10px;
+    }
+
+    .sectionistext .gallery-wrapper .gallery.thumb .swiper-prev-button {
+        left: 10px;
+    }
+}

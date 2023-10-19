@@ -1,28 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>  
-
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Title -->
   <title>Imam Sidyot | Empowering Excellence</title>
-
   <!-- Favicon -->
-<link rel="icon" type="image/x-icon" href="/salam_logo.png">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
+  <link rel="icon" type="image/x-icon" href="/salam_logo.png">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@6.0.2/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
-  <!-- ==================== Scroll-Top Area (Start) ==================== -->
+<body>
+  <!-- Scroll-Top Area -->
   <a href="#" class="scroll-top">
     <i class="fas fa-caret-up"></i>
   </a>
-  <!-- ==================== Scroll-Top Area (End) ==================== -->
 
   <%= render partial: 'shared/header' %>
 
-  <!-- ==================== Gallery Details Area (Start) ==================== -->
+  <!-- Gallery Details Area -->
   <section class="events gallery" id="events" style='margin-top: 90px'>
     <div class="start-heading">
       <h1><%= @gallery&.title %></h1>
@@ -34,87 +30,88 @@
       <%= @gallery&.front_image&.attached? ? image_tag(@gallery&.front_image) : image_tag("Home-1.png", alt: "logo") %>
     </div>
     <div class='detail'>
-        <p><%= @gallery&.description.html_safe %></p>
+      <p><%= @gallery&.description.html_safe %></p>
     </div>
-
-    <!-- ==================== Slider Area (Start) ==================== -->
-    
-    <!-- ==================== Slider Area (End) ==================== -->
+    <!-- Slider Area -->
+    <!-- Slider Area End -->
   </section>
-  <!-- ==================== Gallery Details Area (End) ==================== -->
 
-
-  <!-- ==================== Slider Area (End) ==================== -->
-    <% unless @gallery&.photos&.blank? %>      
-      <section class="services" id="services">
-          <div class="heading">
-            <h1>our Images</h1>
-            <div class="design"><%= image_tag("salam_logo.png", alt: "logo") %></div>
-          </div>  
+  <!-- Slider Area End -->
+  <% unless @gallery&.photos&.blank? %>      
+    <section class="services" id="services">
+      <div class="heading">
+        <h1>our Images</h1>
+        <div class="design"><%= image_tag("salam_logo.png", alt: "logo") %></div>
+      </div>
       <div class="box-container images-box-size">
         <% image_count = 0 %>
         <% @gallery&.photos&.each do |gallery_photo| %>
-          <div class="service-item customcolumn">
+          <div class="service-item">
             <%= image_tag(gallery_photo.image, alt: "Service-logo", onclick: "openModal(); currentSlide(#{image_count + 1});") %>
           </div>
           <% image_count += 1 %>
         <% end %>
-
         <div class="modal" id="myModal">
           <span class="close cursor" onclick="closeModal()">&times;</span>
           <div class="modal-content">
-            <% image_count = 0 %>
-            <% @gallery&.photos&.each do |gallery_photo| %>
-              <div class="mySlides">
-                <%= image_tag(gallery_photo.image, alt: "Service-logo") %>
+                 <div class="sectionistext">
+        <div class="gallery-wrapper">
+          <div class="content">
+            <div class="gallery full">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <% image_count = 0 %>
+                  <% @gallery&.photos&.each do |gallery_photo| %>
+                    <div class="swiper-slide">
+                      <div class="image">
+                        <%= image_tag(gallery_photo.image, alt: "Service-logo") %>
+                      </div>
+                      <% image_count += 1 %>
+                      <div class="overlay">
+                        <div class="text-wrap">
+                          <div class="name">
+                            <%= gallery_photo.title %>
+                          </div>
+                          <div class="caption">
+                            <%= gallery_photo.description.html_safe %>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  <% end %>
+                </div>
               </div>
-              <% image_count += 1 %>
-            <% end %>
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              <div class="swiper-next-button">
+                <em class="material-icons"><i class="fas fa-chevron-right"></i></em>
+              </div>
+              <div class="swiper-prev-button">
+                <em class="material-icons"><i class="fas fa-chevron-left"></i></em>
+              </div>
+            </div>
+            <div class="gallery thumb">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <% image_count = 0 %>
+                  <% @gallery&.photos&.each do |gallery_photo| %>
+                    <div class="swiper-slide">
+                      <div class="image">
+                        <%= image_tag(gallery_photo.image, alt: "Service-logo") %>
+                      </div>
+                    </div>
+                    <% image_count += 1 %>
+                  <% end %>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        </div>
-      </section>
-  <% end %>
-  
-
-
-
-
-
-
-  <%
-=begin%>
- <% unless @gallery&.photos&.blank? %>      
-  <section class="services" id="services">
-
-    <div class="heading">
-      <h1>our Images</h1>
-      <div class="design"><%= image_tag("salam_logo.png", alt: "logo") %></div>
-    </div>
-      <div class="box-container">
-        <% image_count = 0 %>
-        <% @gallery&.photos&.each do |gallery_photo| %>
-          <div class="service-item">
-            <%= image_tag(gallery_photo.image, alt: "Service-logo") %>
-          </div>
-          <% image_count += 1 %>
-
-          <% if image_count % 3 == 0 %>
-            <div class="noMobileView" style="width:100%;"></div>
-          <% end %>
-        <% end %>
       </div>
-  </section>
-  <% end %> 
-<%
-=end%>
+          </div>
+        </div>
+      </div>
 
-
-
-
-
+    </section>
+  <% end %>
 
   <%= render partial: 'shared/footer' %>
   
@@ -153,24 +150,6 @@
   function currentSlide(n) {
     showSlides(slideIndex = n);
   }
-
-  function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("demo");
-    var captionText = document.getElementById("caption");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-    captionText.innerHTML = dots[slideIndex-1].alt;
-  }
 </script>
   <script>
       jQuery('#contact-form').on('submit',function(e){
@@ -199,4 +178,120 @@
         duration: 1000
     })
   </script>
+  <script>
+      $(function () {
+      if ($(".gallery-wrapper").length) {
+        var galleryThumbs = new Swiper(
+          ".gallery-wrapper .content .gallery.thumb .swiper-container",
+          {
+            speed: 900,
+            effect: "slide",
+            spaceBetween: 12,
+            grabCursor: false,
+            simulateTouch: true,
+            loop: false,
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+            navigation: {
+              nextEl: ".gallery-wrapper .content .gallery.thumb .swiper-next-button",
+              prevEl: ".gallery-wrapper .content .gallery.thumb .swiper-prev-button"
+            },
+            breakpoints: {
+              320: {
+                slidesPerView: 2,
+                spaceBetween: 10
+              },
+              414: {
+                slidesPerView: 3,
+                spaceBetween: 10
+              },
+              768: {
+                slidesPerView: 5,
+                spaceBetween: 10
+              },
+              1024: {
+                slidesPerView: 7,
+                spaceBetween: 10
+              }
+            },
+            on: {
+              init: function () {
+                let containerThumbWidth = $(
+                  ".gallery-wrapper .content .gallery.thumb"
+                ).outerWidth();
+
+                let totalThumbWidth = 0;
+
+                $(".gallery.thumb .swiper-container .swiper-wrapper .swiper-slide").each(
+                  function () {
+                    let thumbWidth = $(this).outerWidth();
+                    totalThumbWidth += thumbWidth;
+                  }
+                );
+
+                if (totalThumbWidth < containerThumbWidth) {
+                  $(
+                    ".gallery.thumb .swiper-next-button, .gallery.thumb .swiper-prev-button"
+                  ).addClass("hide");
+                } else {
+                  $(
+                    ".gallery.thumb .swiper-next-button, .gallery.thumb .swiper-prev-button"
+                  ).removeClass("hide");
+                }
+              }
+            }
+          }
+        );
+
+        var galleryFull = new Swiper(
+          ".gallery-wrapper .content .gallery.full .swiper-container",
+          {
+            speed: 900,
+            effect: "slide",
+            slidesPerView: 3,
+            spaceBetween: 0,
+            centeredSlides: true,
+            autoplay: {
+              delay: 7000,
+              disableOnInteraction: false,
+              stopOnLastSlide: false
+            },
+            keyboard: {
+              enabled: true
+            },
+            grabCursor: false,
+            simulateTouch: false,
+            loop: true,
+            navigation: {
+              nextEl: ".gallery-wrapper .content .gallery.full .swiper-next-button",
+              prevEl: ".gallery-wrapper .content .gallery.full .swiper-prev-button"
+            },
+            thumbs: {
+              swiper: galleryThumbs
+            },
+            on: {
+              slideChangeTransitionStart: function () {
+                $(
+                  ".gallery-wrapper .content .gallery.full .swiper-slide .overlay"
+                ).removeClass("show");
+              },
+              slideChangeTransitionEnd: function () {
+                $(
+                  ".gallery-wrapper .content .gallery.full .swiper-slide-active .overlay"
+                ).addClass("show");
+              }
+            }
+          }
+        );
+      }
+      });
+
+      $(window).on("load", function () {
+      setTimeout(function () {
+        $(".loader").fadeOut();
+      }, 1000);
+      });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>   
+  <script src="https://unpkg.com/swiper@6.0.2/swiper-bundle.min.js"></script>
 </html>
