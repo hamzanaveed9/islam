@@ -319,7 +319,7 @@
         <% @services&.each do |service| %>
           <% if service.active? %>
             <div class="service-item border-rad-color">
-              <%= link_to service_path(service) do %>
+              <%= link_to service_path(service), style:'display:contents !important' do %>
                 <div class="image">
                   <%= image_tag(service&.logo, alt: "Service-logo") if service&.logo&.attached? %>
                 </div>
@@ -640,4 +640,14 @@
         duration: 1000
     })
   </script>
+  <!-- <div class="loader-container">
+    <div class="loader">
+      <div class="loader__bar"></div>
+      <div class="loader__bar"></div>
+      <div class="loader__bar"></div>
+      <div class="loader__bar"></div>
+      <div class="loader__bar"></div>
+      <div class="loader__ball"></div>
+    </div>
+  </div> -->
 </html>
