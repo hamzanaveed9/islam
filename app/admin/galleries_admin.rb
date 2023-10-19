@@ -23,7 +23,7 @@ Trestle.resource(:galleries) do
       editor :description
       active_storage_field :front_image
       check_box :active, label: "Active"
-
+      number_field :home_position, label: "Home Position(Enter position from 1 to 4)"
     end
   end
 end

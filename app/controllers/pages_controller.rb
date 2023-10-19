@@ -7,6 +7,7 @@ class PagesController < ApplicationController
     @services = Service.all
     @feedback = Feedback.new
     @contacts = Contact.all
+    @galleries = Gallery.order(:home_position)
   end
 
   def about_us
