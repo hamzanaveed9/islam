@@ -338,7 +338,36 @@
 
   </section>
   <!-- ==================== Services Area (End) ==================== -->
+  <section class="volunteers" id="volunteers">
 
+  <div class="heading">
+    <h1>gallaries</h1>
+    <div class="design">
+      <img src="./assets/images/Logo/Logo.png" alt="">
+    </div>
+  </div>
+  <div class="box-container">
+    <% @galleries.each do |gallery| %>
+      <div class="volunteers-item">
+        <div class="image">
+          <%= image_tag(gallery&.front_image, alt: "gallery-logo") if gallery&.front_image&.attached? %>
+        </div>
+        <div class="content">
+          <div class="icon-container">
+            <div class="inner">
+            </div>
+          </div>
+          <div class="text">
+            <h2><%= gallery.title %></h2>
+            <h5><%= gallery.description.html_safe %></h5>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  
+
+</section>
 
 
   <!-- ==================== Events Area (Start) ==================== -->
