@@ -9,6 +9,7 @@
   <link rel="icon" type="image/x-icon" href="/salam_logo.png">
   <link rel="stylesheet" href="https://unpkg.com/swiper@6.0.2/swiper-bundle.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://unpkg.com/swiper@6.0.2/swiper-bundle.min.js"></script>
 </head>
 <body>
   <!-- Scroll-Top Area -->
@@ -120,9 +121,9 @@
  <%= javascript_include_tag 'jquery-3.6.0' %>
  <%= javascript_include_tag 'tinymce' %>
   <!-- SWIPER JS -->
-  <%= javascript_include_tag 'swiper.js' %>
+  <%#= javascript_include_tag 'swiper.js' %>
   <%= javascript_include_tag 'home-slider.js' %>
-    <%= javascript_include_tag 'script.js' %>
+    <%#= javascript_include_tag 'script.js' %>
         <%= javascript_include_tag 'scroll-spy.js' %>
   <!-- Animation -->
  <%= javascript_include_tag 'aos.js' %>
@@ -150,6 +151,17 @@
   function currentSlide(n) {
     showSlides(slideIndex = n);
   }
+
+      function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      slides[slideIndex - 1].style.display = "block";
+    }
 </script>
   <script>
       jQuery('#contact-form').on('submit',function(e){
@@ -181,6 +193,7 @@
   <script>
       $(function () {
       if ($(".gallery-wrapper").length) {
+        $(document).ready(function() {
         var galleryThumbs = new Swiper(
           ".gallery-wrapper .content .gallery.thumb .swiper-container",
           {
@@ -242,6 +255,7 @@
             }
           }
         );
+        });
 
         var galleryFull = new Swiper(
           ".gallery-wrapper .content .gallery.full .swiper-container",
@@ -285,13 +299,7 @@
         );
       }
       });
-
-      $(window).on("load", function () {
-      setTimeout(function () {
-        $(".loader").fadeOut();
-      }, 1000);
-      });
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>   
+  <%= javascript_include_tag 'jquery-3.6.0' %>  
   <script src="https://unpkg.com/swiper@6.0.2/swiper-bundle.min.js"></script>
 </html>
