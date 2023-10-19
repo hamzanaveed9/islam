@@ -1197,6 +1197,7 @@ section{
 
 .volunteers-item{
     position: relative;
+    max-width: 300px;
 }
 
 .volunteers-item .image{

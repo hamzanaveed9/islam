@@ -348,21 +348,23 @@
   </div>
   <div class="box-container">
     <% @galleries.each do |gallery| %>
-      <div class="volunteers-item">
-        <div class="image">
-          <%= image_tag(gallery&.front_image, alt: "gallery-logo") if gallery&.front_image&.attached? %>
-        </div>
-        <div class="content">
-          <div class="icon-container">
-            <div class="inner">
+      <%= link_to galleries_path(gallery.id) do %>
+        <div class="volunteers-item">
+          <div class="image">
+            <%= image_tag(gallery&.front_image, alt: "gallery-logo") if gallery&.front_image&.attached? %>
+          </div>
+          <div class="content">
+            <div class="icon-container">
+              <div class="inner">
+              </div>
+            </div>
+            <div class="text">
+              <h2><%= gallery.title %></h2>
+              <h5><%= gallery.description.html_safe %></h5>
             </div>
           </div>
-          <div class="text">
-            <h2><%= gallery.title %></h2>
-            <h5><%= gallery.description.html_safe %></h5>
-          </div>
         </div>
-      </div>
+      <% end %>
     <% end %>
   </div>
   
