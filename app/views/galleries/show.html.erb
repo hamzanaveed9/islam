@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper@6.0.2/swiper-bundle.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <script src="https://unpkg.com/swiper@6.0.2/swiper-bundle.min.js"></script>
+  <%= javascript_include_tag 'jquery-3.6.0' %>  
+  <script  defer src="https://unpkg.com/swiper@6.0.2/swiper-bundle.min.js"></script>
+
 </head>
 <body>
   <!-- Scroll-Top Area -->
@@ -123,7 +126,7 @@
   <!-- SWIPER JS -->
   <%#= javascript_include_tag 'swiper.js' %>
   <%= javascript_include_tag 'home-slider.js' %>
-    <%#= javascript_include_tag 'script.js' %>
+    <%= javascript_include_tag 'script.js' %>
         <%= javascript_include_tag 'scroll-spy.js' %>
   <!-- Animation -->
  <%= javascript_include_tag 'aos.js' %>
@@ -133,35 +136,47 @@
 
   <!-- Contact-Form Script -->
 <script>
-  function openModal() {
-    document.getElementById("myModal").style.display = "block";
-  }
 
-  function closeModal() {
-    document.getElementById("myModal").style.display = "none";
-  }
+    function openModal() {
+      document.getElementById("myModal").style.display = "block";
+    }
 
-  var slideIndex = 1;
-  showSlides(slideIndex);
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
 
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
 
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
 
-      function showSlides(n) {
+    function showSlides(n) {
       var i;
       var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      
       if (n > slides.length) {slideIndex = 1}
       if (n < 1) {slideIndex = slides.length}
       for (i = 0; i < slides.length; i++) {
           slides[i].style.display = "none";
       }
-      slides[slideIndex - 1].style.display = "block";
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
     }
+  document.addEventListener("DOMContentLoaded", function() {
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+  });
 </script>
   <script>
       jQuery('#contact-form').on('submit',function(e){
@@ -192,8 +207,8 @@
   </script>
   <script>
       $(function () {
+    window.onload = function() {
       if ($(".gallery-wrapper").length) {
-        $(document).ready(function() {
         var galleryThumbs = new Swiper(
           ".gallery-wrapper .content .gallery.thumb .swiper-container",
           {
@@ -205,6 +220,8 @@
             loop: false,
             watchSlidesVisibility: true,
             watchSlidesProgress: true,
+            observer: true,
+            observeParents: true,
             navigation: {
               nextEl: ".gallery-wrapper .content .gallery.thumb .swiper-next-button",
               prevEl: ".gallery-wrapper .content .gallery.thumb .swiper-prev-button"
@@ -255,7 +272,6 @@
             }
           }
         );
-        });
 
         var galleryFull = new Swiper(
           ".gallery-wrapper .content .gallery.full .swiper-container",
@@ -265,6 +281,8 @@
             slidesPerView: 3,
             spaceBetween: 0,
             centeredSlides: true,
+            observer: true,
+            observeParents: true,
             autoplay: {
               delay: 7000,
               disableOnInteraction: false,
@@ -298,8 +316,8 @@
           }
         );
       }
+    }
       });
+    
   </script>
-  <%= javascript_include_tag 'jquery-3.6.0' %>  
-  <script src="https://unpkg.com/swiper@6.0.2/swiper-bundle.min.js"></script>
 </html>
