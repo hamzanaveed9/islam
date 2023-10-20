@@ -9,6 +9,10 @@
   <link rel="icon" type="image/x-icon" href="/salam_logo.png">
   <link rel="stylesheet" href="https://unpkg.com/swiper@6.0.2/swiper-bundle.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://unpkg.com/swiper@6.0.2/swiper-bundle.min.js"></script>
+  <%= javascript_include_tag 'jquery-3.6.0' %>  
+  <script  defer src="https://unpkg.com/swiper@6.0.2/swiper-bundle.min.js"></script>
+
 </head>
 <body>
   <!-- Scroll-Top Area -->
@@ -120,7 +124,7 @@
  <%= javascript_include_tag 'jquery-3.6.0' %>
  <%= javascript_include_tag 'tinymce' %>
   <!-- SWIPER JS -->
-  <%= javascript_include_tag 'swiper.js' %>
+  <%#= javascript_include_tag 'swiper.js' %>
   <%= javascript_include_tag 'home-slider.js' %>
     <%= javascript_include_tag 'script.js' %>
         <%= javascript_include_tag 'scroll-spy.js' %>
@@ -132,24 +136,15 @@
 
   <!-- Contact-Form Script -->
 <script>
-  function openModal() {
-    document.getElementById("myModal").style.display = "block";
-  }
 
-  function closeModal() {
-    document.getElementById("myModal").style.display = "none";
-  }
+    function openModal() {
+      document.getElementById("myModal").style.display = "block";
+    }
 
-  var slideIndex = 1;
-  showSlides(slideIndex);
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
 
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
 </script>
   <script>
       jQuery('#contact-form').on('submit',function(e){
@@ -192,6 +187,8 @@
             loop: false,
             watchSlidesVisibility: true,
             watchSlidesProgress: true,
+            observer: true,
+            observeParents: true,
             navigation: {
               nextEl: ".gallery-wrapper .content .gallery.thumb .swiper-next-button",
               prevEl: ".gallery-wrapper .content .gallery.thumb .swiper-prev-button"
@@ -251,6 +248,8 @@
             slidesPerView: 3,
             spaceBetween: 0,
             centeredSlides: true,
+            observer: true,
+            observeParents: true,
             autoplay: {
               delay: 7000,
               disableOnInteraction: false,
@@ -284,14 +283,8 @@
           }
         );
       }
-      });
-
-      $(window).on("load", function () {
-      setTimeout(function () {
-        $(".loader").fadeOut();
-      }, 1000);
-      });
+    }
+      );
+    
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>   
-  <script src="https://unpkg.com/swiper@6.0.2/swiper-bundle.min.js"></script>
 </html>

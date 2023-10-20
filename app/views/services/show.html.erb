@@ -102,6 +102,23 @@
 
   
   <!-- ==================== Event Details Area (End) ==================== -->
-  <%= render partial: 'shared/footer' %>
+<%= render partial: 'shared/footer' %>
+   <!-- JQuery -->
+<%= javascript_include_tag 'jquery-3.6.0' %>
+<%= javascript_include_tag 'tinymce' %>
+  <!-- SWIPER JS -->
+<%= javascript_include_tag 'swiper.js' %>
+<%= javascript_include_tag 'home-slider.js' %>
+<%= javascript_include_tag 'script.js' %>
+<%= javascript_include_tag 'scroll-spy.js' %>
+  <!-- Animation -->
+<%= javascript_include_tag 'aos.js' %>
+<script>
+  AOS.init({
+      delay: 400,
+      duration: 1000
+  })
+</script>
+
 </body>
 </html>

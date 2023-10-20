@@ -33,7 +33,7 @@
         <% service_count = 0 %>
         <% @services&.each do |service| %>
           <div class="service-item border-rad-color">
-            <%= link_to service_path(service), style:'border: none !important' do %>
+            <%= link_to service_path(service), style:'border: none !important;display: contents;' do %>
               <div class="image">
                 <%= image_tag(service&.logo) if service&.logo&.attached? %>
               </div>
