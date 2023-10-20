@@ -9,6 +9,7 @@ Trestle.resource(:feedbacks) do
     column :email
     column :subject
     column :message
+    column :imam_name
     column :service
     actions
   end
@@ -17,6 +18,7 @@ Trestle.resource(:feedbacks) do
     text_field :name
     text_field :email
     text_field :subject
+    text_field :imam_name
     text_area :message
   end
 end

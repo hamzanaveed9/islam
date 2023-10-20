@@ -319,7 +319,7 @@
         <% @services&.each do |service| %>
           <% if service.active? %>
             <div class="service-item border-rad-color">
-              <%= link_to service_path(service), style:'display:contents !important' do %>
+              <%= link_to service_path(service), style:'border: none !important; display: contents !important;' do %>
                 <div class="image">
                   <%= image_tag(service&.logo, alt: "Service-logo") if service&.logo&.attached? %>
                 </div>
@@ -338,7 +338,38 @@
 
   </section>
   <!-- ==================== Services Area (End) ==================== -->
+  <section class="volunteers" id="volunteers">
 
+  <div class="heading">
+    <h1>gallaries</h1>
+    <div class="design">
+      <img src="./assets/images/Logo/Logo.png" alt="">
+    </div>
+  </div>
+  <div class="box-container">
+    <% @galleries.each do |gallery| %>
+      <%= link_to galleries_path(gallery.id) do %>
+        <div class="volunteers-item">
+          <div class="image">
+            <%= image_tag(gallery&.front_image, alt: "gallery-logo") if gallery&.front_image&.attached? %>
+          </div>
+          <div class="content">
+            <div class="icon-container">
+              <div class="inner">
+              </div>
+            </div>
+            <div class="text">
+              <h2><%= gallery.title %></h2>
+              <h5><%= gallery.description.html_safe %></h5>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+  
+
+</section>
 
 
   <!-- ==================== Events Area (Start) ==================== -->
@@ -506,6 +537,7 @@
           <p class="gmail">imamsaskatoon@gmail.com</p>
         </div>
       <% else %>
+        <% if @contacts&.first %>
         <div class="info-item">
           <i class="fas fa-user"></i>
           <h3>Imam details</h3>
@@ -513,22 +545,28 @@
           <p><%= @contacts.first.mobile %></p>
           <p><%= @contacts.first.email %></p>
         </div>
-        
-        <div class="info-item">
-          <i class="fas fa-user"></i>
-          <h3>Imam details</h3>
-          <p><%= @contacts&.second.phone %></p>
-          <p><%= @contacts&.second.mobile %></p>
-          <p><%= @contacts&.second.email %></p>
-        </div>
+      <% end %>
       
+      <% if @contacts&.second %>
         <div class="info-item">
           <i class="fas fa-user"></i>
           <h3>Imam details</h3>
-          <p><%= @contacts&.third.phone %></p>
-          <p><%= @contacts&.third.mobile %></p>
-          <p><%= @contacts&.third.email %></p>
+          <p><%= @contacts.second.phone %></p>
+          <p><%= @contacts.second.mobile %></p>
+          <p><%= @contacts.second.email %></p>
         </div>
+      <% end %>
+      
+      <% if @contacts&.third %>
+        <div class="info-item">
+          <i class="fas fa-user"></i>
+          <h3>Imam details</h3>
+          <p><%= @contacts.third.phone %></p>
+          <p><%= @contacts.third.mobile %></p>
+          <p><%= @contacts.third.email %></p>
+        </div>
+      <% end %>
+      
       <% end %>
 
     </div>

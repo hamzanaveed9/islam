@@ -82,6 +82,11 @@
         </div>
 
         <div class="mb-1">
+          <%#= form.label :subject, class: 'form-label' %>
+          <%= form.select :imam_name, ['Option 1', 'Option 2', 'Option 3'], {}, { class: 'box form-control' } %>
+        </div>
+
+        <div class="mb-1">
           <%#= form.label :message, class: 'form-label' %>
           <%= form.text_area :message, class: 'box form-control', placeholder: 'Message', rows: 3 %>
         </div>
