@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Admin Dashboard</title>
+  <style>
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+  }
+  
+  .dashboard {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .summary-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    margin: 20px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .summary-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .summary-card h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  .summary-card .count {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Optional: Add media queries for responsiveness */
+  @media (max-width: 768px) {
+    .dashboard {
+      flex-direction: column;
+    }
+  
+    .summary-card {
+      width: 80%;
+    }
+  }
+  
+
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <div class="summary-card">
+      <h2>Total Feedbacks</h2>
+      <p class="count"><%=  @total_feedbacks %></p>
+    </div>
+    <div class="summary-card">
+      <h2>Total Services</h2>
+      <p class="count"><%=  @total_services %></p>
+    </div>
+    <div class="summary-card">
+      <h2>Photos</h2>
+      <p class="count"><%= @total_photos %></p>
+    </div>
+    <div class="summary-card">
+    <h2>Total Events</h2>
+    <p class="count"><%= @total_events %></p>
+  </div>
+  </div>
+</body>
+</html>
