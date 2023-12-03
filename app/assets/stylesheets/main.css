@@ -2987,3 +2987,32 @@ display: inline;
 .fa-chevron-left,.fa-chevron-right{
     color: #fff;
 }
+
+.flash-message-container {
+    position: fixed;
+    top: 78px;
+    right: 530px;
+    z-index: 1000;
+    font-size: 20px;
+  }
+  
+  .flash-message {
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+  }
+  
+  .alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+  }
+  
+  /* Add styles for other alert types (error, warning, etc.) similarly */
+  
+  .flash-message.fade-out {
+    opacity: 0;
+  }
+  
