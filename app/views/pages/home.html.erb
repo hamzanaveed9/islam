@@ -235,26 +235,18 @@
       <div class="image">
         <div>
           <div class="image1">
-            <% if @about&.images[0].present? %>
-              <%= image_tag(@about&.images[0], alt: "about1") if @about&.images&.attached? %>
-            <% end %>
+            <%= image_tag("About-1.png", alt: "about1") %>
           </div>
           <div class="image2">
-            <% if @about&.images[1].present? %>
-              <%= image_tag(@about&.images[1], alt: "about2") if @about&.images&.attached? %>
-            <% end %>
+            <%= image_tag("About-2.png", alt: "about1") %>
           </div>
         </div>
         <div>
           <div class="image3">
-            <% if @about&.images[2].present? %>
-              <%= image_tag(@about&.images[2], alt: "about3") if @about&.images&.attached? %>
-            <% end %>
+            <%= image_tag("About-3.png", alt: "about1") %>
           </div>
           <div class="image4">
-            <% if @about&.images[3].present? %>
-              <%= image_tag(@about&.images[3], alt: "about4") if @about&.images&.attached? %>
-            <% end %>
+            <%= image_tag("About-4.png", alt: "about1") %>
           </div>
         </div>
       </div>
