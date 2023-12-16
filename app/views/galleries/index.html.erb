@@ -23,38 +23,46 @@
   <%= render partial: 'shared/header' %>
   
   <!-- ==================== Services Area (Start) ==================== -->
-  <section class="volunteers digg_pagination" id="volunteers" style='margin-top: 90px'>
+  <section class="services digg_pagination" id="services" style='margin-top: 90px'>
 
-      <div class="heading">
-        <h1>gallaries</h1>
-        <div class="design">
-          <img src="./assets/images/Logo/Logo.png" alt="">
-        </div>
-      </div>
-      <div class="box-container">
-        <% @galleries.each do |gallery| %>
-          <%= link_to galleries_path(gallery.id) do %>
-            <div class="volunteers-item">
-              <div class="image">
-                <%= image_tag(gallery&.front_image, alt: "gallery-logo") if gallery&.front_image&.attached? %>
-              </div>
-              <div class="content">
-                <div class="icon-container">
-                  <div class="inner">
-                  </div>
-                </div>
-                <div class="text">
-                  <h2><%= gallery.title %></h2>
-                  <h5><%= gallery.description.html_safe %></h5>
-                </div>
-              </div>
-            </div>
+    <div class="heading">
+      <h1>our Gallery</h1>
+      <div class="design"><%= image_tag("salam_logo.png", alt: "logo") %></div>
+    </div>
+
+      <div class="parenttabi">
+        <% gallery_count = 0 %>
+        <% @galleries&.each do |gallery| %>
+          <div class="service-item tabi">
+            <%= link_to gallery_path(gallery), style:'border: none !important' do %>
+              <h4><%= gallery&.title %></h4>
+            <% end %>
+          </div>
+          <% gallery_count += 1 %>
+
+          <% if gallery_count % 3 == 0 %>
+            <div class="noMobileView" style="width:100%;"></div>
           <% end %>
         <% end %>
       </div>
-      
-    
-    </section>
+
+
+
+      <div class="">
+        <% gallery_count = 0 %>
+        <% @galleries&.each do |gallery| %>
+          <div class="box-image">
+            <%= link_to gallery_path(gallery), style:'border: none !important' do %>
+                <%= image_tag(gallery&.front_image, alt: "gallery-logo") if gallery&.front_image&.attached? %>
+            <% end %>
+          </div>
+          <% gallery_count += 1 %>
+
+          <% if gallery_count % 3 == 0 %>
+            <div class="noMobileView" style="width:100%;"></div>
+          <% end %>
+        <% end %>
+      </div>
 
     <div class="d-flex mt-4">
       <%= link_to_previous_page @galleries, "&larr; Previous Page".html_safe, class: "btn btn-outline-primary rounded-pill mr-auto" %>
