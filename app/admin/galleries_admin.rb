@@ -10,6 +10,7 @@ Trestle.resource(:galleries) do
     column :active, label: "Active" do |event|
       event.active ? status_tag("Yes", :success) : status_tag("No", :danger)
     end
+    column :display_on_homepage
     actions
   end
 
@@ -23,6 +24,7 @@ Trestle.resource(:galleries) do
       editor :description
       active_storage_field :front_image
       check_box :active, label: "Active"
+      check_box :display_on_homepage, label: "Display on homepage"
       number_field :home_position, label: "Home Position(Enter position from 1 to 4)"
     end
   end
