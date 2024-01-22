@@ -4,10 +4,10 @@ class PagesController < ApplicationController
     @about = About.first
     @events = Event.all
     @latest_event = Event.order(:date).first
-    @services = Service.on_homepage.limit(6)
+    # @services = Service.on_homepage.limit(6)
     @feedback = Feedback.new
     @contacts = Contact.all
-    @galleries = Gallery.on_homepage.limit(6)
+    # @galleries = Gallery.on_homepage.limit(6)
   end
 
   def about_us
