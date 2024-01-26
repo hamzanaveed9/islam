@@ -1,3 +1,3 @@
-server "13.211.211.59", port: 22, roles: [:web, :app, :db], primary: true
-set :stage, :production
-set :branch, :main
+set :rails_env, 'production'
+set :puma_env, fetch(:rack_env, fetch(:rails_env, 'production'))
+server '52.63.32.249', user: 'deploy', roles: %w{web app db}
