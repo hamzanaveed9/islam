@@ -1,4 +1,4 @@
-lock '3.11.0' #capistrano version
+lock '3.18.0'
 
 set :application, 'islam'
 set :repo_url, 'https://github.com/hamzanaveed9/islam'
