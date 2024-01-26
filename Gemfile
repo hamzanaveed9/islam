@@ -36,8 +36,11 @@ gem "jbuilder"
 
 # Use Redis adapter to run Action Cable in production
 gem "redis", "~> 4.0"
-gem 'capistrano', require: false
+gem 'capistrano'
+gem 'capistrano3-puma'
 gem 'capistrano-rails', require: false
+gem 'capistrano-bundler', require: false
+gem 'capistrano-rvm'
 
 gem 'bootstrap', '~> 5.0.0'
 
