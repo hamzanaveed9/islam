@@ -36,11 +36,6 @@ gem "jbuilder"
 
 # Use Redis adapter to run Action Cable in production
 gem "redis", "~> 4.0"
-gem 'capistrano'
-gem 'capistrano3-puma'
-gem 'capistrano-rails', require: false
-gem 'capistrano-bundler', require: false
-gem 'capistrano-rvm'
 
 gem 'bootstrap', '~> 5.0.0'
 
@@ -73,6 +68,11 @@ group :development, :test do
 end
 
 group :development do
+  gem 'capistrano'
+  gem 'capistrano3-puma'
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano-rvm'
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 
