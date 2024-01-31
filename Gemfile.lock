@@ -326,7 +326,7 @@ DEPENDENCIES
   capistrano-bundler
   capistrano-rails
   capistrano-rvm
-  capistrano3-puma
+  capistrano3-puma (~> 5.0)
   capybara
   debug
   dockerfile-rails (>= 1.5)
