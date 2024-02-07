@@ -111,6 +111,7 @@ GEM
       reline (>= 0.3.1)
     dockerfile-rails (1.5.7)
       rails
+    dotenv (2.8.1)
     erubi (1.12.0)
     execjs (2.8.1)
     ffi (1.15.5)
@@ -178,6 +179,8 @@ GEM
       net-protocol
     net-ssh (7.2.1)
     nio4r (2.5.9)
+    nokogiri (1.15.4-arm64-darwin)
+      racc (~> 1.4)
     nokogiri (1.15.4-x86_64-darwin)
       racc (~> 1.4)
     nokogiri (1.15.4-x86_64-linux)
@@ -315,6 +318,7 @@ GEM
     zeitwerk (2.6.11)
 
 PLATFORMS
+  arm64-darwin-22
   x86_64-darwin-20
   x86_64-linux
 
@@ -326,10 +330,11 @@ DEPENDENCIES
   capistrano-bundler
   capistrano-rails
   capistrano-rvm
-  capistrano3-puma (~> 5.0)
+  capistrano3-puma
   capybara
   debug
   dockerfile-rails (>= 1.5)
+  dotenv
   image_processing (~> 1.2)
   importmap-rails
   jbuilder
@@ -360,4 +365,4 @@ RUBY VERSION
    ruby 3.0.3p157
 
 BUNDLED WITH
-   2.4.19
+   2.5.6
