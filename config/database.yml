@@ -24,6 +24,6 @@ test:
 
 production:
   <<: *default
-  database: islam_production
-  username: postgres
-  password: postgres
+  database: islam
+  username: islamdb
+  password: islamdb
