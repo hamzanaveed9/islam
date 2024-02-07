@@ -25,4 +25,5 @@ test:
 production:
   <<: *default
   database: islam
-  username: postgres
+  username: deploy
+  password: deploy
