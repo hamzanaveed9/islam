@@ -341,7 +341,7 @@
   </div>
   <div class="box-container">
     <% @galleries.each do |gallery| %>
-      <%= link_to galleries_path(gallery.id) do %>
+      <%= link_to gallery_path(gallery.id) do %>
         <div class="volunteers-item">
           <div class="image">
             <%= image_tag(gallery&.front_image, alt: "gallery-logo") if gallery&.front_image&.attached? %>

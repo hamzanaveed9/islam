@@ -1,5 +1,5 @@
 class Contact < ApplicationRecord
-  before_save :check_existing_entries
+  before_create :check_existing_entries
 
   private
 
