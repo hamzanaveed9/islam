@@ -98,3 +98,4 @@ gem "sentry-rails", "~> 5.11"
 gem 'sidekiq'
 
 gem 'dotenv'
+gem 'aws-sdk-s3'
