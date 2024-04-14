@@ -5,9 +5,9 @@
 
       <div class="footer-item">
         <a class="logo" href="/">
-        <% if @header_setting.logo_image.present? %>
-          <%= image_tag @header_setting.logo_image, alt: "logo", class: "logo", height: @header_setting.logo_height, width: @header_setting.logo_width %>
-        <% end %>
+        <%= image_tag("footer_logo.png", alt: "logo", style: "height: 100px; width: 50px;") %>
+
+
           <div class="logo-name">
             <h3><%= @header_setting&.logo_text %></h3>
             <p><%= @header_setting&.tagline %></p>
@@ -88,7 +88,9 @@
 
         <div class="footer-item">
           <a class="logo" href="/">
-          <%= image_tag("salam_logo.png", alt: "Logo") %>
+          <%= image_tag("footer_logo.png", alt: "logo", style: "height: 100px; width: 200px;") %>
+
+            
             <div class="logo-name">
               <h3>Imam Sidyot</h3>
               <p>Empowering Excellence</p>

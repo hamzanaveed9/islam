@@ -12,6 +12,8 @@ Trestle.resource(:events) do
     column :event_types
     column :start_time
     column :end_time
+    column :repeat
+    column :is_repeat_day
     column :active, label: "Active" do |event|
       event.active ? status_tag("Yes", :success) : status_tag("No", :danger)
     end
@@ -31,6 +33,7 @@ Trestle.resource(:events) do
     datetime_field :start_time
     datetime_field :end_time
     active_storage_field :image
-    check_box :active, label: "Active"
+    check_box :is_repeat_day
+    select :repeat, [["None", :none], ["Every Monday", :monday], ["Every Tuesday", :tuesday], ["Every Wednesday", :wednesday], ["Every Thursday", :thursday], ["Every Friday", :friday], ["Every Saturday", :saturday], ["Every Sunday", :sunday]], { label: "Repeat Day" }
   end
 end

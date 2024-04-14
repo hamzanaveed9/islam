@@ -51,7 +51,7 @@
     </div>
 
     <div class="image thumb-image-service">
-      <%= @service&.logo&.attached? ? image_tag(@service&.logo) : image_tag("Home-1.png", alt: "logo") %>
+      <%= @service&.front_image&.attached? ? image_tag(@service&.front_image) : image_tag("Home-1.png", alt: "logo") %>
     </div>
 
     <div class='detail descriptionp'>

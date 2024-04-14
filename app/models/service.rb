@@ -1,5 +1,6 @@
 class Service < ApplicationRecord
   has_one_attached :logo
+  has_one_attached :front_image
   has_many :feedbacks
   scope :on_homepage, -> { where(display_on_homepage: true) }
   validate :validate_homepage_limit, if: :display_on_homepage

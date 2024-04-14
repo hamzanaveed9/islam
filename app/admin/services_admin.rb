@@ -19,7 +19,7 @@ Trestle.resource(:services) do
   end
 
   active_storage_fields do
-    [:logo]
+    [:logo, :front_image]
   end
 
   form do |service|
@@ -27,6 +27,7 @@ Trestle.resource(:services) do
       text_field :name
       editor :description
       active_storage_field :logo
+      active_storage_field :front_image
       check_box :active, label: "Active"
       check_box :display_on_homepage, label: "Display on homepage"
     end

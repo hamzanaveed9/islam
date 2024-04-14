@@ -336,7 +336,7 @@
   <div class="heading">
     <h1>gallaries</h1>
     <div class="design">
-      <img src="./assets/images/Logo/Logo.png" alt="">
+      <div class="design"><%= image_tag("salam_logo.png", alt: "logo") %></div>
     </div>
   </div>
   <div class="box-container">
@@ -454,8 +454,12 @@
             <% if event.active? %>
               <div class="event-item">
                 <div class="date">
-                  <h2><%= event&.date&.strftime("%d %b") %></h2>
-                  <p><%= event&.date&.strftime("%a") %></p>
+                  <% if event.is_repeat_day %>
+                    <p>Every<br><%= event&.repeat %></p>
+                  <% else %>
+                    <h2><%= event&.date&.strftime("%d %b") %></h2>
+                    <p><%= event&.date&.strftime("%a") %></p>
+                  <% end %>
                 </div>
                 <div class="detail">
                   <%= link_to event_path(event) do %>
@@ -480,7 +484,11 @@
                   <div class="description">
                     <span>scholar : <%= @latest_event&.scholar %></span>
                     <span>timing : <%= @latest_event&.start_time&.strftime("%I:%M %p") %> - <%= @latest_event&.end_time&.strftime("%I:%M %p") %></span>
-                    <span>date : <%= @latest_event&.date&.strftime("%m/%d/%Y") %></span>
+                    <% if @latest_event&.is_repeat_day %>
+                      <p>Date: Every <%= @latest_event&.repeat %></p>
+                    <% else %>
+                      <span>date : <%= @latest_event&.date&.strftime("%m/%d/%Y") %></span>
+                    <% end %>
                   </div>
                   <h4><i class="fas fa-tag"></i><span><%= @latest_event&.event_types&.join(',') %></span></h4>
                 </div>

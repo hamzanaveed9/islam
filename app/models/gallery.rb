@@ -8,11 +8,11 @@ class Gallery < ApplicationRecord
 
   validates_presence_of :title, :description
 
-  validate :validate_homepage_limit, if: :display_on_homepage
+  # validate :validate_homepage_limit, if: :display_on_homepage
 
-  def validate_homepage_limit
-    if Gallery.on_homepage.count >= 5
-      errors.add(:base, 'Cannot display more than 6 gallaries on the homepage.')
-    end
-  end
+  # def validate_homepage_limit
+  #   if Gallery.on_homepage.count >= 5
+  #     errors.add(:base, 'Cannot display more than 6 gallaries on the homepage.')
+  #   end
+  # end
 end
