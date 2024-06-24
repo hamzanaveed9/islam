@@ -12,6 +12,7 @@ gem 'trestle-auth'
 gem 'trestle-active_storage'
 gem 'kaminari'
 gem 'trestle-tinymce'
+gem 'trestle-search'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 gem 'tinymce-rails'

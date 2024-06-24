@@ -3,6 +3,14 @@ Trestle.resource(:photos) do
     item :photos, icon: "fa fa-images"
   end
 
+  search do |query|
+    if query.present?
+      collection.joins(:gallery).where("galleries.title ILIKE ?", "%#{query}%")
+    else
+      collection.includes(:gallery)
+    end
+  end
+
   table do
     column :id
     column :title
